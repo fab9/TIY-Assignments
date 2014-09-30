@@ -11,7 +11,7 @@ function _previousStep() {
 * Operators: `===`
 * Booleans: `false`
 
-~~~
+---
 
 ```javascript
 var nextStep = this._introItems[--this._currentStep];
@@ -23,7 +23,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Variable: `nextStep`
 * Operators:`!==`
 
-~~~
+---
 
 ```javascript
    var helperLayer = targetElement.querySelector('.introjs-helperLayer');
@@ -36,7 +36,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Variable: `helperLayer`
 * Operators: `=`
 
-~~~
+---
 
 ```javascript
   var fixParents = document.querySelectorAll('.introjs-fixParent');
@@ -45,7 +45,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Variable: `fixParens`
 * Operators: `=`
 
-~~~
+---
 
 ```javascript
  if (fixParents && fixParents.length > 0) {
@@ -54,7 +54,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Value: Number 0
 * Operators: `>`
 
-~~~
+---
 
 ```javascript
     this._direction = 'forward';
@@ -62,7 +62,7 @@ var nextStep = this._introItems[--this._currentStep];
 
 * Variable: `this._direction`
 
-~~~
+---
 
 ```javascript
       for (var i = fixParents.length - 1; i >= 0; i--) {
@@ -72,7 +72,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Value: Number 0, 1
 * Operators: `=`, `-`,`>`
 
-~~~
+---
 
 ```javascript
         var innerLi    = document.createElement('li');
@@ -82,7 +82,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Variable: `innerLi`,`anchorLink`
 * Value: Number 0
 
-~~~
+---
 
 ```javascript
       if (top < 0 || targetElement.element.clientHeight > winHeight) {
@@ -93,7 +93,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Value: Number 0, 30
 * Operators: `-`, `||`, `>`, `<`
 
-~~~
+---
 
 ```javascript
  while (parentElm != null) {
