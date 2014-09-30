@@ -4,7 +4,8 @@ function _previousStep() {
 
     if (this._currentStep === 0) {
       return false;
-    }```
+    }
+```
 
 * Variable:`this._direction `
 * Operators: `===`
@@ -16,7 +17,8 @@ function _previousStep() {
 var nextStep = this._introItems[--this._currentStep];
     if (typeof (this._introBeforeChangeCallback) !== 'undefined') {
       this._introBeforeChangeCallback.call(this, nextStep.element);
-    }```
+    }
+```
 
 * Variable: `nextStep`
 * Operators:`!==`
@@ -37,7 +39,8 @@ var nextStep = this._introItems[--this._currentStep];
 ~~~
 
 ```javascript
-  var fixParents = document.querySelectorAll('.introjs-fixParent');```
+  var fixParents = document.querySelectorAll('.introjs-fixParent');
+```
 
 * Variable: `fixParens`
 * Operators: `=`
@@ -46,7 +49,6 @@ var nextStep = this._introItems[--this._currentStep];
 
 ```javascript
  if (fixParents && fixParents.length > 0) {
-  ...
 ```
 
 * Value: Number 0
@@ -55,7 +57,8 @@ var nextStep = this._introItems[--this._currentStep];
 ~~~
 
 ```javascript
-    this._direction = 'forward';```
+    this._direction = 'forward';
+    ```
 
 * Variable: `this._direction`
 
@@ -63,7 +66,6 @@ var nextStep = this._introItems[--this._currentStep];
 
 ```javascript
       for (var i = fixParents.length - 1; i >= 0; i--) {
-      ...
 ```
 
 * Variable: `i`
@@ -73,10 +75,8 @@ var nextStep = this._introItems[--this._currentStep];
 ~~~
 
 ```javascript
-      ...
         var innerLi    = document.createElement('li');
         var anchorLink = document.createElement('a');
-      ...
 ```
 
 * Variable: `innerLi`,`anchorLink`
@@ -86,7 +86,7 @@ var nextStep = this._introItems[--this._currentStep];
 
 ```javascript
       if (top < 0 || targetElement.element.clientHeight > winHeight) {
-        window.scrollBy(0, top - 30);  ...
+        window.scrollBy(0, top - 30);
 ```
 
 * Variable: `clientHeight`, `winHeight`
@@ -96,7 +96,7 @@ var nextStep = this._introItems[--this._currentStep];
 ~~~
 
 ```javascript
- while (parentElm != null) { ...
+ while (parentElm != null) {
 ```
 
 * Variable: `parentElm`
