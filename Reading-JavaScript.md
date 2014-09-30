@@ -58,7 +58,7 @@ var nextStep = this._introItems[--this._currentStep];
 
 ```javascript
     this._direction = 'forward';
-    ```
+```
 
 * Variable: `this._direction`
 
