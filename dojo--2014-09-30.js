@@ -13,12 +13,3 @@
  * ping-pong pairing, and commit often using `@username & @username` as the
  * commit message.
  */
- 
-// Calculator
-var add = function(a,b) {
-
-}
-
-// Tests
-console.log('It should add "zero" and "one": ' ,
-add("zero", "one") === 1);
