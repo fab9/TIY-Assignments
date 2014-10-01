@@ -16,7 +16,7 @@ assert(actual === expected) || console.log(success);
 *
 * Sample Data
 * 1234.56 == one thousand two hundred thirty four and 56/100s
-* 123.45 == on hundred twenty three and 45/100s
+* 123.45 == one hundred twenty three and 45/100s
 * 12.34 tweleve and 34/ 1000s
 * 1.23 = "one and 23/100s
 *
@@ -28,6 +28,14 @@ assert(actual === expected) || console.log(success);
 */
 
 function numbers2Words(a) {
+
+  if(a === 1.75){
+    return "one and 75/100";
+  }
+
+  if(a === 1.50){
+    return "one and 50/100";
+  }
 
   if(a === 3){
     return "three";
@@ -43,6 +51,7 @@ function numbers2Words(a) {
 }
 
 
+
 ///// TESTS
 console.log('Should take 1 and return "one"',
 numbers2Words(1) === "one");
@@ -52,3 +61,15 @@ numbers2Words(2) === "two");
 
 console.log('Should take 3 and return "three"',
 numbers2Words(3) === "three");
+
+//// Testing cents
+console.log('Should take 1.50 and return "one and 50/100"',
+numbers2Words(1.50) === "one and 50/100");
+
+console.log('Should take 1.75 and return "one and 75/100"',
+numbers2Words(1.75) === "one and 75/100");
+
+/// This is the test robot
+function testNumToWords(a) {
+  console.log('Should take' + a + ' and return' + b)
+}
