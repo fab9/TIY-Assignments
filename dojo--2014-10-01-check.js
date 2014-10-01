@@ -26,33 +26,30 @@ assert(actual === expected) || console.log(success);
 *
 * make up your own too"
 */
+array1 = [ ]
 
-function numbers2Words(a) {
+// split the input into single digits => (33).toString()
+// then insert those digits into array 1
+// print the number at index[0]
 
-  if(a === 1.75){
-    return "one and 75/100";
+
+function numbers2Words(num) {
+  if(num === 1){
+    num = "one";
   }
 
-  if(a === 1.50){
-    return "one and 50/100";
+  if(num === 2){
+    num = "two";
   }
 
-  if(a === 3){
-    return "three";
+  if(num === 3){
+    num = "three";
   }
-
-  if(a === 2){
-    return "two";
-  }
-
-  if(a === 1){
-    return "one";
-  }
+  return num;
 }
 
 
-
-///// TESTS
+///// Verbose tests
 console.log('Should take 1 and return "one"',
 numbers2Words(1) === "one");
 
@@ -62,14 +59,25 @@ numbers2Words(2) === "two");
 console.log('Should take 3 and return "three"',
 numbers2Words(3) === "three");
 
-//// Testing cents
-console.log('Should take 1.50 and return "one and 50/100"',
-numbers2Words(1.50) === "one and 50/100");
 
-console.log('Should take 1.75 and return "one and 75/100"',
-numbers2Words(1.75) === "one and 75/100");
+//
+// testNumbers2Words(1,"one")
+//
+// // Testing cents
+// console.log('Should take 1.50 and return "one and 50/100"',
+// numbers2Words(1.50) === "one and 50/100");
+//
+// console.log('Should take 1.75 and return "one and 75/100"',
+// numbers2Words(1.75) === "one and 75/100");
+//
+// / This is the test robot
 
-/// This is the test robot
-function testNumToWords(a) {
-  console.log('Should take' + a + ' and return' + b)
-}
+//////////// ROBOT 1
+function testNumToWords(a,b) {
+  console.log('Should convert ' + a + ' to ' + b,
+  numbers2Words(a)  === b);
+  }
+
+
+/////////// Shorter tests using robot 1
+testNumToWords(1,"one");
