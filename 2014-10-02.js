@@ -1,18 +1,3 @@
-/**
- * Return a nested array representing an initially empty 3x3 board.
- *
- * @return Array of Array of Boolean
- */
-function board(){
-    return [
-        [ false, false, false ],
-        [ false, false, false ],
-        [ false, false, false ],
-    ];
-}
-
-
-/** === TEST CODE === **/
 var assert = require('assert');
 
 /**
@@ -29,3 +14,23 @@ function test(actual, expected, success){
 
     console.log(success);
 }
+
+/**
+ * Return a nested array representing an initially empty 3x3 board.
+ *
+ * @return Array of Array of Boolean
+ */
+function board(){
+    return [
+        [ false, false, false ],
+        [ false, false, false ],
+        [ false, false, false ],
+    ];
+}
+
+
+/** === TEST CODE === **/
+// test that the board starts off empty?
+
+//
+
