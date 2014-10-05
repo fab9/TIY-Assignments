@@ -20,17 +20,23 @@ function test(actual, expected, success){
  *
  * @return Array of Array of Boolean
  */
-function board(){
-    return [
+var board = [
         [ false, false, false ],
         [ false, false, false ],
         [ false, false, false ],
     ];
-}
 
 
 /** === TEST CODE === **/
-// test that the board starts off empty?
 
-//
+// Check that board is empty
+console.log(board[0][0] === false)
+console.log(board[0][1] === false)
+console.log(board[0][2] === false)
+console.log(board[1][0] === false)
+console.log(board[1][1] === false)
+console.log(board[1][2] === false)
+console.log(board[2][0] === false)
+console.log(board[2][1] === false)
+console.log(board[2][2] === false)
 
