@@ -63,7 +63,7 @@ console.log('it should check that board is empty: ',
  * Function Definition: neighborsOf()
  *
  * @name neighborsOf Identifier
- *
+ * TODO: add all necessary info to this block
  * GIVEN a `board` and `row` and `col` coordinates...
  * THEN returns a list of the neighboring cells.
  *
@@ -71,11 +71,62 @@ console.log('it should check that board is empty: ',
 
  function neighborsOf(board, row, col) {
   var neighbors = [];
+   if (row === 0 && col === 0) {
+        return [
+          board[0][1], board[1][0], board[1][1]
+        ];
+    }
+    if (row === 0 && col === 1) {
+        return [
+          board[0][0], board[1][0], board[1][1],
+          board[0][2], board[1][2]
+        ];
+    }
+    if (row === 0 && col === 2) {
+        return [
+          board[0][1], board[1][1], board[1][2]
+        ];
+    }
+    if (row === 1 && col === 0) {
+        return [
+          board[0][0], board[0][1], board[1][1],
+          board[2][0], board[2][1]
+        ];
+    }
+    if (row === 1 && col === 1) {
+        return [
+          board[0][0], board[0][1], board[0][2],
+          board[1][0], board[1][2], board[2][0],
+          board[2][1], board[2][2]
+        ];
+    }
+    if (row === 1 && col === 2) {
+        return [
+          board[0][1], board[0][2], board[1][1],
+          board[2][1], board[2][2]
+        ];
+    }
+    if (row === 2 && col === 0) {
+        return [
+          board[1][0], board[1][1],board[2][1]
+        ];
+    }
+    if (row === 2 && col === 1) {
+        return [
+          board[1][0],board[2][0],board[1][1],
+          board[1][2],board[2][2]
+        ];
+    }
+    if (row === 2 && col === 2) {
+        return [
+          board[1][1], board[1][2], board[2][1]
+        ];
+    }
+}
 
 
  }
 
-neighborsOf
 
 
 
