@@ -26,15 +26,24 @@ var board = [
     [ false, false, false ],
     ];
 
+
+
+/** === TEST CODE === **/
+// Flatten board
 var row0 = board[0]
 var row1 = board[1]
 var row2 = board[2]
 
 var flatArray = row0.concat(row1, row2);
 
-
-/** === TEST CODE === **/
-// this function finds out how many cells are alive
+/**
+* Function Definition: neighborsOf()
+*
+* this function finds out how many cells are alive
+*
+*
+*
+*/
 function checkForAliveCells(array) {
   var numberAliveCounter = 0;
   for (var i = 0; i < array.length; i++) {
@@ -46,7 +55,38 @@ function checkForAliveCells(array) {
   return numberAliveCounter;
 }
 
-
 // ----------- Check starting positions
 console.log('it should check that board is empty: ',
   checkForAliveCells(flatArray) === 0);
+
+/**
+ * Function Definition: neighborsOf()
+ *
+ * @name neighborsOf Identifier
+ *
+ * GIVEN a `board` and `row` and `col` coordinates...
+ * THEN returns a list of the neighboring cells.
+ *
+ */
+
+ function neighborsOf(board, row, col) {
+  var neighbors = [];
+
+
+ }
+
+neighborsOf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
