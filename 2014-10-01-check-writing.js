@@ -35,3 +35,8 @@ function test(actual, expected, success){
  *
  * Make up your own, too.
  */
+
+
+
+ console.log('it should convert 1 to "one"',
+  letters2Numbers(1,"one") === true);
