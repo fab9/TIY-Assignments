@@ -35,8 +35,42 @@ function test(actual, expected, success){
  *
  * Make up your own, too.
  */
+var num2Words = function(num) {
+  if (num === 1) {
+    return "one";
+  }
+
+  if (num === 2) {
+    return "two";
+  }
+
+  if (num === 3) {
+    return "three";
+  }
+
+  if (num === 4) {
+    return "four";
+  }
+
+  if (num === 5) {
+    return "five";
+  }
+}
+
+// Tests
+console.log('it should convert ' + 1 + ' to "one": ',
+num2Words(1) === "one");
+console.log('it should convert ' + 2 + ' to "two": ',
+num2Words(2) === "two");
+console.log('it should convert ' + 3 + ' to "three": ',
+num2Words(3) === "three");
+console.log('it should convert ' + 4 + ' to "four": ',
+num2Words(4) === "four");
+ console.log('it should convert ' + 5 + ' to "five": ',
+num2Words(5) === "five");
 
 
 
- console.log('it should convert 1 to "one"',
-  letters2Numbers(1,"one") === true);
+
+
+
