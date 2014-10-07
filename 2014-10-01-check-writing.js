@@ -35,47 +35,75 @@ function test(actual, expected, success){
  *
  * Make up your own, too.
  */
+
+var ones = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9:"nine"};
+var tens = {10: "ten", 20: "twenty", 30: "thirty", 40: "forty", 50: "fifty", 60:"sixty", 70:"seventy", 80:"eighty", 90:"ninety"};
+
 var num2Words = function(num) {
-  if (num === 1) {
-    return "one";
+  // if number has 1 digit
+  if (num < 10) {
+    // iterate through tens array until you find a match and exit
+    return ones[num];
   }
+  // if num is 2 digits and starts with a 3
+  if (num > 29) {
+    // grab the integer (ignore decimals)
+    var resultOfDividingByTen = num / 10;
+    var firstDigit = Math.floor(resultOfDividingByTen) * 10;
+    // lookup first digit in tens dict and
+    var wordBeginning = tens[firstDigit];
+    // lookup second digit in ones dict
+    var wordEnd = num % 10;
 
-  if (num === 2) {
-    return "two";
-  }
-
-  if (num === 3) {
-    return "three";
-  }
-
-  if (num === 4) {
-    return "four";
-  }
-
-  if (num === 5) {
-    return "five";
-  }
-
-  if (num === 6) {
-    return "six";
-  }
-
-  if (num === 7) {
-    return "seven";
-  }
-
-  if (num === 8) {
-    return "eight";
-  }
-
-  if (num === 9) {
-    return "nine";
-  }
-
-  if (num === 10) {
-    return "ten";
+    // check the second digit, if it's 0 then
+    if (wordEnd === 0) {
+    // lookup first digit in tens dictionary and return its match
+     return tens[firstDigit];
+    }
+  // return its match
+  return wordBeginning + " " + ones[wordEnd];
   }
 }
+
+  // if (num === 1) {
+  //   return "one";
+  // }
+  // if (num === 2) {
+  //   return "two";
+  // }
+
+  // if (num === 3) {
+  //   return "three";
+  // }
+
+  // if (num === 4) {
+  //   return "four";
+  // }
+
+  // if (num === 5) {
+  //   return "five";
+  // }
+
+  // if (num === 6) {
+  //   return "six";
+  // }
+
+  // if (num === 7) {
+  //   return "seven";
+  // }
+
+  // if (num === 8) {
+  //   return "eight";
+  // }
+
+  // if (num === 9) {
+  //   return "nine";
+  // }
+
+  // if (num === 10) {
+  //   return "ten";
+  // }
+
 
 // ------------ Tests
 // First refactor
@@ -83,17 +111,23 @@ function testNum2Words(a,b) {
   console.log('it should convert ' + a + ' to "' + b + '" :' ,
   num2Words(a) === b);
 }
-
-testNum2Words(1, "one");
-testNum2Words(2, "two");
-testNum2Words(3, "three");
-testNum2Words(4, "four");
-testNum2Words(5, "five");
-testNum2Words(6, "six");
-testNum2Words(7, "seven");
-testNum2Words(8, "eight");
-testNum2Words(9, "nine");
+// commenting out temporarily
+// testNum2Words(1, "one");
+// testNum2Words(2, "two");
+// testNum2Words(3, "three");
+// testNum2Words(4, "four");
+// testNum2Words(5, "five");
+// testNum2Words(6, "six");
+// testNum2Words(7, "seven");
+// testNum2Words(8, "eight");
+// testNum2Words(9, "nine");
 testNum2Words(10, "ten");
+testNum2Words(20, "twenty");
+testNum2Words(30, "thirty");
+testNum2Words(33, "thirty three");
+testNum2Words(89, "eighty nine");
+testNum2Words(100, "one hundred");
+testNum2Words(212, "two hundred twelve");
 
 // Original (not refactored)
 // console.log('it should convert ' + 1 + ' to "one": ',
