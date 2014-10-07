@@ -14,7 +14,7 @@
  * commit message.
  */
 var letters2Numbers = function(letters) {
- if (letters == a "zero") {
+ if (letters ==  "zero") {
     letters = 0;
  }
 
@@ -29,6 +29,36 @@ var letters2Numbers = function(letters) {
   if (letters == "three") {
     letters = 3;
  }
+
+  if (letters == "four") {
+    letters = 4;
+ }
+
+   if (letters == "five") {
+    letters = 5;
+ }
+
+   if (letters == "six") {
+    letters = 6;
+ }
+
+   if (letters == "seven") {
+    letters = 7;
+ }
+
+   if (letters == "eight") {
+    letters = 8;
+ }
+
+   if (letters == "nine") {
+    letters = 9;
+ }
+
+   if (letters == "ten") {
+    letters = 10;
+ }
+
+ return letters;
 }
 
 var add = function(a,b) {
@@ -78,23 +108,40 @@ var add = function(a,b) {
 //   }
 // }
 
-// Tests
-function addTest (a,b,c) {
-  console.log('Should add ' + a + " and " + b + " to equal " + c + " => ",
-  add(a,b) ==c);
+// ------------ Tests
+
+function testLetters2Numbers(a, b){
+  console.log('It should convert "' + a + '" to ' + b + ':',
+        letters2Numbers(a) === b);
 }
 
-addTest("zero", "one", 1);
-addTest("one" , "one", 2);
-addTest("two", "one", 3);
-addTest("three", "one", 4);
-addTest("four", "one", 5);
-addTest("five", "one", 6);
-addTest("six", "one", 7);
-addTest("seven", "one", 8);
-addTest("eight", "one", 9);
-addTest("nine", "one", 10);
+testLetters2Numbers("one", 1);
+testLetters2Numbers("two", 2);
+testLetters2Numbers("three", 3);
+testLetters2Numbers("four", 4);
+testLetters2Numbers("five", 5);
+testLetters2Numbers("six", 6);
+testLetters2Numbers("seven", 7);
+testLetters2Numbers("eight", 8);
+testLetters2Numbers("nine", 9);
+testLetters2Numbers("ten", 10);
+// -----
+// function addTest (a,b,c) {
+//   console.log('Should add ' + a + " and " + b + " to equal " + c + " => ",
+//   add(a,b) ==c);
+// }
 
+// addTest("zero", "one", 1);
+// addTest("one" , "one", 2);
+// addTest("two", "one", 3);
+// addTest("three", "one", 4);
+// addTest("four", "one", 5);
+// addTest("five", "one", 6);
+// addTest("six", "one", 7);
+// addTest("seven", "one", 8);
+// addTest("eight", "one", 9);
+// addTest("nine", "one", 10);
+// ---------
 // console.log('Should add "zero" and "one": ',
 // add("zero", "one") === 1);
 // console.log('Should add "one" and "one": ',
