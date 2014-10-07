@@ -1,11 +1,3 @@
-var assert = require('assert');
-
-function test(actual, expected, success){
-    success = success || 'pass!';
-
-    assert(actual === expected) || console.log(success);
-}
-
 /**
  * Check Writing
  *
@@ -45,8 +37,9 @@ var num2Words = function(num) {
     // iterate through tens array until you find a match and exit
     return ones[num];
   }
-  // if num is 2 digits and starts with a 3
-  if (num > 29) {
+
+  // if num has 2 digits
+  if (num > 9) {
     // grab the integer (ignore decimals)
     var resultOfDividingByTen = num / 10;
     var firstDigit = Math.floor(resultOfDividingByTen) * 10;
@@ -121,15 +114,36 @@ function testNum2Words(a,b) {
 // testNum2Words(7, "seven");
 // testNum2Words(8, "eight");
 // testNum2Words(9, "nine");
-testNum2Words(10, "ten");
+console.log('----- Test ones ----------')
+testNum2Words(1, "one");
+testNum2Words(2, "two");
+testNum2Words(3, "three");
+testNum2Words(4, "four");
+testNum2Words(5, "five");
+
+console.log('----- Test teens ----------')
+testNum2Words(11, "eleven");
+testNum2Words(12, "twelve");
+testNum2Words(13, "thirteen");
+testNum2Words(14, "fourteen");
+testNum2Words(15, "fifteen");
+testNum2Words(16, "sixteen");
+testNum2Words(17, "seventeen");
+
+console.log('----- Test 20s, 30s ... 99 ----------')
 testNum2Words(20, "twenty");
 testNum2Words(30, "thirty");
 testNum2Words(33, "thirty three");
+testNum2Words(45, "forty five");
+testNum2Words(58, "fifty eight");
+testNum2Words(67, "sixty seven");
 testNum2Words(89, "eighty nine");
+
+console.log('----- Test hundreds ----------')
 testNum2Words(100, "one hundred");
 testNum2Words(212, "two hundred twelve");
 
-// Original (not refactored)
+// Original (pre-refactoring)
 // console.log('it should convert ' + 1 + ' to "one": ',
 // num2Words(1) === "one");
 
