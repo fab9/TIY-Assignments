@@ -13,48 +13,70 @@
  * ping-pong pairing, and commit often using `@username & @username` as the
  * commit message.
  */
+var letters2Numbers = function(letters) {
+ if (letters == "zero") {
+    letters = 0;
+ }
+
+ if (letters == "one") {
+    letters = 1;
+ }
+
+  if (letters == "two") {
+    letters = 2;
+ }
+
+  if (letters == "three") {
+    letters = 3;
+ }
+}
 
 var add = function(a,b) {
-  if(a === "zero" && b === "one")  {
-    return 1;
-  }
-
-  if(a === "one" && b === "one") {
-    return 2;
-  }
-
-  if(a === "two" && b === "one") {
-    return 3;
-  }
-
-  if(a === "three" && b === "one") {
-    return 4;
-  }
-
-  if(a === "four" && b === "one") {
-    return 5;
-  }
-
-  if(a === "five" && b === "one") {
-    return 6;
-  }
-
-  if(a === "six" && b === "one") {
-    return 7;
-  }
-
-  if(a === "seven" && b === "one") {
-    return 8;
-  }
-
-  if(a === "eight" && b === "one") {
-    return 9;
-  }
-
-  if(a === "nine" && b === "one") {
-    return 10;
-  }
+  a = letters2Numbers(a);
+  b = letters2Numbers(b);
+  return a + b;
 }
+// var add = function(a,b) {
+//   if(a === "zero" && b === "one")  {
+//     return 1;
+//   }
+
+//   if(a === "one" && b === "one") {
+//     return 2;
+//   }
+
+//   if(a === "two" && b === "one") {
+//     return 3;
+//   }
+
+//   if(a === "three" && b === "one") {
+//     return 4;
+//   }
+
+//   if(a === "four" && b === "one") {
+//     return 5;
+//   }
+
+//   if(a === "five" && b === "one") {
+//     return 6;
+//   }
+
+//   if(a === "six" && b === "one") {
+//     return 7;
+//   }
+
+//   if(a === "seven" && b === "one") {
+//     return 8;
+//   }
+
+//   if(a === "eight" && b === "one") {
+//     return 9;
+//   }
+
+//   if(a === "nine" && b === "one") {
+//     return 10;
+//   }
+// }
 
 // Tests
 function addTest (a,b,c) {
