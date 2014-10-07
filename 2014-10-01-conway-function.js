@@ -1,0 +1,3 @@
+Implement a simple function named conway(cell, neighbors) that...
+Given the state of its neighbors
+Returns the state of cell after 1 tick

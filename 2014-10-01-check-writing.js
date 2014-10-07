@@ -31,6 +31,15 @@
 var ones = {0: "zero", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9:"nine"};
 var tens = {10: "ten", 20: "twenty", 30: "thirty", 40: "forty", 50: "fifty", 60:"sixty", 70:"seventy", 80:"eighty", 90:"ninety"};
 
+/**
+ * num2Words
+ *
+ * Takes any number, including floats, from 1 to 99 and
+ * returns them as English words.
+ *
+ * @param  Integer num
+ * @return String
+ */
 var num2Words = function(num) {
   // if number has 1 digit
   if (num < 10) {
