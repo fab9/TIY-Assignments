@@ -77,36 +77,54 @@ var num2Words = function(num) {
   }
 }
 
-// Tests
-console.log('it should convert ' + 1 + ' to "one": ',
-num2Words(1) === "one");
+// ------------ Tests
+// First refactor
+function testNum2Words(a,b) {
+  console.log('it should convert ' + a + ' to "' + b + '" :' ,
+  num2Words(a) === b);
+}
 
-console.log('it should convert ' + 2 + ' to "two": ',
-num2Words(2) === "two");
+testNum2Words(1, "one");
+testNum2Words(2, "two");
+testNum2Words(3, "three");
+testNum2Words(4, "four");
+testNum2Words(5, "five");
+testNum2Words(6, "six");
+testNum2Words(7, "seven");
+testNum2Words(8, "eight");
+testNum2Words(9, "nine");
+testNum2Words(10, "ten");
 
-console.log('it should convert ' + 3 + ' to "three": ',
-num2Words(3) === "three");
+// Original (not refactored)
+// console.log('it should convert ' + 1 + ' to "one": ',
+// num2Words(1) === "one");
 
-console.log('it should convert ' + 4 + ' to "four": ',
-num2Words(4) === "four");
+// console.log('it should convert ' + 2 + ' to "two": ',
+// num2Words(2) === "two");
 
-console.log('it should convert ' + 5 + ' to "five": ',
-num2Words(5) === "five");
+// console.log('it should convert ' + 3 + ' to "three": ',
+// num2Words(3) === "three");
 
-console.log('it should convert ' + 6 + ' to "six": ',
-num2Words(6) === "six");
+// console.log('it should convert ' + 4 + ' to "four": ',
+// num2Words(4) === "four");
 
-console.log('it should convert ' + 7 + ' to "seven": ',
-num2Words(7) === "seven");
+// console.log('it should convert ' + 5 + ' to "five": ',
+// num2Words(5) === "five");
 
-console.log('it should convert ' + 8 + ' to "eight": ',
-num2Words(8) === "eight");
+// console.log('it should convert ' + 6 + ' to "six": ',
+// num2Words(6) === "six");
 
-console.log('it should convert ' + 9 + ' to "nine": ',
-num2Words(9) === "nine");
+// console.log('it should convert ' + 7 + ' to "seven": ',
+// num2Words(7) === "seven");
 
-console.log('it should convert ' + 10 + ' to "ten": ',
-num2Words(10) === "ten");
+// console.log('it should convert ' + 8 + ' to "eight": ',
+// num2Words(8) === "eight");
+
+// console.log('it should convert ' + 9 + ' to "nine": ',
+// num2Words(9) === "nine");
+
+// console.log('it should convert ' + 10 + ' to "ten": ',
+// num2Words(10) === "ten");
 
 
 
