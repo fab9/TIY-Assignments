@@ -14,7 +14,7 @@
  * commit message.
  */
 var letters2Numbers = function(letters) {
- if (letters == "zero") {
+ if (letters == a "zero") {
     letters = 0;
  }
 
