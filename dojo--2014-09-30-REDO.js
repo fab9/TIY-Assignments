@@ -34,6 +34,26 @@ var add = function(a,b) {
   if(a === "four" && b === "one") {
     return 5;
   }
+
+  if(a === "five" && b === "one") {
+    return 6;
+  }
+
+  if(a === "six" && b === "one") {
+    return 7;
+  }
+
+  if(a === "seven" && b === "one") {
+    return 8;
+  }
+
+  if(a === "eight" && b === "one") {
+    return 9;
+  }
+
+  if(a === "nine" && b === "one") {
+    return 10;
+  }
 }
 
 // Tests
@@ -47,6 +67,11 @@ addTest("one" , "one", 2);
 addTest("two", "one", 3);
 addTest("three", "one", 4);
 addTest("four", "one", 5);
+addTest("five", "one", 6);
+addTest("six", "one", 7);
+addTest("seven", "one", 8);
+addTest("eight", "one", 9);
+addTest("nine", "one", 10);
 
 // console.log('Should add "zero" and "one": ',
 // add("zero", "one") === 1);
