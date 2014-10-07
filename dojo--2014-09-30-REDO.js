@@ -23,23 +23,37 @@ var add = function(a,b) {
     return 2;
   }
 
-  if(a === "one" && b === "two") {
+  if(a === "two" && b === "one") {
     return 3;
   }
 
-  if(a === "one" && b === "three") {
+  if(a === "three" && b === "one") {
     return 4;
   }
 
+  if(a === "four" && b === "one") {
+    return 5;
+  }
 }
 
 // Tests
-console.log('Should add "zero" and "one": ',
-add("zero", "one") === 1);
-console.log('Should add "one" and "one": ',
-add("one", "one") === 2);
-console.log('Should add "one" and "two": ',
-add("one", "two") === 3);
-console.log('Should add "one" and "three": ',
-add("one", "three") === 4);
+function addTest (a,b,c) {
+  console.log('Should add ' + a + " and " + b + " to equal " + c + " => ",
+  add(a,b) ==c);
+}
+
+addTest("zero", "one", 1);
+addTest("one" , "one", 2);
+addTest("two", "one", 3);
+addTest("three", "one", 4);
+addTest("four", "one", 5);
+
+// console.log('Should add "zero" and "one": ',
+// add("zero", "one") === 1);
+// console.log('Should add "one" and "one": ',
+// add("one", "one") === 2);
+// console.log('Should add "one" and "two": ',
+// add("one", "two") === 3);
+// console.log('Should add "one" and "three": ',
+// add("one", "three") === 4);
 
