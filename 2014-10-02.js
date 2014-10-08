@@ -26,11 +26,83 @@ var board = [
     [ false, false, false ],
     ];
 
+/**
+ * Function Definition: neighborsOf()
+ *
+ * @name neighborsOf Identifier
+ * TODO: add all necessary info to this block
+ * GIVEN a `board` and `row` and `col` coordinates...
+ * THEN returns a list of the neighboring cells.
+ *
+ */
+ function neighborsOf(board, row, col) {
+  var neighbors = [];
+   if (row === 0 && col === 0) {
+        return [
+          board[0][1], board[1][0], board[1][1]
+        ];
+    }
 
+    if (row === 0 && col === 1) {
+        return [
+          board[0][0], board[1][0], board[1][1],
+          board[0][2], board[1][2]
+        ];
+    }
+
+    if (row === 0 && col === 2) {
+        return [
+          board[0][1], board[1][1], board[1][2]
+        ];
+    }
+
+    if (row === 1 && col === 0) {
+        return [
+          board[0][0], board[0][1], board[1][1],
+          board[2][0], board[2][1]
+        ];
+    }
+
+    if (row === 1 && col === 1) {
+        return [
+          board[0][0], board[0][1], board[0][2],
+          board[1][0], board[1][2], board[2][0],
+          board[2][1], board[2][2]
+        ];
+    }
+
+    if (row === 1 && col === 2) {
+        return [
+          board[0][1], board[0][2], board[1][1],
+          board[2][1], board[2][2]
+        ];
+    }
+
+    if (row === 2 && col === 0) {
+        return [
+          board[1][0], board[1][1], board[2][1]
+        ];
+    }
+
+    if (row === 2 && col === 1) {
+        return [
+          board[1][0], board[2][0], board[1][1],
+          board[1][2], board[2][2]
+        ];
+    }
+
+    if (row === 2 && col === 2) {
+        return [
+          board[1][1], board[1][2], board[2][1]
+        ];
+    }
+} // END neighborsOf
 
 /** === TEST CODE === **/
-
-// Check starting position #1: Empty board
+/**
+ * Check starting position #1: Empty board
+ *
+ */
 // Concatenate all 3 arrays
 var row0 = board[0]
 var row1 = board[1]
@@ -51,69 +123,7 @@ function checkForAliveCells(array) {
 console.log('it should check that board is empty: ',
   checkForAliveCells(flatArray) === 0);
 
-/**
- * Function Definition: neighborsOf()
- *
- * @name neighborsOf Identifier
- * TODO: add all necessary info to this block
- * GIVEN a `board` and `row` and `col` coordinates...
- * THEN returns a list of the neighboring cells.
- *
- */
- function neighborsOf(board, row, col) {
-  var neighbors = [];
-   if (row === 0 && col === 0) {
-        return [
-          board[0][1], board[1][0], board[1][1]
-        ];
-    }
-    if (row === 0 && col === 1) {
-        return [
-          board[0][0], board[1][0], board[1][1],
-          board[0][2], board[1][2]
-        ];
-    }
-    if (row === 0 && col === 2) {
-        return [
-          board[0][1], board[1][1], board[1][2]
-        ];
-    }
-    if (row === 1 && col === 0) {
-        return [
-          board[0][0], board[0][1], board[1][1],
-          board[2][0], board[2][1]
-        ];
-    }
-    if (row === 1 && col === 1) {
-        return [
-          board[0][0], board[0][1], board[0][2],
-          board[1][0], board[1][2], board[2][0],
-          board[2][1], board[2][2]
-        ];
-    }
-    if (row === 1 && col === 2) {
-        return [
-          board[0][1], board[0][2], board[1][1],
-          board[2][1], board[2][2]
-        ];
-    }
-    if (row === 2 && col === 0) {
-        return [
-          board[1][0], board[1][1],board[2][1]
-        ];
-    }
-    if (row === 2 && col === 1) {
-        return [
-          board[1][0],board[2][0],board[1][1],
-          board[1][2],board[2][2]
-        ];
-    }
-    if (row === 2 && col === 2) {
-        return [
-          board[1][1], board[1][2], board[2][1]
-        ];
-    }
-} // END neighborsOf
+
 
 
 
