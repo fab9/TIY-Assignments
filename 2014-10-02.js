@@ -1,4 +1,4 @@
-// var assert = require('assert');
+var assert = require('assert');
 
 /**
  * Log `success` if `actual` is STRICTLY equal to `expected`
@@ -7,13 +7,13 @@
  * @param ANY expected
  * @param String success
  */
-// function test(actual, expected, success){
-//     if (success === undefined) success = 'pass!';
+function test(actual, expected, success){
+    if (success === undefined) success = 'pass!';
 
-//     assert.strictEqual(actual, expected);
+    assert.strictEqual(actual, expected);
 
-//     console.log(success);
-// }
+    console.log(success);
+}
 /** === PRODUCTION CODE === **/
 /**
  * Return a nested array representing an initially empty 3x3 board.
@@ -29,29 +29,21 @@ var board = [
 /**
  * Function Definition: conway()
  *
- * @name conway Identifier
+ * @name Identifier conway
+ * @param Boolean cell
+ * @return Boolean state of cell
  *
  * GIVEN the state of a `cell` and a list of neighboring cells...
  * THEN returns the state of the `cell` with the rules applied.
  *
  */
 function conway(cell, neighbors) {
-  if(cell === true) {
-  // live cell with < 2 or > 3 live neighbors dies
-    if(neighbors < 2 || neighbors > 3) {
-      return cell = false;
-      // live cell with 2 or 3 live neighbors survives
-    } else if(neighbors === 2 || neighbors === 3) {
-        return cell === true;
-      }
-  }
-
-  // dead cell with exactly 3 live neighbors becomes alive
-  if(cell === false) {
-    if(neighbors === 3) {
-      cell = true;
+    if (neighbors.length === 3) {
+        return true;
     }
-  }
+    return false;
+}
+
 } // END conway
 
 /**
@@ -164,6 +156,9 @@ function checkForAliveCells(array) {
 console.log('it should check that board is empty: ',
   checkForAliveCells(flatArray) === 0);
 
+// David's tests
+test(conway(false, []), false);
+test(conway(false, [true]), false); // not sure what this is testing
 
 
 
