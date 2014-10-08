@@ -27,6 +27,15 @@ var board = [
     ];
 
 /**
+ * Function Definition: conway()
+ *
+ * @name conway Identifier
+ * GIVEN the state of a `cell` and a list of neighboring cells...
+ * THEN returns the state of the `cell` with the rules applied.
+ *
+ */
+
+/**
  * Function Definition: neighborsOf()
  *
  * @name neighborsOf Identifier
