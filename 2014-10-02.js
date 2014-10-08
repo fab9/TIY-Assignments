@@ -156,9 +156,20 @@ function checkForAliveCells(array) {
 console.log('it should check that board is empty: ',
   checkForAliveCells(flatArray) === 0);
 
-// David's tests
-test(conway(false, []), false);
-test(conway(false, [true]), false); // not sure what this is testing
+// David's rules tests
+describe('generation rule', function() {
+
+  it('should NOT generate a new cell if there are fewer than 3 neighbors', function() {
+      test(conway(false, []), false);
+      test(conway(false,[true]), false);
+      test(conway(false, [true, true]), false);
+      test(conway(false, [false, false, false]), false);
+  });
+
+  it('should generate a new cell if there are exactly 3 neighbors', function() {
+    test(conway(false, [true, true, true]), true);
+  });
+})
 
 
 
