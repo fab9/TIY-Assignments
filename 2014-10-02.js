@@ -30,10 +30,29 @@ var board = [
  * Function Definition: conway()
  *
  * @name conway Identifier
+ *
  * GIVEN the state of a `cell` and a list of neighboring cells...
  * THEN returns the state of the `cell` with the rules applied.
  *
  */
+function conway(cell, neighbors) {
+  if(cell === true) {
+  // live cell with < 2 or > 3 live neighbors dies
+    if(neighbors < 2 || neighbors > 3) {
+      return cell = false;
+      // live cell with 2 or 3 live neighbors survives
+    } else if(neighbors === 2 || neighbors === 3) {
+        return cell === true;
+      }
+  }
+
+  // dead cell with exactly 3 live neighbors becomes alive
+  if(cell === false) {
+    if(neighbors === 3) {
+      cell = true;
+    }
+  }
+} // END conway
 
 /**
  * Function Definition: neighborsOf()
@@ -107,6 +126,19 @@ var board = [
     }
 } // END neighborsOf
 
+ /**
+  * Function Definition: tick()
+  *
+  * @name  tick Identifier
+  *
+  * GIVEN a `board`...
+  * THEN returns a NEW `board` representing the next generation.
+  *
+  */
+
+
+
+
 /** === TEST CODE === **/
 /**
  * Check starting position #1: Empty board
@@ -118,7 +150,7 @@ var row1 = board[1]
 var row2 = board[2]
 var flatArray = row0.concat(row1, row2);
 
-// Give me the total number of alive cells
+// Give me the total number of live cells
 function checkForAliveCells(array) {
   var numberAliveCounter = 0;
   for (var i = 0; i < array.length; i++) {
