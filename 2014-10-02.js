@@ -1,4 +1,4 @@
-var assert = require('assert');
+// var assert = require('assert');
 
 /**
  * Log `success` if `actual` is STRICTLY equal to `expected`
@@ -7,14 +7,14 @@ var assert = require('assert');
  * @param ANY expected
  * @param String success
  */
-function test(actual, expected, success){
-    if (success === undefined) success = 'pass!';
+// function test(actual, expected, success){
+//     if (success === undefined) success = 'pass!';
 
-    assert.strictEqual(actual, expected);
+//     assert.strictEqual(actual, expected);
 
-    console.log(success);
-}
-
+//     console.log(success);
+// }
+/** === PRODUCTION CODE === **/
 /**
  * Return a nested array representing an initially empty 3x3 board.
  *
@@ -29,21 +29,15 @@ var board = [
 
 
 /** === TEST CODE === **/
-// Flatten board
+
+// Check starting position #1: Empty board
+// Concatenate all 3 arrays
 var row0 = board[0]
 var row1 = board[1]
 var row2 = board[2]
-
 var flatArray = row0.concat(row1, row2);
 
-/**
-* Function Definition: neighborsOf()
-*
-* this function finds out how many cells are alive
-*
-*
-*
-*/
+// Give me the total number of alive cells
 function checkForAliveCells(array) {
   var numberAliveCounter = 0;
   for (var i = 0; i < array.length; i++) {
@@ -51,11 +45,9 @@ function checkForAliveCells(array) {
           numberAliveCounter++
       };
   };
-  // console.log('Cell(s) alive: ' + numberAliveCounter)
   return numberAliveCounter;
 }
 
-// ----------- Check starting positions
 console.log('it should check that board is empty: ',
   checkForAliveCells(flatArray) === 0);
 
@@ -68,7 +60,6 @@ console.log('it should check that board is empty: ',
  * THEN returns a list of the neighboring cells.
  *
  */
-
  function neighborsOf(board, row, col) {
   var neighbors = [];
    if (row === 0 && col === 0) {
@@ -122,10 +113,7 @@ console.log('it should check that board is empty: ',
           board[1][1], board[1][2], board[2][1]
         ];
     }
-}
-
-
- }
+} // END neighborsOf
 
 
 
