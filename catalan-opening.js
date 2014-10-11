@@ -59,9 +59,9 @@ var board = [
 
 // ------- Tests
 
-// Render board's starting position
-console.log('it should render board and pieces only if a game is not already in progress',
-  board === boardState(0) === true);
+// start game only if no game is in progress
+console.log('it should render board and pieces instarting position only if a game is not already in progress',
+  startGame === true && board[1] === ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P']);
 
 
 
