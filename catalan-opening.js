@@ -20,7 +20,36 @@ var board = [
 ];
 
 // render board and chessPieces
-// update
+// game begins with a confirmation box "Play turn 1?"
+// Turn1: move pawn from   board[6][3] => board[4][3]
+//                         board[6][3] => empty
+// conf box: "Play turn 2?"
+// Turn2: move knight from board[0][6] => board[2][5]
+//                         board[0][6] => empty
+// conf box: "Play turn 3?"
+// Turn3: move knight from board[xx][xx] => board[xx][xx]
+//                         board[xx][xx] => empty
+// conf box: "Play turn 4?"
+// Turn4: move knight from board[xx][xx] => board[xx][xx]
+//                         board[xx][xx] => empty
+// conf box: "Play turn 5?"
+// Turn5: move knight from board[xx][xx] => board[xx][xx]
+//                         board[xx][xx] => empty
+// conf box: "Play turn 6?"
+// Turn6: move knight from board[xx][xx] => board[xx][xx]
+//                         board[xx][xx] => empty
+// conf box: "Play turn 7?"
+// Turn7: move knight from board[xx][xx] => board[xx][xx]
+//                         board[xx][xx] => empty
+// conf box: "Play turn 8?"
+// Turn8: move knight from board[xx][xx] => board[xx][xx]
+//                         board[xx][xx] => empty
+// conf box: "Play turn 9?"
+// Turn9: move knight from board[xx][xx] => board[xx][xx]
+//                         board[xx][xx] => empty
+
+
+
 
 
 // ------- Tests
