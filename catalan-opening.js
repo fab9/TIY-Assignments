@@ -1,6 +1,9 @@
 /** functions/variables I might need:
 * startGame
 * endGame
+* currentTurn
+* gameInProgress
+* currentBoard
 * var gameFinished = false
 * nextTurn or playGame?
 * turnsRemaining - how many turns until the game finishes? Set to 9
@@ -20,6 +23,7 @@ var board = [
 ];
 
 // render board and chessPieces
+//
 // game begins with a confirmation box "Play turn 1?"
 // Turn1: move pawn from   board[6][3] => board[4][3]
 //                         board[6][3] => empty
@@ -27,26 +31,27 @@ var board = [
 // Turn2: move knight from board[0][6] => board[2][5]
 //                         board[0][6] => empty
 // conf box: "Play turn 3?"
-// Turn3: move knight from board[xx][xx] => board[xx][xx]
-//                         board[xx][xx] => empty
+// Turn3: move pawn from board[6][2] => board[6][4]
+//                         board[6][2] => empty
 // conf box: "Play turn 4?"
-// Turn4: move knight from board[xx][xx] => board[xx][xx]
-//                         board[xx][xx] => empty
+// Turn4: move pawn from board[1][4] => board[2][4]
+//                         board[1][4] => empty
 // conf box: "Play turn 5?"
-// Turn5: move knight from board[xx][xx] => board[xx][xx]
-//                         board[xx][xx] => empty
+// Turn5: move pawn from board[6][6] => board[4][6]
+//                         board[6][6] => empty
 // conf box: "Play turn 6?"
-// Turn6: move knight from board[xx][xx] => board[xx][xx]
-//                         board[xx][xx] => empty
+// Turn6: move pawn from board[1][3] => board[3][3]
+//                         board[1][3] => empty
 // conf box: "Play turn 7?"
-// Turn7: move knight from board[xx][xx] => board[xx][xx]
-//                         board[xx][xx] => empty
+// Turn7: move bishop from board[7][5] => board[6][6]
+//                         board[7][5] => empty
 // conf box: "Play turn 8?"
-// Turn8: move knight from board[xx][xx] => board[xx][xx]
-//                         board[xx][xx] => empty
+// Turn8: move bishop from board[0][5] => board[1][4]
+//                         board[0][5] => empty
 // conf box: "Play turn 9?"
-// Turn9: move knight from board[xx][xx] => board[xx][xx]
-//                         board[xx][xx] => empty
+// Turn9: move knight from board[7][6] => board[5][5]
+//                         board[7][6] => empty
+// game ends
 
 
 
@@ -54,5 +59,13 @@ var board = [
 
 // ------- Tests
 
-// Test board's starting position
-console.log(board )
+// Render board's starting position
+console.log('it should render board and pieces only if a game is not already in progress',
+  board === boardState(0) === true);
+
+
+
+
+
+
+
