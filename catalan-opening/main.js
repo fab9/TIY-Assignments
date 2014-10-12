@@ -22,21 +22,8 @@ var board = [
  // 0,   1,   2,   3,   4,   5,   6,   7
 ];
 
-function startGame(){
-  // render board and chessPieces
-  console.log(board)
 
-
-
-
-
-
-}// END startGame
-
-startGame()
-
-
-// game begins with a confirmation box "Play turn 1?"
+// game begins when Start button is clicked
 // Turn1: move pawn from   board[6][3] => board[4][3]
 //                         board[6][3] => empty
 // if (confirm('Play turn 1')){
@@ -45,28 +32,28 @@ startGame()
 //   console.log(board);
 // };
 //
-// conf box: "Play turn 2?"
+// click Next move button
 // Turn2: move knight from board[0][6] => board[2][5]
 //                         board[0][6] => empty
-// conf box: "Play turn 3?"
+// click Next move button
 // Turn3: move pawn from board[6][2] => board[6][4]
 //                         board[6][2] => empty
-// conf box: "Play turn 4?"
+// click Next move button
 // Turn4: move pawn from board[1][4] => board[2][4]
 //                         board[1][4] => empty
-// conf box: "Play turn 5?"
+// click Next move button
 // Turn5: move pawn from board[6][6] => board[4][6]
 //                         board[6][6] => empty
-// conf box: "Play turn 6?"
+// click Next move button
 // Turn6: move pawn from board[1][3] => board[3][3]
 //                         board[1][3] => empty
-// conf box: "Play turn 7?"
+// click Next move button
 // Turn7: move bishop from board[7][5] => board[6][6]
 //                         board[7][5] => empty
-// conf box: "Play turn 8?"
+// click Next move button
 // Turn8: move bishop from board[0][5] => board[1][4]
 //                         board[0][5] => empty
-// conf box: "Play turn 9?"
+// click Next move button
 // Turn9: move knight from board[7][6] => board[5][5]
 //                         board[7][6] => empty
 // game ends
