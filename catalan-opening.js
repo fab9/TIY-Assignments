@@ -18,15 +18,33 @@ var board = [
   [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], // 4
   [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], // 5
   ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'], // 6
-  ['r', 'r', 'b', 'q', 'k', 'b', 'n', 'r'], // 7
+  ['r', 'r', 'b', 'q', 'k', 'b', 'n', 'r'] // 7
  // 0,   1,   2,   3,   4,   5,   6,   7
 ];
 
-// render board and chessPieces
-//
+function startGame(){
+  // render board and chessPieces
+  console.log(board)
+
+
+
+
+
+
+}// END startGame
+
+startGame()
+
+
 // game begins with a confirmation box "Play turn 1?"
 // Turn1: move pawn from   board[6][3] => board[4][3]
 //                         board[6][3] => empty
+// if (confirm('Play turn 1')){
+//   board[6][3] = board[4][3];
+//   board[6][3];
+//   console.log(board);
+// };
+//
 // conf box: "Play turn 2?"
 // Turn2: move knight from board[0][6] => board[2][5]
 //                         board[0][6] => empty
@@ -54,14 +72,8 @@ var board = [
 // game ends
 
 
-
-
-
 // ------- Tests
 
-// start game only if no game is in progress
-console.log('it should render board and pieces instarting position only if a game is not already in progress',
-  startGame === true && board[1] === ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P']);
 
 
 
