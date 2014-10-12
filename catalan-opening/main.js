@@ -10,7 +10,8 @@
 * turnsTaken - set to 0
 */
 
-var board = [
+// starting positions
+var startingBoard = [
   ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'], // 0
   ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'], // 1
   [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], // 2
@@ -22,7 +23,25 @@ var board = [
  // 0,   1,   2,   3,   4,   5,   6,   7
 ];
 
+var wP = p;
+var wR = r;
+var wB = b;
+var wK = k;
+var wQ = q;
+var wN = n;
+var bP = P;
+var bR = R;
+var bB = B;
+var bK = K;
+var bQ = Q;
+var bN = N;
 
+//The size of each cell
+var SIZE = 40;
+
+//Find the number of rows and columns
+var ROWS = startingBoard.length;
+var COLUMNS = startingBoard[0].length;
 
 // access the button
 var startButton = document.getElementById('btn-start');
@@ -32,7 +51,7 @@ startButton.addEventListener('click', clickHandler, false);
 function clickHandler() {
 	// render board's starting position
 	board;
-	console.log("Button clicked");
+	console.log("Button clicked"); // temp code
 
 }
 
