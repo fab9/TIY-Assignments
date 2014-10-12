@@ -1,3 +1,4 @@
+#05--Reading-Javascript
 ```javascript
 function _previousStep() {
     this._direction = 'backward';
@@ -103,4 +104,208 @@ var nextStep = this._introItems[--this._currentStep];
 * Value: null
 * Operators: `=`, `!`
 
-
+#06--Coding-Dojo
+You need 10 more (unique) examples and should include conditionals, loops, and lists (arrays).  
+##Ex 1
+```javascript
+ /**
+     * Keyword
+     * =======
+     * name: Conditional
+     * symbol: if
+     *
+     * Operator
+     * ========
+     * name: Conditional
+     * symbol: () parentheses
+     *
+     * Identifier?
+     * ==========
+     * name: Parameter (Special Variable)
+     * symbol?: typeof
+     *
+     * Identifier
+     * ==========
+     * name: Parameter (Special Variable)
+     * symbol: exports
+     *
+     * Operator
+     * ========
+     * name: Triple Equal, Strictly Equal
+     * symbol: ===
+     * operands:
+     * - typeof exports
+     * - 'object'
+     *
+     * Type Literal
+     * ============
+     * name: String
+     * symbol: 'object'
+     *
+     * Operator
+     * ========
+     * name: Block
+     * nickname: Moustache
+     * symbol: { }
+     */
+    // if ( condition ) expression;
+    if (typeof exports === 'object') {
+```
+##Ex 2
+```javascript
+/**
+    * Keyword
+    * =======
+    * name: Loop
+    * symbol: for
+    *
+    * Operator
+    * ========
+    * name: Conditional
+    * symbol: () parentheses
+    *
+    * Keyword
+    * =======
+    * name: Variable declaration
+    * symbol: var
+    *
+    * Identifier
+    * ========
+    * name: Variable
+    * symbol: z
+    *
+    * Operator
+    * ========
+    * name: Assignment
+    * symbol: =
+    * operands:
+    * - Variable: z
+    * - Number
+    *
+    * Operator
+    * ============
+    * name: Greater Than
+    * symbol: >
+    * operands:
+    * - z
+    * - introItems.length
+    *
+    * Identifier
+    * ==========
+    * name: Variable
+    * symbol: z
+    *
+    * Operator
+    * ========
+    * name: Plus
+    * symbol: +
+    * operands:
+    * - z
+    *
+    * Operator
+    * ========
+    * name: Block
+    * nickname: Moustache
+    * symbol: { }
+    */
+   // for ([initialization]; [condition]; [final-expression])
+   // statement
+    for (var z = 0; z < introItems.length; z++) {
+```
+##Ex 3
+```javascript
+ /**
+   * Variable
+   * ========
+   * symbol: tempIntroItems
+   * value: Array
+   *
+   * Operator:
+   * =========
+   * name: Assignment
+   * symbol: =
+   * operands:
+   * - Variable: tempIntroItems
+   * - Array
+   *
+   * Type Literal
+   * ============
+   * name: Array
+   * symbol: [ ]
+   *
+   * Keyword
+   * =======
+   * name: Variable Declaration
+   * symbol: var
+   */
+   var tempIntroItems = [
+```
+##Ex 4
+```javascript
+  /**
+    * Variable
+    * ========
+    * symbol: fixParents
+    * value: Array
+    *
+    * Operator:
+    * =========
+    * name: Assignment
+    * symbol: =
+    * operands:
+    * - Variable: fixParents
+    * - Array
+    *
+    * Type Literal
+    * ============
+    * name: Array
+    * symbol: [ ]
+    *
+    * Keyword
+    * =======
+    * name: Variable Declaration
+    * symbol: var
+    */
+    var fixParents = [
+```
+##Ex 5
+```javascript
+  /**
+    * Keyword
+    * =======
+    * name: Loop
+    * symbol: switch
+    *
+    * Operator
+    * ========
+    * name: Conditional
+    * symbol: () parentheses
+    *
+    * Identifier
+    * =======
+    * name: Variable
+    * symbol: currentTooltipPosition
+    *
+    */
+      switch (currentTooltipPosition) {
+```
+##Ex 6
+```javascript
+      xxxx
+```
+##Ex 7
+```javascript
+      xxxx
+```
+##Ex 8
+```javascript
+      xxxx
+```
+##Ex 9
+```javascript
+      xxxx
+```
+##Ex 10
+```javascript
+      xxxx
+```
