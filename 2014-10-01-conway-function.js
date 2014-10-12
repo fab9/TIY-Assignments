@@ -6,6 +6,8 @@
  * THEN: Returns the state of cell after 1 tick
  */
 /** === PRODUCTION CODE === **/
+
+var cell = board[2][6]
 function conway(cell, neighbors) {
 
 }
