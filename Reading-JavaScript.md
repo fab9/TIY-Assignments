@@ -109,105 +109,105 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
 ##Ex 1
 ```javascript
  /**
-     * Keyword
-     * =======
-     * name: Conditional
-     * symbol: if
-     *
-     * Operator
-     * ========
-     * name: Conditional
-     * symbol: () parentheses
-     *
-     * Identifier?
-     * ==========
-     * name: Parameter (Special Variable)
-     * symbol?: typeof
-     *
-     * Identifier
-     * ==========
-     * name: Parameter (Special Variable)
-     * symbol: exports
-     *
-     * Operator
-     * ========
-     * name: Triple Equal, Strictly Equal
-     * symbol: ===
-     * operands:
-     * - typeof exports
-     * - 'object'
-     *
-     * Type Literal
-     * ============
-     * name: String
-     * symbol: 'object'
-     *
-     * Operator
-     * ========
-     * name: Block
-     * nickname: Moustache
-     * symbol: { }
-     */
+   * Keyword
+   * =======
+   * name: Conditional
+   * symbol: if
+   *
+   * Operator
+   * ========
+   * name: Conditional
+   * symbol: () parentheses
+   *
+   * Identifier?
+   * ==========
+   * name: Parameter (Special Variable)
+   * symbol?: typeof
+   *
+   * Identifier
+   * ==========
+   * name: Parameter (Special Variable)
+   * symbol: exports
+   *
+   * Operator
+   * ========
+   * name: Triple Equal, Strictly Equal
+   * symbol: ===
+   * operands:
+   * - typeof exports
+   * - 'object'
+   *
+   * Type Literal
+   * ============
+   * name: String
+   * symbol: 'object'
+   *
+   * Operator
+   * ========
+   * name: Block
+   * nickname: Moustache
+   * symbol: { }
+   */
     // if ( condition ) expression;
     if (typeof exports === 'object') {
 ```
 ##Ex 2
 ```javascript
 /**
-    * Keyword
-    * =======
-    * name: Loop
-    * symbol: for
-    *
-    * Operator
-    * ========
-    * name: Conditional
-    * symbol: () parentheses
-    *
-    * Keyword
-    * =======
-    * name: Variable declaration
-    * symbol: var
-    *
-    * Identifier
-    * ========
-    * name: Variable
-    * symbol: z
-    *
-    * Operator
-    * ========
-    * name: Assignment
-    * symbol: =
-    * operands:
-    * - Variable: z
-    * - Number
-    *
-    * Operator
-    * ============
-    * name: Greater Than
-    * symbol: >
-    * operands:
-    * - z
-    * - introItems.length
-    *
-    * Identifier
-    * ==========
-    * name: Variable
-    * symbol: z
-    *
-    * Operator
-    * ========
-    * name: Plus
-    * symbol: +
-    * operands:
-    * - z
-    *
-    * Operator
-    * ========
-    * name: Block
-    * nickname: Moustache
-    * symbol: { }
-    */
+  * Keyword
+  * =======
+  * name: Loop
+  * symbol: for
+  *
+  * Operator
+  * ========
+  * name: Conditional
+  * symbol: () parentheses
+  *
+  * Keyword
+  * =======
+  * name: Variable declaration
+  * symbol: var
+  *
+  * Identifier
+  * ========
+  * name: Variable
+  * symbol: z
+  *
+  * Operator
+  * ========
+  * name: Assignment
+  * symbol: =
+  * operands:
+  * - Variable: z
+  * - Number
+  *
+  * Operator
+  * ============
+  * name: Greater Than
+  * symbol: >
+  * operands:
+  * - z
+  * - introItems.length
+  *
+  * Identifier
+  * ==========
+  * name: Variable
+  * symbol: z
+  *
+  * Operator
+  * ========
+  * name: Plus
+  * symbol: +
+  * operands:
+  * - z
+  *
+  * Operator
+  * ========
+  * name: Block
+  * nickname: Moustache
+  * symbol: { }
+  */
    // for ([initialization]; [condition]; [final-expression])
    // statement
     for (var z = 0; z < introItems.length; z++) {
@@ -287,25 +287,152 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
     * symbol: currentTooltipPosition
     *
     */
-      switch (currentTooltipPosition) {
+    // switch (expression) {
+    switch (currentTooltipPosition) {
 ```
 ##Ex 6
 ```javascript
-      xxxx
+  /**
+    * Variable
+    * ========
+    * symbol: allIntroSteps
+    * value: Array
+    *
+    * Operator:
+    * =========
+    * name: Assignment
+    * symbol: =
+    * operands:
+    * - Variable: allIntroSteps
+    * - Array
+    *
+    * Type Literal
+    * ============
+    * name: Array
+    * symbol: [ ]
+    *
+    * Keyword
+    * =======
+    * name: Variable Declaration
+    * symbol: var
+    */
+      var allIntroSteps = [
 ```
 ##Ex 7
 ```javascript
-      xxxx
+  /**
+    * Variable
+    * ========
+    * symbol: finishedSteps
+    * value: Array
+    *
+    * Operator:
+    * =========
+    * name: Assignment
+    * symbol: =
+    * operands:
+    * - Variable: finishedSteps
+    * - Array
+    *
+    * Type Literal
+    * ============
+    * name: Array
+    * symbol: [ ]
+    *
+    * Keyword
+    * =======
+    * name: Variable Declaration
+    * symbol: var
+    */
+    var finishedSteps = [
 ```
 ##Ex 8
 ```javascript
-      xxxx
+  /**
+    * Variable
+    * ========
+    * symbol: stepsRemaining
+    * value: Array
+    *
+    * Operator:
+    * =========
+    * name: Assignment
+    * symbol: =
+    * operands:
+    * - Variable: stepsRemaining
+    * - Array
+    *
+    * Type Literal
+    * ============
+    * name: Array
+    * symbol: [ ]
+    *
+    * Keyword
+    * =======
+    * name: Variable Declaration
+    * symbol: var
+    */
+    var stepsRemaining = [
 ```
 ##Ex 9
 ```javascript
-      xxxx
+/**
+  * Keyword
+  * =======
+  * name: Conditional
+  * symbol: if
+  *
+  * Operator
+  * ========
+  * name: Conditional
+  * symbol: () parentheses
+  *
+  * Identifier
+  * ==========
+  * name: Parameter (Special Variable)
+  * symbol: step
+  *
+  * Operator
+  * ========
+  * name: Greater Than
+  * symbol: >
+  * operands:
+  * - step
+  * - 0
+  *
+  * Operator
+  * ========
+  * name: Block
+  * nickname: Moustache
+  * symbol: { }
+  */
+  // if ( condition ) expression;
+  if (step > 0) {
 ```
 ##Ex 10
 ```javascript
-      xxxx
+/**
+  * Keyword
+  * =======
+  * name: Loop
+  * symbol: while
+  *
+  * Operator
+  * ========
+  * name: Conditional
+  * symbol: () parentheses
+  *
+  * Identifier
+  * ==========
+  * name: Boolean
+  * symbol: true
+  *
+  * Operator
+  * ========
+  * name: Block
+  * nickname: Moustache
+  * symbol: { }
+  */
+  //while (condition) {
+      while (true) {
 ```
