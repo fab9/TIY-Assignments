@@ -23,7 +23,19 @@ var board = [
 ];
 
 
-// game begins when Start button is clicked
+
+// access the button
+var startButton = document.getElementById('btn-start');
+// add an event listener to the start button
+startButton.addEventListener('click', clickHandler, false);
+// when the start button is clicked, the event listener runs a fn called clickHandler
+function clickHandler() {
+	// render board's starting position
+	board;
+	console.log("Button clicked");
+
+}
+
 // Turn1: move pawn from   board[6][3] => board[4][3]
 //                         board[6][3] => empty
 // if (confirm('Play turn 1')){
