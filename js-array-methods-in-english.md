@@ -1,18 +1,18 @@
 #JavaScript Methods
 ##Mutators
-###`Array.prototype.copyWithin()`  
->copy the elements starting at index 0 of whichever array you give me,
-and paste them starting at index 0 of the *new* array.
+###Array.prototype.copyWithin()  
+"Copy the elements starting at index 0 of whichever array you give me,
+and paste them starting at index 0 of the *new* array.""
 ```javascript
 [1, 2, 3, 4, 5].copyWithin(0, 3);
 // [4, 5, 3, 4, 5]
 ```
-###`Array.prototype.fill()`  
+###Array.prototype.fill()  
 Fills all the elements of an array from(an optional) start to an end index.
 ```javascript
 [1, 2, 3].fill(4, 1, 2)         // [1, 4, 3]
 ```
-###`Array.prototype.pop()`  
+###Array.prototype.pop()  
 Removes the last element from an array and returns that element.
 ```javascript
 arr.pop()
@@ -20,7 +20,7 @@ var x = [1,2,3,4,5];
 x.pop() //5
 x === [1,2,3,4];
 ```
-###`Array.prototype.push()`  
+###Array.prototype.push()  
 adds one or more elements to the end of an array and returns the new length of the array.
 ```javascript
 arr.push(element1,element2,...elementX)
@@ -28,14 +28,14 @@ var x = [1,2,3,4,5];
 x.push(6) // 6
 x === [1,2,3,4,5,6];
 ```
-###`Array.prototype.reverse()`  
+###Array.prototype.reverse()  
 ```javascript
 arr.reverse()
 var x = [1,2,3,4,5,6];
 x.reverse() //6,5,4,3,2,1
 x === [6,5,4,3,2,1];
 ```
-###`Array.prototype.shift()`  
+###Array.prototype.shift()  
 removes the first element in the array and returns it, changes the length of the array.
 ```javascript
 arr.shift()
@@ -44,7 +44,7 @@ x.shift() // takes away first element
 x === [5,4,3,2,1];
 ```
 
-###`Array.prototype.sort()`  
+###Array.prototype.sort()  
 Sorts the elements of an array in place and returns the array. (or: sorts the objects in an array by unicode code points.)
 ```javascript
 arr.sort([compareFunction])
@@ -52,7 +52,7 @@ var x = [5,4,3,2,1];
 x.sort() // 1-5
 x === [1,2,3,4,5];
 ```
-###`Array.prototype.splice()`  
+###Array.prototype.splice()  
 Changes the content of an array adding new elements and removing old elements.
 ```javascript
 array.splice(index, howMany[, element1[, ...[, elementN]]]) array.splice(index)
@@ -60,7 +60,7 @@ var x = [1,2,3,4,5];
 x.splice(0,2) // 1 and 3
 x === [2,4,5];
 ```
-###`Array.prototype.unshift()`  
+###Array.prototype.unshift()  
 Adds one or more elements to the front of an array and returns the new length of the array.  
 ```javascript
 arr.unshift([element1[,element2[, element3]]])
@@ -71,7 +71,7 @@ x === [1,2,3,4,5]
 ##Accessor methods
 These methods do not modify the array and return some representation of the array.
 
-###`Array.prototype.concat()`  
+###Array.prototype.concat()  
 Given: 2 or more arrays  
 Returns: a new array  
 
@@ -85,12 +85,12 @@ console.log(newLongArray);
 // [1, 2, 3 4, 5, 6]
 ```
 
-###`Array.prototype.contains()`  
+###Array.prototype.contains()  
 Determines whether an array contains a certain element, returning true or false as appropriate.  
 ```javascript
 arr.contains(searchElement[, fromIndex])
 ```
-###`Array.prototype.join()`  
+###Array.prototype.join()  
 Given: one arrays  
 Returns: all elements of the array into a string  
 
@@ -103,8 +103,8 @@ var result = food.join(" ,");
 console.log(result);
 // apple, coffee
 ```
-### Array.prototype.slice()
-returns a portion of an array into a new array object
+###Array.prototype.slice()
+Returns a portion of an array into a new array object
 ```javascript
 arr.slice([begin[,end]])
 var x = [1,2,3,4,5,6];
@@ -112,12 +112,12 @@ x.slice(0,2) // 1,2
 x === [1,4,5,6];
 ```
 
-### Array.prototype.toSource()
-returns a string representing the source code of the array.
+###Array.prototype.toSource()
+Returns a string representing the source code of the array.
 ```javascript
 arr.toSource
 ```
-###`Array.prototype.toString()`  
+###Array.prototype.toString()  
 Given: an array  
 Returns: a string made up of the elements in the array  
 
@@ -131,12 +131,12 @@ console.log(result);
 // apple,orange
 ```
 
-### Array.prototype.toLocaleString()
-returns a string representing the elements of the array using the locale string method.
+###Array.prototype.toLocaleString()
+Returns a string representing the elements of the array using the locale string method.
 ```javascript
 arr.toLocaleString()
 ```
-###`Array.prototype.indexOf()`  
+###Array.prototype.indexOf()  
 Given: a value, looks for that value inside an array and...  
 Returns: the value's index *if* it exists, or -1 if it doesn't exist
 
@@ -145,7 +145,6 @@ Returns: the value's index *if* it exists, or -1 if it doesn't exist
 if (months.indexOf('February') != -1) {
   ```
   [-src](http://my.safaribooksonline.com/book/programming/javascript/9780132905848/6dot-complex-variable-types/ch06lev1sec2)
-
 
 Examples:
 ```javascript
@@ -171,7 +170,7 @@ index = array.indexOf(2, -1);
 index = array.indexOf(2, -3);
 // index is 0
 ```
-###`Array.prototype.lastIndexOf()`  
+###Array.prototype.lastIndexOf()  
 Returns the last index at which a given element can be found in the array or -1 if its not in the array.
 ```javascript
 arr.lastIndexOf(searchElement[, fromIndex = arr.length])
@@ -180,18 +179,65 @@ x.lastIndexOf('name')//2
 x === ['beer', 'food', 'name'];
 ```
 #Iterators
-###`Array.prototype.forEach()`
-Calls a function for each element in the array.
-###`Array.prototype.entries()`
-Returns a new Array Iterator object that contains the key/value pairs for each index in the array.  
-###`Array.prototype.every()`  
-Returns true if every element in this array satisfies the provided testing function.  
-###`Array.prototype.some()`
-Returns true if at least one element in this array satisfies the provided testing function.  
-###`Array.prototype.filter()`
-Given: an array and a function to test each element in the array  
-Returns: a new array with all the elements that pass the test implemented by the given function
+###Array.prototype.forEach()
+Executes a provided function once per array element
+```javascript
+arr.forEach(callBack[, thisArg])
+var count = 0;
+var x = ['beer','food','name'];
+x.forEach(function(index){
+  if(index === 'food')
+  count++;
+  return cound;
+})
+console.log(count) // 1
+```
 
+###Array.prototype.entries()
+Returns a new array Iteration object that contains the key/value pairs for each index in the array.
+```javascript
+arr.entries
+```
+
+###Array.prototype.every()
+Test whether all elements in the array pass the test implement by the provided function.
+```javascript
+arr.every(callback[, thisArg])
+var THRESHOLD = 4;
+var test;
+var x = [1,2,3,4,5];
+
+test = x.every(function(element,index,array){
+  console.log('element:', element);
+  if (element <= THRESHOLD){
+    return true;
+  }
+  return false;
+})
+console.log('test:', test)//element:1, element:2, element:3, element:4, element:5, test:false
+```
+
+###Array.prototype.some()
+Test whether some element in the array passes the test implement by the provided function.
+```javascript
+arr.some(callback[, thisArg])
+```
+
+###Array.prototype.filter()
+Creates a new array with all elements that pass the test implement by the provided function.
+```javascript
+arr.filter(callback[, thisArg])
+var THRESHOLD = 3;
+var test;
+var x = [1,2,3,4,5];
+test = x.filter(function(element,index, array){
+  if(element <= THRESHOLD){
+    return true;
+  }
+  return false;
+});
+console.log('test', test)// [1,2,3]
+```
 Examples:
 ```javascript
 var numbers = [1, 23, 55, 3, 4];
@@ -204,22 +250,57 @@ var filtered = numbers.filter(lessThanTen);
 console.log(filtered);
 // [1, 3, 4]
 ```
-###`Array.prototype.find()`
-Returns the found value in the array, if an element in the array satisfies the provided testing function or undefined if not found.  
-###`Array.prototype.findIndex()`
-Returns the found index in the array, if an element in the array satisfies the provided testing function or -1 if not found.  
-###`Array.prototype.keys()`
-Returns a new Array Iterator that contains the keys for each index in the array.  
-###`Array.prototype.map()`
-Creates a new array with the results of calling a provided function on every element in this array.  
-###`Array.prototype.reduce()`
-Apply a function against an accumulator and each value of the array (from left-to-right) as to reduce it to a single value.  
-###`Array.prototype.reduceRight()`
-Apply a function against an accumulator and each value of the array (from right-to-left) as to reduce it to a single value.  
+###Array.prototype.find()
+Returns a value in the array if its not found undefined is return
+```javascript
+arr.find(callback[, thisArg])
+```
 
+###Array.prototype.findIndex()
+Returns an index in the array if not found -1 is return
+```javascript
+arr.findIndex(callback[, thisArg])
+```
+
+###Array.prototype.keys()
+Returns a new array Iteration that contains the keys for each index in the array.
+```javascript
+arr.keys
+```
+
+###Array.prototype.map()
+Creates a new array with the results of calling a provided function on every element in the array.
+```javascript
+arr.map(callback[,thisArg])
+var num = [11,29,2014];
+var dates = num.map(function(numm){
+  return numm + 60;
+});
+console.log(num) // 11,29,2014
+console.log(dates) // 71,89,2074
+```
+
+###Array.prototype.reduce()
+Applies a function against an accumulator and each value of the array from left to right has been reduced to a single value.
+```javascript
+arr.reduce(callback[, initialValue])
+var num = [11,29,2014].reduce(function(a,b){
+  return a/b;
+});
+console.log(num) //0.000188843037
+```
+
+###Array.prototype.reduceRight()
+Applies a function against an accumulator and each value of the array from right to left has been reduced to a single value.
+```javascript
+arr.reduceRigh(callback[,initialValue])
+var num = [11,29,2013].reduce(function(a,b){
+  return a/b;
+});
+console.log(num) //6.3102448275
+```
 
 ##Generics
-
 ###Array.from()   ??????????????
 It creates a new array from an existing array.
 
@@ -227,7 +308,7 @@ Array.from("Friday is a fun day at the Iron Yard.")
 
 Example:
 
-###`Array.isArray()`  
+###Array.isArray()
 Given: an array
 Then: it should return true, if not an array then false.
 
