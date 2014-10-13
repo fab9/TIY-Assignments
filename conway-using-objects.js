@@ -1,4 +1,9 @@
 var game = {
+        board: [
+           [ false, true,  false ],
+           [ false, true,  false ],
+           [ false, true,  false ],
+        ],
     // board: undefined,
     newBoard: function(){
         return [
@@ -47,7 +52,7 @@ var game = {
             });
 
             return neighbors;
-    }// neighborsOf
+    },// neighborsOf
 
 
     tick: function(){ /* accepts nothing, alters `game.board` */
@@ -66,11 +71,6 @@ var game = {
 
 
 
-     *   this.board === [
-     *      [ false, true,  false ],
-     *      [ false, true,  false ],
-     *      [ false, true,  false ],
-     *   ];
     // *
     //  * WARNING: This is VOODOO MAGIC...
     //  *
