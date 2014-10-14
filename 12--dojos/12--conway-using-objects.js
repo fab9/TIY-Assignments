@@ -71,7 +71,7 @@ var game = {
 
 
 
-    // *
+    // * (below is the interface)
     //  * WARNING: This is VOODOO MAGIC...
     //  *
     //  * GIVEN:
