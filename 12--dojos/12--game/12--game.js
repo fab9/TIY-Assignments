@@ -18,7 +18,7 @@ function Game(){
  * @return Boolean if cell at {x,y} is alive
  */
 Game.prototype.isAlive = function(x, y){
-
+    return this.board[x][y] === true;
 }
 
 /**
@@ -29,7 +29,7 @@ Game.prototype.isAlive = function(x, y){
  * @return undefined
  */
 Game.prototype.setAlive = function(x, y){
-
+    this.board[x][y] = true;
 }
 
 /**

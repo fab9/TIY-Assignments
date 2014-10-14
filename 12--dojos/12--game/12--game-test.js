@@ -1,4 +1,4 @@
-var Game = require('./game.js');
+var Game = require('./12--game.js');
 
 var assert = require('chai').assert;
 
@@ -11,14 +11,45 @@ it('should play the game', function(){
     [ false, false, false ],
   ]);
 
-/* Uncomment me to kill tests...
-  game.setAlive(0,1);
-  game.setAlive(1,1);
-  game.setAlive(2,1);
+// test that the functions are indeed functions
+describe('should be functions', function(){
+    it('should be a function', function(){
+      assert.isFunction(Game.prototype.isAlive);
+      assert.isFunction(Game.prototype.setAlive);
+      assert.isFunction(Game.prototype.setDead);
+      assert.isFunction(Game.prototype.tick);
+      assert.isFunction(Game.prototype.rules);
+    });
+});
 
-  assert.isTrue(game.isAlive(0, 1));
-  assert.isTrue(game.isAlive(1, 1));
-  assert.isTrue(game.isAlive(2, 1));
+// test that isAlive() returns a Boolean if cell at {x,y} is alive
+// describe('isAlive()', function(){
+//     it('returns a Boolean', function(){
+//       assert.isBoolean(game.isAlive(0, 1));
+
+//     });
+// });
+
+
+
+describe('game.setAlive()', function(){
+    it('should make these cells alive', function(){
+      assert.isUndefined(game.setAlive(0,1));
+      assert.isUndefined(game.setAlive(1,1));
+      assert.isUndefined(game.setAlive(2,1));
+    });
+});
+
+describe('cell is alive right?', function(){
+    it('should ensure cells are alive', function(){
+      assert.isTrue(game.isAlive(0, 1));
+      assert.isTrue(game.isAlive(1, 1));
+      assert.isTrue(game.isAlive(2, 1));
+    });
+});
+
+/* Uncomment me to kill tests...
+
 
   assert.equal(game.display(),
     "+---+---+---+\n" +
