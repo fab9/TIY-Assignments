@@ -40,7 +40,7 @@ Game.prototype.setAlive = function(x, y){
  * @return undefined
  */
 Game.prototype.setDead = function(x, y){
-
+    this.board[x][y] = false;
 }
 
 /**

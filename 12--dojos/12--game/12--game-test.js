@@ -48,20 +48,23 @@ describe('cell is alive right?', function(){
     });
 });
 
-/* Uncomment me to kill tests...
 
-
-  assert.equal(game.display(),
-    "+---+---+---+\n" +
-    "|   | X |   |\n" +
-    "+---+---+---+\n" +
-    "|   | X |   |\n" +
-    "+---+---+---+\n" +
-    "|   | X |   |\n" +
-    "+---+---+---+\n"
-  );
+describe('Starting position 1 passes', function(){
+    it('should ensure that starting position 1 works', function(){
+      assert.equal(game.display(),
+        "+---+---+---+\n" +
+        "|   | X |   |\n" +
+        "+---+---+---+\n" +
+        "|   | X |   |\n" +
+        "+---+---+---+\n" +
+        "|   | X |   |\n" +
+        "+---+---+---+\n"
+      );
+    });
+});
 
   game.tick();
+/* Uncomment me to kill tests...
 
   assert.isTrue(game.isAlive(1,0));
   assert.isTrue(game.isAlive(1,1));
