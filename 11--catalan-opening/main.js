@@ -1,17 +1,4 @@
-/** functions/variables I might need:
-* startGame
-* endGame
-* currentTurn
-* gameInProgress
-* currentBoard
-* var gameFinished = false
-* nextTurn or playGame?
-* turnsRemaining - how many turns until the game finishes? Set to 9
-* turnsTaken - set to 0
-*/
-
-// starting positions
-var startingBoard = [
+var moves = [
   ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'], // 0
   ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'], // 1
   [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], // 2
@@ -22,76 +9,93 @@ var startingBoard = [
   ['r', 'r', 'b', 'q', 'k', 'b', 'n', 'r'] // 7
  // 0,   1,   2,   3,   4,   5,   6,   7
 ];
-
-var wP = p;
-var wR = r;
-var wB = b;
-var wK = k;
-var wQ = q;
-var wN = n;
-var bP = P;
-var bR = R;
-var bB = B;
-var bK = K;
-var bQ = Q;
-var bN = N;
-
-//The size of each cell
-var SIZE = 40;
-
-//Find the number of rows and columns
-var ROWS = startingBoard.length;
-var COLUMNS = startingBoard[0].length;
-
-// access the button
-var startButton = document.getElementById('btn-start');
-// add an event listener to the start button
-startButton.addEventListener('click', clickHandler, false);
-// when the start button is clicked, the event listener runs a fn called clickHandler
-function clickHandler() {
-	// render board's starting position
-	board;
-	console.log("Button clicked"); // temp code
-
 }
 
+// Note: turns are commands, therefore we're not expecting it to return anything.
 // Turn1: move pawn from   board[6][3] => board[4][3]
-//                         board[6][3] => empty
-// if (confirm('Play turn 1')){
-//   board[6][3] = board[4][3];
-//   board[6][3];
-//   console.log(board);
-// };
+//                         board[6][3] => ' ',
 //
-// click Next move button
-// Turn2: move knight from board[0][6] => board[2][5]
-//                         board[0][6] => empty
-// click Next move button
+var moves = {
+  // move1
+  step1: function(){
+    board[4][3] = board[6][3];
+    board[6][3] = ' ';
+  },
+
+};
+
+  // move2
+  step2: function(){
+    board[0][6] = board[2][5];
+    board[0][6] = ' ';
+  },
+//
+
+  // move3
+  step3: function(){
+    board[6][4] = board[6][2];
+    board[6][2] = ' ';
+  },
 // Turn3: move pawn from board[6][2] => board[6][4]
-//                         board[6][2] => empty
-// click Next move button
+//                         board[6][2] => ' ',
+//
+  // move4
+  step4: function(){
+    board[2][4] = board[1][4];
+    board[1][4] = ' ';
+  },
 // Turn4: move pawn from board[1][4] => board[2][4]
-//                         board[1][4] => empty
-// click Next move button
+//                         board[1][4] => ' ',
+
+  // move5
+  step5: function(){
+    board[4][6] = board[6][6];
+    board[6][6] = ' ';
+  },
 // Turn5: move pawn from board[6][6] => board[4][6]
-//                         board[6][6] => empty
-// click Next move button
+//                         board[6][6] => ' ',
+
+  // move6
+  step6: function(){
+    board[3][3] = board[1][3];
+    board[1][3] = ' ';
+  },
 // Turn6: move pawn from board[1][3] => board[3][3]
-//                         board[1][3] => empty
-// click Next move button
+//                         board[1][3] => ' ',
+
+  // move7
+  step7: function(){
+    board[6][6] = board[7][5];
+    board[7][5] = ' ';
+  },
 // Turn7: move bishop from board[7][5] => board[6][6]
-//                         board[7][5] => empty
-// click Next move button
+//                         board[7][5] => ' ',
+
+  // move8
+  step8: function(){
+    board[1][4] = board[0][5];
+    board[0][5] = ' ';
+  },
 // Turn8: move bishop from board[0][5] => board[1][4]
-//                         board[0][5] => empty
-// click Next move button
+//                         board[0][5] => ' ',
+
+  // move9
+  step9: function(){
+    board[5][5] = board[7][6];
+    board[7][6] = ' ';
+  },
 // Turn9: move knight from board[7][6] => board[5][5]
-//                         board[7][6] => empty
+//                         board[7][6] => ' ',
+//
 // game ends
 
 
 // ------- Tests
+describe('Testing the board state', function(){
+  it('Move 1', function(){
 
+  })
+})
 
 
 
