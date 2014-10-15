@@ -48,9 +48,9 @@ Game.prototype.setDead = function(x, y){
  */
 Game.prototype.tick = function(){
   // Start with a fresh board...
-  startingPosition1 = this.board;
+  freshBoard = new board();
   // Apply `rules` to each cell in the current board...
-  startingPosition1.forEach.rules;
+
   // Record the result of `rules` in the new board...
   // Update the current board to match the new board.
 }
