@@ -48,10 +48,12 @@ Game.prototype.setDead = function(x, y){
  */
 Game.prototype.tick = function(){
   // Start with a fresh board...
-  freshBoard = new board();
+  board = new board();
   // Apply `rules` to each cell in the current board...
-
+  this.board.rules();
+  console.log(board);
   // Record the result of `rules` in the new board...
+
   // Update the current board to match the new board.
 }
 
@@ -59,58 +61,59 @@ Game.prototype.tick = function(){
  * What goes here?
  */
 Game.prototype.rules = function(){
+    // -----------------
+     /**
+     * @param Array board of Array of Boolean (except for testing)
+     * @param Number x coordinate of cell
+     * @param Number y coordinate of cell
+     * @return Array of values from `board` that are neighbors of cell(`x`, `y`)
+     */
+    neighborsOf :   function(board, x, y){
+                    var diffs = [ -1, 0, +1 ],
+                    neighbors = [ ];
 
-/** ---------------
- * @param Boolean cell
- * @param Array neighbors
- * @return Boolean state of cell
- */
-function conway(cell, neighbors){
-    var alive = 0;
-    neighbors.forEach(function(neighbor){
-        if ( neighbor ){
-            alive++;
-        }
-    });
+                    // Apply each `diff` to the `x` coordinate...
+                    diffs.forEach(function(dX){
+                        // If no element exists, skip...
+                        if ( !board[x + dX] ) return;
 
-    if ( cell && alive === 2 ){
-        return true;
-    }
-    if ( alive === 3 ){
-        return true;
-    }
-    return false;
-}
-// -----------------
- /**
- * @param Array board of Array of Boolean (except for testing)
- * @param Number x coordinate of cell
- * @param Number y coordinate of cell
- * @return Array of values from `board` that are neighbors of cell(`x`, `y`)
- */
-function neighborsOf(board, x, y){
-    var diffs = [ -1, 0, +1 ],
-        neighbors = [ ];
+                        // Apply the `diff` to the `y` coordinate...
+                        diffs.forEach(function(dY){
+                            // skip yourself...
+                            if ( dX === 0 && dY === 0 ) return;
 
-    // Apply each `diff` to the `x` coordinate...
-    diffs.forEach(function(dX){
-        // If no element exists, skip...
-        if ( !board[x + dX] ) return;
+                            // If no element exists, skip...
+                            if ( !board[x + dX][y + dY] ) return;
 
-        // Apply the `diff` to the `y` coordinate...
-        diffs.forEach(function(dY){
-            // skip yourself...
-            if ( dX === 0 && dY === 0 ) return;
+                            neighbors.push(board[x + dX][y + dY]);
+                        });
+                    });
 
-            // If no element exists, skip...
-            if ( !board[x + dX][y + dY] ) return;
+                    return neighbors;
+                    },
 
-            neighbors.push(board[x + dX][y + dY]);
-        });
-    });
+    /** ---------------
+     * @param Boolean cell
+     * @param Array neighbors
+     * @return Boolean state of cell
+     */
+    conway        : function(cell, neighbors){
+                    var alive = 0;
+                    neighbors.forEach(function(neighbor){
+                        if ( neighbor ){
+                            alive++;
+                        }
+                    });
 
-    return neighbors;
-}
+                    if ( cell && alive === 2 ){
+                        return true;
+                    }
+                    if ( alive === 3 ){
+                        return true;
+                    }
+                    return false;
+                }
+
 
 
 }// rules
