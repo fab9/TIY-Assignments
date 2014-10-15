@@ -63,9 +63,16 @@ describe('Starting position 1 passes', function(){
     });
 });
 
-  game.tick();
-/* Uncomment me to kill tests...
 
+game.tick()
+
+
+describe('Update the board', function(){
+  it('should update cell states', function(){
+    assert.equal();
+  })
+}
+/* Uncomment me to kill tests...
   assert.isTrue(game.isAlive(1,0));
   assert.isTrue(game.isAlive(1,1));
   assert.isTrue(game.isAlive(1,2));

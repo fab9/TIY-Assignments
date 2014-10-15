@@ -48,7 +48,9 @@ Game.prototype.setDead = function(x, y){
  */
 Game.prototype.tick = function(){
   // Start with a fresh board...
+  startingPosition1 = this.board;
   // Apply `rules` to each cell in the current board...
+  startingPosition1.forEach.rules;
   // Record the result of `rules` in the new board...
   // Update the current board to match the new board.
 }
@@ -58,7 +60,60 @@ Game.prototype.tick = function(){
  */
 Game.prototype.rules = function(){
 
+/** ---------------
+ * @param Boolean cell
+ * @param Array neighbors
+ * @return Boolean state of cell
+ */
+function conway(cell, neighbors){
+    var alive = 0;
+    neighbors.forEach(function(neighbor){
+        if ( neighbor ){
+            alive++;
+        }
+    });
+
+    if ( cell && alive === 2 ){
+        return true;
+    }
+    if ( alive === 3 ){
+        return true;
+    }
+    return false;
 }
+// -----------------
+// /**
+ * @param Array board of Array of Boolean (except for testing)
+ * @param Number x coordinate of cell
+ * @param Number y coordinate of cell
+ * @return Array of values from `board` that are neighbors of cell(`x`, `y`)
+ */
+function neighborsOf(board, x, y){
+    var diffs = [ -1, 0, +1 ],
+        neighbors = [ ];
+
+    // Apply each `diff` to the `x` coordinate...
+    diffs.forEach(function(dX){
+        // If no element exists, skip...
+        if ( !board[x + dX] ) return;
+
+        // Apply the `diff` to the `y` coordinate...
+        diffs.forEach(function(dY){
+            // skip yourself...
+            if ( dX === 0 && dY === 0 ) return;
+
+            // If no element exists, skip...
+            if ( !board[x + dX][y + dY] ) return;
+
+            neighbors.push(board[x + dX][y + dY]);
+        });
+    });
+
+    return neighbors;
+}
+
+
+}// rules
 
 /**
  * WARNING: This is VOODOO MAGIC...
