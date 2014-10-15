@@ -1,4 +1,5 @@
 #05--Reading-Javascript
+##Ex 1
 ```javascript
 function _previousStep() {
     this._direction = 'backward';
@@ -12,8 +13,7 @@ function _previousStep() {
 * Operators: `===`
 * Booleans: `false`
 
----
-
+##Ex 2
 ```javascript
 var nextStep = this._introItems[--this._currentStep];
     if (typeof (this._introBeforeChangeCallback) !== 'undefined') {
@@ -24,8 +24,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Variable: `nextStep`
 * Operators:`!==`
 
----
-
+##Ex 3
 ```javascript
    var helperLayer = targetElement.querySelector('.introjs-helperLayer');
     if (helperLayer) {
@@ -37,8 +36,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Variable: `helperLayer`
 * Operators: `=`
 
----
-
+##Ex 4
 ```javascript
   var fixParents = document.querySelectorAll('.introjs-fixParent');
 ```
@@ -46,8 +44,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Variable: `fixParens`
 * Operators: `=`
 
----
-
+##Ex 5
 ```javascript
  if (fixParents && fixParents.length > 0) {
 ```
@@ -55,16 +52,14 @@ var nextStep = this._introItems[--this._currentStep];
 * Value: Number 0
 * Operators: `>`
 
----
-
+##Ex 6
 ```javascript
     this._direction = 'forward';
 ```
 
 * Variable: `this._direction`
 
----
-
+##Ex 7
 ```javascript
       for (var i = fixParents.length - 1; i >= 0; i--) {
 ```
@@ -73,8 +68,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Value: Number 0, 1
 * Operators: `=`, `-`,`>`
 
----
-
+##Ex 8
 ```javascript
         var innerLi    = document.createElement('li');
         var anchorLink = document.createElement('a');
@@ -83,8 +77,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Variable: `innerLi`,`anchorLink`
 * Value: Number 0
 
----
-
+##Ex 9
 ```javascript
       if (top < 0 || targetElement.element.clientHeight > winHeight) {
         window.scrollBy(0, top - 30);
@@ -94,8 +87,7 @@ var nextStep = this._introItems[--this._currentStep];
 * Value: Number 0, 30
 * Operators: `-`, `||`, `>`, `<`
 
----
-
+##Ex 10
 ```javascript
  while (parentElm != null) {
 ```
@@ -105,8 +97,8 @@ var nextStep = this._introItems[--this._currentStep];
 * Operators: `=`, `!`
 
 #06--Coding-Dojo
-You need 10 more (unique) examples and should include conditionals, loops, and lists (arrays).  
-##Ex 1
+You need 10 more (unique) examples and should include conditionals, loops, and lists (arrays).
+##Ex 11
 ```javascript
  /**
    * Keyword
@@ -151,7 +143,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
     // if ( condition ) expression;
     if (typeof exports === 'object') {
 ```
-##Ex 2
+##Ex 12
 ```javascript
 /**
   * Keyword
@@ -212,7 +204,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
    // statement
     for (var z = 0; z < introItems.length; z++) {
 ```
-##Ex 3
+##Ex 13
 ```javascript
  /**
    * Variable
@@ -240,7 +232,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
    */
    var tempIntroItems = [
 ```
-##Ex 4
+##Ex 14
 ```javascript
   /**
     * Variable
@@ -268,7 +260,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
     */
     var fixParents = [
 ```
-##Ex 5
+##Ex 15
 ```javascript
   /**
     * Keyword
@@ -290,7 +282,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
     // switch (expression) {
     switch (currentTooltipPosition) {
 ```
-##Ex 6
+##Ex 16
 ```javascript
   /**
     * Variable
@@ -318,7 +310,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
     */
       var allIntroSteps = [
 ```
-##Ex 7
+##Ex 17
 ```javascript
   /**
     * Variable
@@ -346,7 +338,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
     */
     var finishedSteps = [
 ```
-##Ex 8
+##Ex 18
 ```javascript
   /**
     * Variable
@@ -374,7 +366,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
     */
     var stepsRemaining = [
 ```
-##Ex 9
+##Ex 19
 ```javascript
 /**
   * Keyword
@@ -409,7 +401,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
   // if ( condition ) expression;
   if (step > 0) {
 ```
-##Ex 10
+##Ex 20
 ```javascript
 /**
   * Keyword
@@ -436,22 +428,23 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
   //while (condition) {
       while (true) {
 ```
----
-
+##Ex 21
 ```javascript
 // Variable Storing a Function
   name: Calculator
   Value: Function
   Operands:  ()
 ```
-```javascript  
+##Ex 22
+```javascript
 // Variable
   Name: self
   Value: this
   Symbol: =
   Keyword: this
 ```
-```javascript  
+##Ex 23
+```javascript
 // Variable storing a Function
   Name: number
   Value: function
@@ -460,21 +453,24 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
   Symbol: =
   Keyword: self
 ```
-```javascript  
+##Ex 25
+```javascript
 // if statement
   Name: isShowingResult
   Value: none
   Operands: ( )
   Keyword: self
 ```
-```javascript  
+##Ex 26
+```javascript
 // if statement
   Name: button
   Value: equals to decimalMark and display
   Symbol: ==
   Keywords: self
 ```
-```javascript  
+##Ex 27
+```javascript
 // Variable storing a Function
   Name: negate
   Value: function
@@ -482,7 +478,8 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
   Symbol: =
   Keyword: self
 ```
-```javascript  
+##Ex 28
+```javascript
 // Variable storing a Function
   Name: backspace
   Value: function
@@ -490,6 +487,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
   Symbol: =
   Keyword: self
 ```
+##Ex 29
 ```javascript
 // Variable storing a Function
   Name: clearDisplay
@@ -498,6 +496,7 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
   Symbol: =
   Keyword: self
 ```
+##Ex 30
 ```javascript
 // Variable storing a function
   Name: keycallback
