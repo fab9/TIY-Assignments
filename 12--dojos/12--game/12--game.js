@@ -82,7 +82,7 @@ function conway(cell, neighbors){
     return false;
 }
 // -----------------
-// /**
+ /**
  * @param Array board of Array of Boolean (except for testing)
  * @param Number x coordinate of cell
  * @param Number y coordinate of cell
