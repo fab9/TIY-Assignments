@@ -88,7 +88,7 @@ var moves = {
 //                         board[7][6] => ' ',
 //
 // game ends
-
+}
 
 console.log(board.join('\n'));
 // ------- Tests
@@ -97,9 +97,8 @@ var assert = require('chai').assert
 var expect = require('chai').expect
 
 
-
 describe('Testing the board state', function(){
-  it('After Move 1, the board should look like:', function(){
+  it('After move 1, the board should look like:', function(){
     moves.step1();
 
     assert.deepEqual(board,
@@ -143,7 +142,7 @@ describe('Testing the board state', function(){
       ['p','p','p',' ','p','p','p','p'],
       ['r','n','b','q','k','b',' ','r'] ]
     )
-  })
+  });
   it('after Move 4, the board should look like:', function(){
     assert.deepEqual(board,
       [
@@ -178,8 +177,7 @@ describe('Testing the board state', function(){
   // it('should be a bishop at board[6][6]', function(){
   //   assert.equal(moves.step17, board[6][6]);
   // })
-})
-
+//
 
 
 
