@@ -14,12 +14,31 @@ var should = require('chai').should();
 
 var sequence = [1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
 
-function filterEvens(fib) {
+var filterEvens = function(fib) {
   if(fib % 2 === 0) return fib;
 };
+
+var evens = sequence.filter(filterEvens);
+console.log(evens);
+
+var sumEvens = function(arrEvens) {
+  console.log(arrEvens);
+  return arrEvens;
+
+};
+
+
+
 
 describe('filterEvens function', function(){
   it('should return even numbers', function(){
       expect(filterEvens(2)).to.equal(2);
   });
 });
+
+describe('sumEvens function', function(){
+  it('should return fibEvenArray', function(){
+      expect(sumEvens([2, 4, 8])).to.equal([2, 4, 8]);
+  });
+});
+
