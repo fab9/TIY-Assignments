@@ -122,9 +122,36 @@ function conway(cell, neighbors) {
 
 
 
-
-
 /** === TEST CODE === **/
+describe('Functions are in fact functions', function(){
+
+  it('should have functions', function(){
+    assert(game.newBoard);
+    assert(game.rules);
+    assert(game.neighborsOf);
+    assert(game.tick);
+  });
+}); // END describe(newBoard)
+
+describe('Rules unit tests', function(){
+
+
+
+  it('should NOT generate a new cell if there are fewer than 3 neighbors', function() {
+      // test(conway(false, []), false);
+      // test(conway(false,[true]), false);
+      // test(conway(false, [true, true]), false);
+      // test(conway(false, [false, false, false]), false);
+  });
+
+//   it('should generate a new cell if there are exactly 3 neighbors', function() {
+//     test(conway(false, [true, true, true]), true);
+//   });
+}) // END describe(rules)
+
+
+
+
 // David's rules tests
 // describe('generation rule', function() {
 
