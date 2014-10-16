@@ -21,14 +21,31 @@ var should = require('chai').should();
  //
  //
  //
-var threeArray = [ ];
+var ourLimit = 1000;
 
-function multiplyByThree() {
-  return 3;
+function multiplyByThree(ourLimit) {
+  var threeArray = [ ];
+  var multiple;
+
+  for (var i = 1; i <= ourLimit; i++) {
+    // if the result of i *3 is > ourLimit, break
+
+    multiple = i * 3;
+
+    if (multiple < ourLimit) {
+      threeArray.push(multiple);
+    }
+  }
+
+  return threeArray;
 };
 
 describe('Function multiplyByThree', function(){
   it('should be a function', function(){
       assert.typeOf(multiplyByThree, 'function');
   });
+  it('should return an array of multiples of three', function(){
+      assert.deepEqual(multiplyByThree(10), [3, 6, 9]);
+  });
 });
+
