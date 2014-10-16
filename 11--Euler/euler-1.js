@@ -29,6 +29,6 @@ function multiplyByThree() {
 
 describe('Function multiplyByThree', function(){
   it('should be a function', function(){
-      assert.typeof(multiplyByThree, 'function');
+      assert.typeOf(multiplyByThree, 'function');
   });
 });
