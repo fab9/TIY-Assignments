@@ -148,20 +148,19 @@ describe('Constructor functions', function () {
 });
 
 // test suite for Chess object constructor
-describe('Chess', function () {
-  describe('instance', function () {
-    it('should have an empty starting board', function () {
+describe('New game', function () {
+  describe(' ', function () {
+    it('should have board with pieces in starting positions', function () {
       var chess = new Chess();
-      assert.deepEqual(board,
-      [
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '] ]
+      assert.deepEqual(board, [
+        ['R','N','B','Q','K','B','N','R'],
+        ['P','P','P','P','P','P','P','P'],
+        [' ',' ',' ',' ',' ',' ',' ',' '],
+        [' ',' ',' ',' ',' ',' ',' ',' '],
+        [' ',' ',' ',' ',' ',' ',' ',' '],
+        [' ',' ',' ',' ',' ',' ',' ',' '],
+        ['p','p','p','p','p','p','p','p'],
+        ['r','n','b','q','k','b','n','r'] ]
       );
     });
 
