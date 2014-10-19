@@ -1,18 +1,4 @@
 /** === PRODUCTION CODE === **/
-// game objects
-var rB = new Piece('Rook', 'black');
-var nB = new Piece('Knight', 'black');
-var bB = new Piece('Bishop', 'black');
-var qB = new Piece('Queen', 'black');
-var kB = new Piece('King', 'black');
-var pB = new Piece('Pawn', 'black');
-
-var rW = new Piece('Rook', 'white');
-var nW = new Piece('Knight', 'white');
-var bW = new Piece('Bishop', 'white');
-var qW = new Piece('Queen', 'white');
-var kW = new Piece('King', 'white');
-var pW = new Piece('Pawn', 'white');
 
 var board = [
       [' ',' ',' ',' ',' ',' ',' ',' '],
@@ -25,12 +11,6 @@ var board = [
       [' ',' ',' ',' ',' ',' ',' ',' ']
     ];
 
-function startingPositions(board) {
-  board[0].push( rB, nB, bB, qB, kB, pB ),
-  board[1].push( pB, pB, pB, pB, pB, pB ),
-  board[6].push( pW, pW, pW, pW, pW, pW ),
-  Woard[7].push( rW, nW, WW, qW, kW, pW )
-};
 
 /**
  * Function Definition: Chess()
@@ -90,12 +70,10 @@ Chess.prototype = {
 //  * @property Number x coordinate
 //  * @property Number y coordinate
 //  */
-// function Position(x, y) {
-//   this.x = x;
-//   this.y = y;
-// }
-
-
+function Position(x, y) {
+  this.x = x;
+  this.y = y;
+}
 
 // *
 //  * Function Definition: Piece()
@@ -114,23 +92,44 @@ function Piece(name, color) {
 Piece.prototype = {
   constructor: Piece,
 
-  getName() = function(argument) {
-    // body...
-  };
+  getName:  function() {
+    return this.name;
+  },
 
-  getColor() = function(argument) {
+  getColor: function() {
     // body...
-  };
+  },
 
-  setPosition() = function(position) {
+  setPosition: function(position) {
+
+  },
+
+  toString: function() {
     // body...
   }
 
-  toString() = function() {
-    // body...
-  }
+}// END Piece.prototype methods
 
-}// END Piece.prototype
+// game objects
+var rB = new Piece('Rook', 'black');
+
+var nB = new Piece('Knight', 'black');
+var bB = new Piece('Bishop', 'black');
+var qB = new Piece('Queen', 'black');
+var kB = new Piece('King', 'black');
+var pB = new Piece('Pawn', 'black');
+
+var rW = new Piece('Rook', 'white');
+var nW = new Piece('Knight', 'white');
+var bW = new Piece('Bishop', 'white');
+var qW = new Piece('Queen', 'white');
+var kW = new Piece('King', 'white');
+var pW = new Piece('Pawn', 'white');
+
+function startingPositions() {
+  rB.setPosition(0, 0);
+  console.log(rB);
+}
 // code to visualize board
 var newGame = new Chess(board);
 console.log(newGame);
