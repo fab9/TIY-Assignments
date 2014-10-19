@@ -1,4 +1,15 @@
 /** === PRODUCTION CODE === **/
+var board = [
+      ['R','N','B','Q','K','B','N','R'],
+      ['P','P','P','P','P','P','P','P'],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      ['p','p','p','p','p','p','p','p'],
+      ['r','n','b','q','k','b','n','r']
+    ];
+
 /**
  * Function Definition: Chess()
  * Sets up a board with Pieces representing an initial chessboard.
@@ -9,16 +20,17 @@
  * @method move(piece, destination)
  * @method opening
  */
-function Chess(board, startingPosition) {
-  this.board = board || "Default board";
+
+function Chess(board) {
+  this.board = board;
 }
 
 Chess.prototype = {
   constructor: Chess,
 
-  getPlayer: function(argument) {
-    // return ???
-  },
+  // getPlayer: function(argument) {
+  //   // return ???
+  // },
 
   display: function() {
     var spacer = '+---+---+---+\n';
@@ -37,13 +49,13 @@ Chess.prototype = {
     + spacer;
   },
 
-  move: function(piece, destination) {
-    // body...
-  },
+  // move: function(piece, destination) {
+  //   // body...
+  // },
 
-  opening: function() {
-    // body...
-  }
+  // opening: function() {
+  //   // body...
+  // }
 };
 
 
@@ -79,8 +91,9 @@ Chess.prototype = {
 // }
 
 
-
-
+// code to visualize board
+var newGame = new Chess();
+console.log(board);
 
 /** === TEST CODE === **/
 var assert = require('chai').assert;
@@ -99,9 +112,19 @@ var chai = require('chai')
 // test suite for Chess object constructor
 describe('Chess', function () {
   describe('constructor', function () {
-    it('should have a default board', function () {
+    it('should have a starting board', function () {
       var chess = new Chess();
-      expect(chess.board).to.equal("Default board");
+      assert.deepEqual(board,
+      [
+      ['R','N','B','Q','K','B','N','R'],
+      ['P','P','P','P','P','P','P','P'],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      ['p','p','p','p','p','p','p','p'],
+      ['r','n','b','q','k','b','n','r'] ]
+      );
     });
   });
 });
