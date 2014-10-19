@@ -10,6 +10,24 @@ var board = [
       [' ',' ',' ',' ',' ',' ',' ',' ']
     ];
 
+function startingPositions () {
+
+}
+// game objects
+var rB = new Piece('Rook', 'black');
+var nB = new Piece('Knight', 'black');
+var bB = new Piece('Bishop', 'black');
+var qB = new Piece('Queen', 'black');
+var kB = new Piece('King', 'black');
+var pB = new Piece('Pawn', 'black');
+
+var rW = new Piece('Rook', 'white');
+var nW = new Piece('Knight', 'white');
+var bW = new Piece('Bishop', 'white');
+var qW = new Piece('Queen', 'white');
+var kW = new Piece('King', 'white');
+var pW = new Piece('Pawn', 'white');
+
 /**
  * Function Definition: Chess()
  * Sets up a board with Pieces representing an initial chessboard.
