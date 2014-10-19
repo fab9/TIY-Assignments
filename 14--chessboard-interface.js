@@ -3,48 +3,48 @@
  * Function Definition: Chess()
  * Sets up a board with Pieces representing an initial chessboard.
  * @type constructor
- * @param {[type]} [varname] [description]
+ * @param board [varname] [description]
  * @method getPlayer
  * @method display
  * @method move(piece, destination)
  * @method opening
  */
-function Chess(board) {
+function Chess(board, startingPosition) {
   this.board = board || "Default board";
 }
 
-// Chess.prototype = {
-//   constructor: Chess,
+Chess.prototype = {
+  constructor: Chess,
 
-//   getPlayer: function(argument) {
-//     // return ???
-//   },
+  getPlayer: function(argument) {
+    // return ???
+  },
 
-//   display: function() {
-//     var spacer = '+---+---+---+\n';
+  display: function() {
+    var spacer = '+---+---+---+\n';
 
-//     return spacer +
-//         // Apply `renderRow` to each `row` in `board`...
-//         this.board.map(function renderRow(row){
-//             return '| ' +
-//                 // Apply `renderCell` to each `cell` in `row`...
-//                 row.map(function renderCell(cell){
-//                     // return 'X' if `cell` is TRUTHY otherwise return ' '
-//                     return cell && 'X' || ' ';
-//                 }).join(' | ') // Place ' | ' between each `cell`...
-//             + ' |\n';
-//         }).join(spacer) // Place `spacer` between each `row`...
-//     + spacer;
-//   },
+    return spacer +
+        // Apply `renderRow` to each `row` in `board`...
+        this.board.map(function renderRow(row){
+            return '| ' +
+                // Apply `renderCell` to each `cell` in `row`...
+                row.map(function renderCell(cell){
+                    // return 'X' if `cell` is TRUTHY otherwise return ' '
+                    return cell && 'X' || ' ';
+                }).join(' | ') // Place ' | ' between each `cell`...
+            + ' |\n';
+        }).join(spacer) // Place `spacer` between each `row`...
+    + spacer;
+  },
 
-//   move: function(piece, destination) {
-//     // body...
-//   },
+  move: function(piece, destination) {
+    // body...
+  },
 
-//   opening: function() {
-//     // body...
-//   }
-// };
+  opening: function() {
+    // body...
+  }
+};
 
 
 
