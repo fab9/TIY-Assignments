@@ -1,5 +1,6 @@
 /** === PRODUCTION CODE === **/
-
+var currentPlayer;
+var players = ["black", "white"];
 var board = [
       [' ',' ',' ',' ',' ',' ',' ',' '],
       [' ',' ',' ',' ',' ',' ',' ',' '],
@@ -11,7 +12,6 @@ var board = [
       [' ',' ',' ',' ',' ',' ',' ',' ']
     ];
 
-var players = ["black", "white"];
 /**
  * Function Definition: Chess()
  * Sets up a board with Pieces representing an initial chessboard.
@@ -24,15 +24,15 @@ var players = ["black", "white"];
  */
 function Chess(board) {
   this.board = board;
-  this.currentPlayer = players[0];
+  this.currentPlayer = currentPlayer;
 }
 
 Chess.prototype = {
   constructor: Chess,
 
-  // getPlayer: function(argument) {
-  //   // return ???
-  // },
+  getPlayer: function() {
+    return currentPlayer;
+  },
 
   display: function() {
     var spacer = '+---+---+---+\n';
@@ -86,18 +86,19 @@ function Position(x, y) {
 //  * @method setPosition(position)
 //  * @method toString
 function Piece(name, color) {
-
+  this.name = name;
+  this.color = color;
 }
 
 Piece.prototype = {
   constructor: Piece,
 
   getName:  function() {
-    return this.name;
+    return name;
   },
 
   getColor: function() {
-    // body...
+    return color;
   },
 
   setPosition: function(position) {
