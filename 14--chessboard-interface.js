@@ -9,20 +9,45 @@
  * @method move(piece, destination)
  * @method opening
  */
-function Chess() {
-  this.getPlayer = function() {
-    // returns String either "white" or "black" representing current player
-  };
-  this.display = function() {
-  // returns String either "white" or "black" representing current player
-  };
-  this.move = function(piece, destination) {
-  // returns String either "white" or "black" representing current player
-  };
-  this.opening = function() {
-  // returns String either "white" or "black" representing current player
-  };
+function Chess(board) {
+  this.board = board;
 }
+
+Chess.prototype = {
+  constructor: Chess,
+
+  getPlayer: function(argument) {
+    // return ???
+  },
+
+  display: function() {
+    var spacer = '+---+---+---+\n';
+
+    return spacer +
+        // Apply `renderRow` to each `row` in `board`...
+        this.board.map(function renderRow(row){
+            return '| ' +
+                // Apply `renderCell` to each `cell` in `row`...
+                row.map(function renderCell(cell){
+                    // return 'X' if `cell` is TRUTHY otherwise return ' '
+                    return cell && 'X' || ' ';
+                }).join(' | ') // Place ' | ' between each `cell`...
+            + ' |\n';
+        }).join(spacer) // Place `spacer` between each `row`...
+    + spacer;
+  },
+
+  move: function(piece, destination) {
+    // body...
+  },
+
+  opening: function() {
+    // body...
+  }
+};
+
+
+
 
 /**
  * Function Definition: Position(x,y)
@@ -35,6 +60,9 @@ function Position(x, y) {
   this.x = x;
   this.y = y;
 }
+
+
+
 /**
  * Function Definition: Piece()
  * Represent a chesspiece on the board with name and color and appropriate starting position.
@@ -50,6 +78,18 @@ function Piece() {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /** === TEST CODE === **/
 var assert = require('chai').assert;
 var chai = require('chai')
@@ -58,8 +98,13 @@ var chai = require('chai')
 
 describe('Constructor functions', function () {
   it('should be defined', function () {
-    assert.isFunction(Chess);
-    assert.isFunction(Piece);
-    assert.isFunction(Position);
+    assert.isDefined(Chess);
+    assert.isDefined(Piece);
+    assert.isDefined(Position);
   });
 });
+
+it('setup board', function () {
+  ass
+});
+
