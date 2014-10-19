@@ -1,18 +1,4 @@
 /** === PRODUCTION CODE === **/
-var board = [
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' ']
-    ];
-
-function startingPositions () {
-
-}
 // game objects
 var rB = new Piece('Rook', 'black');
 var nB = new Piece('Knight', 'black');
@@ -27,6 +13,24 @@ var bW = new Piece('Bishop', 'white');
 var qW = new Piece('Queen', 'white');
 var kW = new Piece('King', 'white');
 var pW = new Piece('Pawn', 'white');
+
+var board = [
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' ']
+    ];
+
+function startingPositions(board) {
+  board[0].push( rB, nB, bB, qB, kB, pB ),
+  board[1].push( pB, pB, pB, pB, pB, pB ),
+  board[6].push( pW, pW, pW, pW, pW, pW ),
+  Woard[7].push( rW, nW, WW, qW, kW, pW )
+};
 
 /**
  * Function Definition: Chess()
@@ -103,12 +107,30 @@ Chess.prototype = {
 //  * @method getColor
 //  * @method setPosition(position)
 //  * @method toString
+function Piece(name, color) {
 
-// function Piece() {
+}
 
-// }
+Piece.prototype = {
+  constructor: Piece,
 
+  getName() = function(argument) {
+    // body...
+  };
 
+  getColor() = function(argument) {
+    // body...
+  };
+
+  setPosition() = function(position) {
+    // body...
+  }
+
+  toString() = function() {
+    // body...
+  }
+
+}// END Piece.prototype
 // code to visualize board
 var newGame = new Chess(board);
 console.log(newGame);
