@@ -1,13 +1,13 @@
 /** === PRODUCTION CODE === **/
 var board = [
-      ['R','N','B','Q','K','B','N','R'],
-      ['P','P','P','P','P','P','P','P'],
       [' ',' ',' ',' ',' ',' ',' ',' '],
       [' ',' ',' ',' ',' ',' ',' ',' '],
       [' ',' ',' ',' ',' ',' ',' ',' '],
       [' ',' ',' ',' ',' ',' ',' ',' '],
-      ['p','p','p','p','p','p','p','p'],
-      ['r','n','b','q','k','b','n','r']
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' ']
     ];
 
 /**
@@ -92,8 +92,8 @@ Chess.prototype = {
 
 
 // code to visualize board
-var newGame = new Chess();
-console.log(board);
+var newGame = new Chess(board);
+console.log(newGame);
 
 /** === TEST CODE === **/
 var assert = require('chai').assert;
@@ -112,18 +112,18 @@ var chai = require('chai')
 // test suite for Chess object constructor
 describe('Chess', function () {
   describe('constructor', function () {
-    it('should have a starting board', function () {
+    it('should have an empty starting board', function () {
       var chess = new Chess();
       assert.deepEqual(board,
       [
-      ['R','N','B','Q','K','B','N','R'],
-      ['P','P','P','P','P','P','P','P'],
       [' ',' ',' ',' ',' ',' ',' ',' '],
       [' ',' ',' ',' ',' ',' ',' ',' '],
       [' ',' ',' ',' ',' ',' ',' ',' '],
       [' ',' ',' ',' ',' ',' ',' ',' '],
-      ['p','p','p','p','p','p','p','p'],
-      ['r','n','b','q','k','b','n','r'] ]
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '],
+      [' ',' ',' ',' ',' ',' ',' ',' '] ]
       );
     });
   });
