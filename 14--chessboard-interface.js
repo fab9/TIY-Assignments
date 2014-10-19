@@ -11,7 +11,7 @@ var board = [
       [' ',' ',' ',' ',' ',' ',' ',' ']
     ];
 
-
+var players = ["black", "white"];
 /**
  * Function Definition: Chess()
  * Sets up a board with Pieces representing an initial chessboard.
@@ -22,9 +22,9 @@ var board = [
  * @method move(piece, destination)
  * @method opening
  */
-
 function Chess(board) {
   this.board = board;
+  this.currentPlayer = players[0];
 }
 
 Chess.prototype = {
@@ -130,9 +130,7 @@ function startingPositions() {
   rB.setPosition(0, 0);
   console.log(rB);
 }
-// code to visualize board
-var newGame = new Chess(board);
-console.log(newGame);
+
 
 /** === TEST CODE === **/
 var assert = require('chai').assert;
@@ -140,17 +138,17 @@ var chai = require('chai')
   , expect = chai.expect
   , should = chai.should();
 
-// describe('Constructor functions', function () {
-//   it('should be defined', function () {
-//     assert.isDefined(Chess);
-//     assert.isDefined(Piece);
-//     assert.isDefined(Position);
-//   });
-// });
+describe('Constructor functions', function () {
+  it('should be defined', function () {
+    assert.isDefined(Chess);
+    assert.isDefined(Piece);
+    assert.isDefined(Position);
+  });
+});
 
 // test suite for Chess object constructor
 describe('Chess', function () {
-  describe('constructor', function () {
+  describe('instance', function () {
     it('should have an empty starting board', function () {
       var chess = new Chess();
       assert.deepEqual(board,
@@ -164,6 +162,16 @@ describe('Chess', function () {
       [' ',' ',' ',' ',' ',' ',' ',' '],
       [' ',' ',' ',' ',' ',' ',' ',' '] ]
       );
+    });
+
+    it('should have 2 players', function () {
+      assert.equal(players.length, 2);
+    });
+
+    it('black player goes first', function () {
+       var chess = new Chess();
+      assert.isTrue(chess.currentPlayer === "black");
+
     });
   });
 });
