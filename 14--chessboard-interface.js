@@ -11,7 +11,6 @@ var board = [
         ['p','p','p','p','p','p','p','p'],
         ['r','n','b','q','k','b','n','r']
     ];
-
 // game objects
 var r = new Piece('Rook', 'black');
 var n = new Piece('Knight', 'black');
@@ -26,7 +25,6 @@ var Q = new Piece('Queen', 'white');
 var K = new Piece('King', 'white');
 var P = new Piece('Pawn', 'white');
 
-
 /**
  * Function Definition: Chess()
  * Sets up a board with Pieces representing an initial chessboard.
@@ -40,6 +38,8 @@ var P = new Piece('Pawn', 'white');
 function Chess(board) {
   this.board = board;
   this.currentPlayer = "black";
+
+
 
 
 }
@@ -105,21 +105,23 @@ function Position(x, y) {
 function Piece(name, color) {
   this.name = name;
   this.color = color;
+
 }
 
 Piece.prototype = {
   constructor: Piece,
 
-  getName:  function() {
-    return name;
+  getName: function() {
+
+    return this.name;
+
   },
 
   getColor: function() {
-    return color;
+    return this.color;
   },
 
   setPosition: function(position) {
-
   },
 
   toString: function() {
@@ -128,8 +130,8 @@ Piece.prototype = {
 
 }// END Piece.prototype methods
 
-
-
+// plan === Chess
+// grid === board
 
 /** === TEST CODE === **/
 var assert = require('chai').assert;
@@ -170,8 +172,23 @@ describe('New game', function () {
     it('black player goes first', function () {
       var chess = new Chess();
       assert.isTrue(chess.currentPlayer === "black");
-
-    });
-  });
+    });//END
+  });//END inner describe
 });
 
+describe('Piece constructor', function () {
+  it('creates a new instance', function () {
+    var myPiece = new Piece('Popeye', 'purple');
+    assert.instanceOf(myPiece, Piece, "myPiece is an instance of Piece");
+    assert.equal(myPiece.name, "Popeye", 'sets its name');
+  });
+
+    it('gets piece\'s name and color', function () {
+    var greenPiece = new Piece('John', 'green');
+    assert.equal(greenPiece.name, 'John');
+    assert.equal(greenPiece.color, 'green');
+    assert.equal(greenPiece.getName(), 'John');
+    assert.equal(greenPiece.getColor(), 'green');
+
+  });
+});
