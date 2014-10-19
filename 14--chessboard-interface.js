@@ -2,15 +2,30 @@
 var currentPlayer;
 var players = ["black", "white"];
 var board = [
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' ']
+        ['R','N','B','Q','K','B','N','R'],
+        ['P','P','P','P','P','P','P','P'],
+        [' ',' ',' ',' ',' ',' ',' ',' '],
+        [' ',' ',' ',' ',' ',' ',' ',' '],
+        [' ',' ',' ',' ',' ',' ',' ',' '],
+        [' ',' ',' ',' ',' ',' ',' ',' '],
+        ['p','p','p','p','p','p','p','p'],
+        ['r','n','b','q','k','b','n','r']
     ];
+
+// game objects
+var r = new Piece('Rook', 'black');
+var n = new Piece('Knight', 'black');
+var b = new Piece('Bishop', 'black');
+var q = new Piece('Queen', 'black');
+var k = new Piece('King', 'black');
+var p = new Piece('Pawn', 'black');
+var R = new Piece('Rook', 'white');
+var N = new Piece('Knight', 'white');
+var B = new Piece('Bishop', 'white');
+var Q = new Piece('Queen', 'white');
+var K = new Piece('King', 'white');
+var P = new Piece('Pawn', 'white');
+
 
 /**
  * Function Definition: Chess()
@@ -24,7 +39,9 @@ var board = [
  */
 function Chess(board) {
   this.board = board;
-  this.currentPlayer = currentPlayer;
+  this.currentPlayer = "black";
+
+
 }
 
 Chess.prototype = {
@@ -111,26 +128,7 @@ Piece.prototype = {
 
 }// END Piece.prototype methods
 
-// game objects
-var rB = new Piece('Rook', 'black');
 
-var nB = new Piece('Knight', 'black');
-var bB = new Piece('Bishop', 'black');
-var qB = new Piece('Queen', 'black');
-var kB = new Piece('King', 'black');
-var pB = new Piece('Pawn', 'black');
-
-var rW = new Piece('Rook', 'white');
-var nW = new Piece('Knight', 'white');
-var bW = new Piece('Bishop', 'white');
-var qW = new Piece('Queen', 'white');
-var kW = new Piece('King', 'white');
-var pW = new Piece('Pawn', 'white');
-
-function startingPositions() {
-  rB.setPosition(0, 0);
-  console.log(rB);
-}
 
 
 /** === TEST CODE === **/
@@ -149,9 +147,10 @@ describe('Constructor functions', function () {
 
 // test suite for Chess object constructor
 describe('New game', function () {
-  describe(' ', function () {
+  describe('', function () {
     it('should have board with pieces in starting positions', function () {
-      var chess = new Chess();
+      var chess = new Chess(board);
+      console.log(chess);
       assert.deepEqual(board, [
         ['R','N','B','Q','K','B','N','R'],
         ['P','P','P','P','P','P','P','P'],
@@ -169,7 +168,7 @@ describe('New game', function () {
     });
 
     it('black player goes first', function () {
-       var chess = new Chess();
+      var chess = new Chess();
       assert.isTrue(chess.currentPlayer === "black");
 
     });
