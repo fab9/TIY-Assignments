@@ -28,6 +28,7 @@ describe('Piece', function(){
 
     it('should have a name and color', function () {
         var horsePiece = new Piece('Horse', 'green');
+        console.log(horsePiece);
         assert.equal(horsePiece.name, 'Horse');
         assert.equal(horsePiece.color, 'green');
         assert.equal(horsePiece.getName(), 'Horse');
@@ -50,18 +51,36 @@ describe('Chess', function(){
 
     it('white player goes first', function () {
         var chess = new Chess();
-        assert.isTrue(chess.currentPlayer === "white");
+        assert.isTrue(chess.currentPlayer === "wPlayer");
     });
 
-    it('should contain 1 piece with position 1,1', function () {
+    it('should contain 1 piece', function () {
         var board = new Chess(board);
-        var piece1 = new Piece('pieceOne', 'white');
-        var piece1Pos = new Position(1,1);
-        piece1.setPosition(piece1Pos);
-        assert.instanceOf(piece1, Piece, "piece1 is an instance of Piece");
-        assert.strictEqual(piece1.x, 1);
-        // assert.strictEqual(piece1.x, 1);
+        var piecexx = new Piece('pieceOne', 'white');
+        console.log("---Below is piecexx: ");
+        console.log(piecexx);
+        assert.instanceOf(piecexx, Piece, "piecexx is an instance of Piece");
 
+    });
+
+     it('piece should have position 2,1', function () {
+        var pieceWithPos = new Piece('nameOfPieceWithPosition', 'white');
+        console.log("---Below is pieceWithPos: ");
+        console.log(pieceWithPos);
+        var coords = new Position(2,1);
+        console.log("---Below are coords: ");
+        console.log(coords);
+        pieceWithPos.setPosition(coords);
+        console.log("---Below is pieceWithPos.position: ");
+        console.log(pieceWithPos.position);
+        console.log("---Below is pieceWithPos.position[0]: ");
+        console.log(pieceWithPos.position[coords.x]);
+        console.log("---Below is coords.x: ");
+        console.log(coords.x);
+        assert.strictEqual(coords.x,2);
+        console.log("-------Below is pieceWithPos");
+        console.log(pieceWithPos);
+        // console.log(pieceWithPos.position[0]); how do I assert that pieceWithPosition has an x coordinate of 2?
 
     });
 });

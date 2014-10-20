@@ -2,7 +2,7 @@ module.exports.Chess = Chess;
 module.exports.Position = Position;
 module.exports.Piece = Piece;
 var currentPlayer;
-var players = ["white", "black"];
+var players = ["wPlayer", "bPlayer"];
 /**
  * To build Chess:
  * - Pieces x 32
@@ -77,7 +77,7 @@ Piece.prototype = {
  */
 function Chess(board) {
   this.board = board;
-  this.currentPlayer = "white";
+  this.currentPlayer = players[0];
 }
 
 Chess.prototype = {
