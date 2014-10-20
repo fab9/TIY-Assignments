@@ -1,6 +1,8 @@
 module.exports.Chess = Chess;
 module.exports.Position = Position;
 module.exports.Piece = Piece;
+var currentPlayer;
+var players = ["white", "black"];
 /**
  * To build Chess:
  * - Pieces x 32
@@ -40,9 +42,31 @@ function Position(x, y){
  * @method setPosition
  * @method toString
  */
-function Piece(){
-
+function Piece(name, color){
+  this.name = name;
+  this.color = color;
 }
+
+Piece.prototype = {
+  constructor: Piece,
+
+  getName: function() {
+    return this.name;
+  },
+
+  getColor: function() {
+    return this.color;
+  },
+
+  setPosition: function(position) {
+    this.position = position;
+  },
+
+  toString: function() {
+    // body...
+  }
+}// END Piece.prototype methods
+
 /**
  * @constructor Chess
  *
@@ -51,5 +75,40 @@ function Piece(){
  * @method opening
  * @method display
  */
-function Chess(){
+function Chess(board) {
+  this.board = board;
+  this.currentPlayer = "white";
 }
+
+Chess.prototype = {
+  constructor: Chess,
+
+  getPlayer: function() {
+    return currentPlayer;
+  },
+
+  display: function() {
+    var spacer = '+---+---+---+\n';
+
+    return spacer +
+        // Apply `renderRow` to each `row` in `board`...
+        this.board.map(function renderRow(row){
+            return '| ' +
+                // Apply `renderCell` to each `cell` in `row`...
+                row.map(function renderCell(cell){
+                    // return 'X' if `cell` is TRUTHY otherwise return ' '
+                    return cell && 'X' || ' ';
+                }).join(' | ') // Place ' | ' between each `cell`...
+            + ' |\n';
+        }).join(spacer) // Place `spacer` between each `row`...
+    + spacer;
+  },
+
+  move: function(piece, destination) {
+    // body...
+  },
+
+  opening: function() {
+    console.log(board);
+  }
+};
