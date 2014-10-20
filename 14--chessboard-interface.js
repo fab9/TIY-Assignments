@@ -39,7 +39,6 @@ var P = new Piece('Pawn', 'white');
 function Chess(board) {
   this.board = board;
   this.currentPlayer = "black";
-
 }
 
 Chess.prototype = {
@@ -66,13 +65,13 @@ Chess.prototype = {
     + spacer;
   },
 
-  // move: function(piece, destination) {
-  //   // body...
-  // },
+  move: function(piece, destination) {
+    // body...
+  },
 
-  // opening: function() {
-  //   // body...
-  // }
+  opening: function() {
+    console.log(board);
+  }
 };
 
 // /**
@@ -127,10 +126,17 @@ Piece.prototype = {
 
 console.log("-------- display below --------")
 var theGame = new Chess(board);
-// console.log(theGame);
-theGame.display();
-console.log("----------------")
+console.log(theGame);
 
+console.log("---------- POSITIONS ------")
+console.log("---------- A ------")
+theGame.opening()
+console.log("---------- B ------")
+this.theGame.position(1,2);
+console.log("---------- C ------")
+this.position(1,2);
+console.log("---------- D ------")
+board.position(1,2);
 
 
 /** === TEST CODE === **/
