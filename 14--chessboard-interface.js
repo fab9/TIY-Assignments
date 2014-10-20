@@ -25,6 +25,7 @@ var Q = new Piece('Queen', 'white');
 var K = new Piece('King', 'white');
 var P = new Piece('Pawn', 'white');
 
+
 /**
  * Function Definition: Chess()
  * Sets up a board with Pieces representing an initial chessboard.
@@ -38,9 +39,6 @@ var P = new Piece('Pawn', 'white');
 function Chess(board) {
   this.board = board;
   this.currentPlayer = "black";
-
-
-
 
 }
 
@@ -77,9 +75,6 @@ Chess.prototype = {
   // }
 };
 
-
-
-
 // /**
 //  * Function Definition: Position(x,y)
 //  * Represent a position on a chessboard with coordinates.
@@ -105,16 +100,13 @@ function Position(x, y) {
 function Piece(name, color) {
   this.name = name;
   this.color = color;
-
 }
 
 Piece.prototype = {
   constructor: Piece,
 
   getName: function() {
-
     return this.name;
-
   },
 
   getColor: function() {
@@ -122,16 +114,24 @@ Piece.prototype = {
   },
 
   setPosition: function(position) {
+    this.position = position;
   },
+
 
   toString: function() {
     // body...
   }
-
 }// END Piece.prototype methods
 
-// plan === Chess
-// grid === board
+
+
+console.log("-------- display below --------")
+var theGame = new Chess(board);
+// console.log(theGame);
+theGame.display();
+console.log("----------------")
+
+
 
 /** === TEST CODE === **/
 var assert = require('chai').assert;
@@ -189,6 +189,14 @@ describe('Piece constructor', function () {
     assert.equal(greenPiece.color, 'green');
     assert.equal(greenPiece.getName(), 'John');
     assert.equal(greenPiece.getColor(), 'green');
+  });
+
+    it('should set a piece\'s position', function () {
+    var anotherGame = new Chess(board);
+    var z = new Piece('Squirrel', 'brown');
+    // z.position = p62;
+    z.setPosition(p62);
+
 
   });
 });
