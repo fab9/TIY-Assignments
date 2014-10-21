@@ -128,10 +128,10 @@ Chess.prototype = {
 // Create 36 pieces
 var K = new Piece('King', 'black');
 var Q = new Piece('Queen', 'black');
-var B = new Piece('Bishop', 'black');
-var N = new Piece('Knight', 'black');
-var R = new Piece('Rook', 'black');
-var P = new Piece('Pawn', 'black');
+var B = new Piece('Bishop', 'black'); // * 2
+var N = new Piece('Knight', 'black'); // * 2
+var R = new Piece('Rook', 'black'); // * 2
+var P = new Piece('Pawn', 'black'); // * 8
 
 var k = new Piece('King', 'white');
 var q = new Piece('Queen', 'white');

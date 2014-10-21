@@ -64,22 +64,22 @@ describe('Chess', function(){
     });
 
      it('piece should have position 2,1', function () {
-        var pieceWithPos = new Piece('nameOfPieceWithPosition', 'white');
-        console.log("---Below is pieceWithPos: ");
-        console.log(pieceWithPos);
-        var coords = new Position(2,1);
-        console.log("---Below are coords: ");
-        console.log(coords);
-        pieceWithPos.setPosition(coords);
-        console.log("---Below is pieceWithPos.position: ");
-        console.log(pieceWithPos.position);
-        console.log("---Below is pieceWithPos.position[0]: ");
-        console.log(pieceWithPos.position[coords.x]);
-        console.log("---Below is coords.x: ");
-        console.log(coords.x);
+        var pieceWithPos = new Piece('nameOfPieceWithPosition', 'white'); // create new Piece called `pieceWithPos`
+        console.log("----Below is pieceWithPos: ");
+        console.log(pieceWithPos); // output: { name: 'nameOfPieceWithPosition', color: 'white' }
+        var coords = new Position(2,1); // create new Position called `coords`
+        console.log("----Below are coords: ");
+        console.log(coords); // output: { x: 2, y: 1 }
+        pieceWithPos.setPosition(coords); // give `pieceWithPos` the position of `coords`
+        console.log("----Below is pieceWithPos.position: ");
+        console.log(pieceWithPos.position); // output: { x: 2, y: 1 }
+        console.log("----Below is pieceWithPos.position[0]: ");
+        console.log(pieceWithPos.position[coords.x]); // output: undefined   :(  :(
+        console.log("----Below is coords.x: ");
+        console.log(coords.x); // output: 2
         assert.strictEqual(coords.x,2);
         console.log("-------Below is pieceWithPos");
-        console.log(pieceWithPos);
+        console.log(pieceWithPos); // output: { name: 'nameOfPieceWithPosition', color: 'white', position: { x: 2, y: 1 } }
         // console.log(pieceWithPos.position[0]); how do I assert that pieceWithPosition has an x coordinate of 2?
 
     });
