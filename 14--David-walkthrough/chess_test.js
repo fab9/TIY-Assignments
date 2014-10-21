@@ -81,6 +81,11 @@ describe('Chess', function(){
         console.log("-------Below is pieceWithPos");
         console.log(pieceWithPos); // output: { name: 'nameOfPieceWithPosition', color: 'white', position: { x: 2, y: 1 } }
         // console.log(pieceWithPos.position[0]); how do I assert that pieceWithPosition has an x coordinate of 2?
+        console.log(pieceWithPos.position[coords.x])
+    });
+
+    it(' should get x coord out of the piece\'s position', function () {
+         assert(pieceWithPos.x === 2);
 
     });
 });

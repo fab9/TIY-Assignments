@@ -42,6 +42,8 @@ var players = ["wPlayer", "bPlayer"];
 function Position(x, y){
     this.x = x;
     this.y = y;
+
+    return { "x":x , "y":y };
 }
 /**
  * @constructor Piece
