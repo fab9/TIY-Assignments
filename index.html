@@ -35,7 +35,7 @@
     margin: auto;
   }
 
-  /*<!-- BEGIN aside -->*/
+ /*BEGIN aside*/
   aside {
     float: left;
     color: #AAAAAA;
@@ -44,7 +44,7 @@
     line-height: 1.5em;
   }
 
-  aside h4, #search {
+  aside h4 {
     text-transform: uppercase;
     letter-spacing: 1.2px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -54,6 +54,7 @@
     margin-bottom: 37px;
     border-bottom: solid 1px #AAB;
     color: #AAB;
+    padding-bottom: 8px;
   }
 
   aside a, .main-content h1 a {
@@ -66,6 +67,20 @@
 
   }
 
+/*BEGIN search*/
+#search {
+    /*width: 258px;*/
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 17px;
+    line-height: 1.0625rem;
+    color: #706f73;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+
+}
   /*BEGIN .main-content*/
   .main-content h1 a {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -94,8 +109,8 @@
     <nav><h4><a href="http://orlando.theironyard.com">The Iron Yard | Orlando</a></h4></nav>
     <p>Happenings and updates from The Iron Yard in Orlando, FL.</p>
 
-    <span id="search">Search</span>
-    <input type="search">
+    <h4>Search</h4>
+    <input type="text" id="search">
   </aside>
   <section class="main-content">
     <article>
