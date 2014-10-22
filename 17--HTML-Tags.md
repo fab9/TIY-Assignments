@@ -685,3 +685,261 @@ Section of a webpage.
 ---
 
 #Tags 11-20 (Assignment 18)
+##Tag 11 `<ul`>
+   This tag allows us to create an unordered list usually with bulleted items.
+
+```html
+<ul><!--  This is the opening unordered list tag -->
+    <li><a href="/locations">Locations</a></li><!--  This is an item in the list, which is also a link, using opening and closing list item tags -->
+    <li><a href="/academy">Academy</a></li><!--  This is an item in the list, which is also a link, using opening and closing list item tags -->
+    <li><a href="/accelerator">Accelerator</a></li><!--  This is an item in the list, which is also a link, using opening and closing list item tags -->
+    <li><a href="/events">Events</a></li><!--  This is an item in the list, which is also a link, using opening and closing list item tags -->
+</ul><!--  This is the closing unordered list tag -->
+<a ref="theironyard.com"></a>
+<!-- Creates an unordered list with the various list items. Each item is also a link to another page within the site -->
+
+<ul><!--  This is the opening unordered list tag -->
+    <li><a href="/about">About</a></li><!--  This is an item in the list, which is also a link, using opening and closing list item tags -->
+    <li><a href="/jobs">Jobs</a></li><!--  This is an item in the list, which is also a link, using opening and closing list item tags -->
+    <li><a href="/press">Press</a></li><!--  This is an item in the list, which is also a link, using opening and closing list item tags -->
+    <li><a href="http://blog.theironyard.com">Blog</a></li><!--  This is an item in the list, which is also a link, using opening and closing list item tags -->
+</ul><!--  This is the closing unordered list tag -->
+<a ref="theironyard.com"></a>
+<!-- Creates an unordered list with the various list items. Each item is also a link to another page within the site -->
+
+ <ul class="no-style-type"><!--  This is the opening unordered list tag -->
+    <li>• Houston:<br> <a href="tel:+7134253797">(713) 425-3797</a></li><!--  This is an item in the list, which is also a link, using opening and closing list item tags. This line also contains a <br> tag to create a line break -->
+    <li>• Tampa Bay:<br> <a href="tel:+8137752275">(813) 775-2275</a> </li><!--  This is an item in the list, which is also a link, using opening and closing list item tags. This line also contains a <br> tag to create a line break -->
+    <li>• Orlando:<br> <a href="tel:+3212098655">(407) 358-6683</a> </li><!--  This is an item in the list, which is also a link, using opening and closing list item tags. This line also contains a <br> tag to create a line break -->
+ </ul><!--  This is the closing unordered list tag -->
+<a ref="theironyard.com"></a>
+ <!-- Creates an unordered list with the various list items. Each item is also a link to another page within the site. The <br> tag also helps to create a vertical list with line breaks -->
+```
+
+
+
+##Tag 12 `<ol>`
+This tage allows us to create an ordered list where the order of items matters
+ and is usually numbered.
+
+```html
+<ol><!--  This is the opening ordered list tag -->
+ <li>Google Chrome</li><!--  This is the first item in the list using opening and closing list item tags -->
+ <li>Internet Explorer</li><!--  This is the second item in the list using opening and closing list item tags -->
+ <li>Firefox</li><!--  This is the third item in the list using opening and closing list item tags -->
+ <li>Safari</li><!--  This is the fourth item in the list using opening and closing list item tags -->
+ <li>Opera</li><!--  This is the fifth item in the list using opening and closing list item tags -->
+</ol><!--  This is the closing ordered list tag -->
+<a ref="http://blog.teamtreehouse.com/use-html-list-elements"></a>
+<!-- Creates an ordered list where Chrome is number 1. all the way
+to Opera being number 5. -->
+
+The three basic steps to creating a web page are:
+<ol><!--  This is the opening ordered list tag -->
+<li> Decide on a subject.</li><!--  This is the first item in the list using opening and closing list item tags -->
+<li> Acquire the necessary tools and materials.</li><!--  This is the second item in the list using opening and closing list item tags -->
+<li> Write the HTML source code.</li><!--  This is the third item in the list using opening and closing list item tags -->
+</ol><!--  This is the closing ordered list tag -->
+<a ref="http://www.ironspider.ca/lists/olists.htm"></a>
+<!-- Creates an ordered list so you can follow the instructions from 1-3
+properly -->
+
+<ol><!--  This is the opening ordered list tag -->
+<li>Turn left out of the car park onto Maple avenue ;</li><!--  This is the first item in the list using opening and closing list item tags -->
+<li>Take the second right onto Beech lane ;</li><!--  This is the second item in the list using opening and closing list item tags -->
+<li>Honk your Horn</li><!--  This is the third item in the list using opening and closing list item tags -->
+</ol><!--  This is the closing ordered list tag -->
+<a ref="http://www.nomensa.com/blog/2011/using-html-lists"></a>
+<!-- Creates an ordered list of directions. This makes you follow them in a
+specific order -->
+
+```
+
+##Tag 13 `h1`
+
+##Tag 14 `h2`
+Second-level heading.
+```html
+<h2 class="story-heading"><a href="http://www.nytimes.com/2014/10/22/us/politics/environmental-issues-become-a-force-in-political-advertising.html">Growing Focus
+on Energy and
+Environment in
+Political Ads</a><span class="product-label theme-nyt-now "><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></h2>
+```
+###Ex2
+```html
+<h2 class="section-heading visually-hidden">Top News</h2>
+
+```
+###Ex3
+```html
+   <h2 class="branding">
+    <svg class="nyt-logo" width="379" height="64" role="img" aria-label="The New York Times">
+        <image width="379" height="64" xlink:href="http://a1.nyt.com/assets/homepage/20141016-212434/images/foundation/logos/nyt-logo-379x64.svg" src="http://a1.nyt.com/assets/homepage/20141016-212434/images/foundation/logos/nyt-logo-379x64.png" alt="The New York Times" border="0"/>
+    </svg>
+
+</h2>
+```
+
+##Tag 15 `<address>`
+This tag is typically used to provide contact information for the company,
+ author, or person of interest within a page or article to the end user.
+
+```html
+<address><!-- This is the opening address tag -->
+Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address><!-- This is the closing address tag -->
+<a href="http://www.w3schools.com/tags/tryit.asp?filename=tryhtml_address"></a>
+
+
+<address><!-- This is the opening address tag -->
+You can contact us at:<br>
+TechOnTheNet.com<br>
+123 Somewhere St.<br>
+City, State
+</address><!-- This is the closing address tag -->
+<a href="http://www.techonthenet.com/html/elements/address_tag.php"></a>
+
+
+<address><!-- This is the opening address tag -->
+Author: Jhon Rocket
+512 E Riverside Dr # 134
+Austin, TX
+(512) 411-7433
+</address><!-- This is the closing address tag -->
+<a href="http://www.htmlquick.com/reference/tags/address.html"></a>
+
+```
+
+
+##Tag 16 `<table>`
+   This tag allows to create a table of information and can take in other tags
+    to add more columns and rows
+
+```html
+<table><!-- This is the opening table tag -->
+      <tbody>
+      <tr class="row-border-btm">
+        <th colspan="2" class="billing-table-head">
+          <span id="order_summary">Order Summary</span>
+        </th>
+      </tr>
+      </tr>
+      </tbody>
+</table><!-- This is the closing table tag -->
+<a href="view-source:http://www.amazon.com/"></a>
+
+
+<table><!-- This is the opening table tag -->
+  <tr><!-- table row tag -->
+    <th>Month</th><!-- table header tag -->
+    <th>Savings</th><!-- table header tag -->
+  </tr><!-- closing table row tag -->
+  <tr><!-- table row tag -->
+    <td>January</td><!-- table data(cell) tag -->
+    <td>$100</td><!-- table data(cell) tag -->
+  </tr><!-- closing table row tag -->
+  <tr><!-- table row tag -->
+    <td>February</td><!-- table data(cell) tag -->
+    <td>$80</td><!-- table data(cell) tag -->
+  </tr><!-- closing table row tag -->
+</table><!-- This is the closing table tag -->
+<a href="http://www.w3schools.com/tags/tryit.asp?filename=tryhtml_table_test"></a>
+
+
+<table style="width:100%"><!-- This is the opening table tag with styling added for the width -->
+  <tr><!-- table row tag -->
+    <td>Jill</td><!-- table data(cell) tag -->
+    <td>Smith</td><!-- table data(cell) tag -->
+    <td>50</td><!-- table data(cell) tag -->
+  </tr><!-- closing table row tag -->
+  <tr><!-- table row tag -->
+    <td>Eve</td><!-- table data(cell) tag -->
+    <td>Jackson</td><!-- table data(cell) tag -->
+    <td>94</td><!-- table data(cell) tag -->
+  </tr><!-- closing table row tag -->
+</table><!-- This is the closing table tag -->
+<a href="http://www.w3schools.com/html/html_tables.asp"></a>
+```
+##Tag 17 `<figure>`
+   This tag allows us to create some sort of content that is self contained
+    from the main flow of the page. Usually an image. This tag also takes the
+    figcaption tag to provide a caption to the content within figure.
+
+```html
+<figure><!-- opening figure tag -->
+  <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228"><!-- this is an image tag contained within the figure tags -->
+</figure><!-- closing figure tag -->
+<a href="http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_figure"></a>
+
+
+<figure><!-- opening figure tag -->
+  <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture"><!-- image with figure -->
+  <figcaption>Caption for the awesome picture</figcaption><!-- caption for the image contained within the figure -->
+</figure><!-- closing figure tag -->
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure"></a>
+
+
+<figure id="figure3"><!-- opening figure tag with id figure3 -->
+  <figcaption>Figure 1: My Dogs Shasta and McKinley</figcaption><!-- caption used as a header for the image contained within the figure -->
+  <img src="shasta.jpg" alt="My Dog Shasta"><!-- image with figure -->
+  <img src="mckinley.jpg" alt="My Dog McKinley"><!-- image with figure -->
+</figure><!-- closing figure tag -->
+<a href="http://webdesign.about.com/od/html5tags/qt/understanding-figure-and-figcaption-html5.htm"></a>
+```
+
+##Tag 18 `span`
+```html
+<span class="icon">2</span>
+<span class="label">Copy short URL</span>
+<span class="icon">f</span>
+```
+##Tag 19 `pre`
+```html
+<pre>
+       Higher still and higher
+         From the earth thou springest
+       Like a cloud of fire;
+         The blue deep thou wingest,
+And singing still dost soar, and soaring ever singest.</PRE>
+
+<pre>Text goes here    preserving whitespace
+and preserving line breaks</pre>
+<pre>
+Text in a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+</pre>
+```
+[source](http://www.w3schools.com/tags/tag_pre.asp)
+
+##Tag 20 `header`
+ Allows us to create a header on our page which will typically be used for
+    a company logo or some information that you want people to see immediately
+
+```html
+<!-- Header -->
+  <header><!-- This is the opening header tag -->
+		<div class="right-panel">
+                	 <a href="/download/" class="cta click_tracking" data-label="Download header">Download</a>
+                        <!-- Clickable Download link for the Evernote App -->
+            			 <a href="#" id="header-menu" class="menu click_tracking" data-label="Menu open header"><span class="text">Menu</span><span class="header-sprite"></span></a>
+	 </div>               <!-- Main menu button for a dropdown -->
+  </header><!-- This is the closing header tag -->
+  <a href="https://evernote.com/"></a>
+
+
+  <header id="topban" class="ban"><!-- This is the opening header tag with an id of "topban" and the class of "ban" assigned -->
+  </header><!-- This is the closing header tag -->
+  <a href="view-source:http://orlando.craigslist.org/"></a>
+
+
+  <header class='nav-locale-us nav-lang-en'><!-- This is the opening header tag with a class of "nav-locale-us nav-lang-en" assigned -->
+ </header><!-- This is the closing header tag -->
+ <a href="view-source:http://www.amazon.com/"></a>
+```
