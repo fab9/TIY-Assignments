@@ -1,0 +1,12 @@
+<ol>
+  <li>color</li>
+  <li>border-color</li>
+  <li>background-color</li>
+  <li>text-decoration-color</li>
+  <li>outline-color</li>
+  <li>column-rule-color</li>
+  <li>border-top-color</li>
+  <li>border-left-color</li>
+  <li>border-bottom-color</li>
+  <li>outline-color</li>
+</ol>
