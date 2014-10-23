@@ -11,6 +11,7 @@ var board = [
         ['p','p','p','p','p','p','p','p'],
         ['r','n','b','q','k','b','n','r']
     ];
+
 // game objects
 var r = new Piece('Rook', 'black');
 var n = new Piece('Knight', 'black');

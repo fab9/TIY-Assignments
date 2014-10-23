@@ -15,6 +15,7 @@ describe('Position', function(){
 
 });
 
+
 /** === Piece === **/
 describe('Piece', function(){
     it('should have a function Piece()', function(){

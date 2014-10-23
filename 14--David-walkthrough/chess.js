@@ -13,6 +13,7 @@ var SQUARES = {
   a1: 112, b1: 113, c1: 114, d1: 115, e1: 116, f1: 117, g1: 118, h1: 119
 };
 
+
 var currentPlayer;
 var players = ["wPlayer", "bPlayer"];
 /**
