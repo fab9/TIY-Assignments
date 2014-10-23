@@ -4,7 +4,15 @@ TIY-Assignments
 The Iron Yard's Frontend class.
 
 
-##Week2
-- String Calculator [dojo--2014-09-30.js](https://github.com/fab9/TIY-Assignments/blob/06--Coding-Dojo/dojo--2014-09-30.js)
-- Check Writing
-- Conway's Game of Life _LITE_
+[Assignment 06](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/issues/128)
+- String Calculator
+
+
+[Assignment 07](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/issues/132)
+- Conway function
+- check writing
+
+[Assignment 08](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/issues/151)
+- [Conway](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/blob/master/Dojos/2014-10-02.js)
+
+[Assignment 09](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/blob/master/Assignments/09-Conway-Revisited.md)
