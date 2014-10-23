@@ -505,3 +505,164 @@ You need 10 more (unique) examples and should include conditionals, loops, and l
   Operands: ( )
   Keyword: var
 ```
+#14-Die-Another-Day
+10 examples of JavaScript Objects, [source repo.](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/issues/212)
+##Ex 31
+```javascript
+var Progress = function(container, opts) { // where do I put that it's a constructor?
+* Symbol: `var`
+  * Type: Keyword
+  * Name: "var"
+  * Meaning: Create an identifier
+  * Operands: `Progress`
+* Symbol: `Progress`
+  * Type: Constructor Identifier
+  * Name: "variable Progress"
+  * Meaning: Variable (bucket) to hold a value. In this case, the constructor function.
+* Symbol: `=`
+  * Type: Operator
+  * Name: "is assigned"
+  * Meaning: Store the value to the right in the identifier on the left
+  * Operands: `Progress`, `function(container, opts){...}`
+```
+##Ex 32
+// why not set
+[Line#](https://github.com/kimmobrunfeldt/progressbar.js/blob/master/dist/progressbar.js#L44)
+```javascript
+Progress.prototype.animate = function animate(progress, opts, cb) {
+// defines the method `animate` on the prototype
+// isn't it unnecessary to include the fn's name to the right of the `=`
+// since it's already specified on the left of the `=`?
+* Symbol: `Progress`
+  * Type: Constructor Identifier
+  * Name: "constructor Progress"
+  * Meaning: references the name of the constructor
+* Symbol: `Progress.prototype`
+  * Type: Property
+  * Name: "Progress dot prototype"
+  * Meaning: the Progress.prototype property represents the prototype for the `Progress` constructor.
+* Symbol: `animate`
+  * Type: method
+  * Name: "animate"
+  * Meaning: `animate`
+```  
+##Ex 33
+```javascript
+Progress.prototype.stop = function stop() {
+* Symbol: `Progress`
+    * Type: Constructor Identifier
+    * Name: "constructor Progress"
+    * Meaning: references the name of the constructor
+  * Symbol: `Progress.prototype`
+    * Type: Property
+    * Name: "Progress dot prototype"
+    * Meaning: the Progress.prototype property represents the prototype for the `Progress` constructor.
+    * Symbol: `stop`
+      * Type: method
+      * Name: "stop"
+      * Meaning: `stop`
+```  
+##Ex 34
+```javascript
+Progress.prototype.set = function set(progress) {
+* Symbol: `Progress`
+    * Type: Constructor Identifier
+    * Name: "constructor Progress"
+    * Meaning: references the name of the constructor
+  * Symbol: `Progress.prototype`
+    * Type: Property
+    * Name: "Progress dot prototype"
+    * Meaning: the Progress.prototype property represents the prototype for the `Progress` constructor.
+    * Symbol: `set`
+      * Type: method
+      * Name: "set"
+      * Meaning: `set`
+```
+##Ex 35
+```javascript
+Progress.prototype.set = function set(progress) {
+  * Symbol: `Progress`
+      * Type: Constructor Identifier
+      * Name: "constructor Progress"
+      * Meaning: references the name of the constructor
+    * Symbol: `Progress.prototype`
+      * Type: Property
+      * Name: "Progress dot prototype"
+      * Meaning: the Progress.prototype property represents the prototype for the `Progress` constructor.
+      * Symbol: `set`
+        * Type: method
+        * Name: "set"
+        * Meaning: `set`
+```  
+##Ex 36
+[Line#](https://github.com/kimmobrunfeldt/progressbar.js/blob/master/dist/progressbar.js#L44)
+```javascript
+Progress.prototype._createSvgView = function _createSvgView(opts) { // why the underscore?
+* Symbol: `Progress`
+      * Type: Constructor Identifier
+      * Name: "constructor Progress"
+      * Meaning: references the name of the constructor
+    * Symbol: `Progress.prototype`
+      * Type: Property
+      * Name: "Progress dot prototype"
+      * Meaning: the Progress.prototype property represents the prototype for the `Progress` constructor.
+      * Symbol: `_createSvgView`
+        * Type: method
+        * Name: "_createSvgView"
+        * Meaning: `_createSvgView`
+```  
+##Ex 37
+[Line#](https://github.com/kimmobrunfeldt/progressbar.js/blob/master/dist/progressbar.js#L88)
+```javascript
+Progress.prototype._initializeSvg = function _initializeSvg(svg, opts) { // why the underscore?
+* Symbol: `Progress`
+      * Type: Constructor Identifier
+      * Name: "constructor Progress"
+      * Meaning: references the name of the constructor
+    * Symbol: `Progress.prototype`
+      * Type: Property
+      * Name: "Progress dot prototype"
+      * Meaning: the Progress.prototype property represents the prototype for the `Progress` constructor.
+      * Symbol: `_initializeSvg`
+        * Type: method
+        * Name: "_initializeSvg"
+        * Meaning: `_initializeSvg`
+```  
+##Ex 38
+```javascript
+    var Line = function(container, options) {
+* Symbol: `var`
+  * Type: Keyword
+  * Name: "var"
+  * Meaning: Create an identifier
+  * Operands: `Line`
+* Symbol: `Line`
+  * Type: Constructor Identifier
+  * Name: "variable Line"
+  * Meaning: Variable (bucket) to hold a value. In this case, the constructor function.
+* Symbol: `=`
+  * Type: Operator
+  * Name: "is assigned"
+  * Meaning: Store the value to the right in the identifier on the left
+  * Operands: `Line`, `function(container, options) {...}`
+```  
+##Ex 39
+```javascript
+Line.prototype = new Progress();
+// Line is a sub-class of a Progress instance. So a line instance's prototype
+// is inherited from Progress
+* Symbol: `Line`
+  * Type: Constructor Identifier
+  * Name: "Line"
+  * Meaning: Name of constructor
+```  
+##Ex 40
+```javascript
+Circle.prototype = new Progress();
+// Circle is a sub-class of a Progress instance. So a circle instance's prototype
+// is inherited from Progress
+* Symbol: `Circle`
+  * Type: Constructor Identifier
+  * Name: "Circle"
+  * Meaning: Name of constructor
+```  
