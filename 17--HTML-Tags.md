@@ -716,8 +716,6 @@ Section of a webpage.
  <!-- Creates an unordered list with the various list items. Each item is also a link to another page within the site. The <br> tag also helps to create a vertical list with line breaks -->
 ```
 
-
-
 ##Tag 12 `<ol>`
 This tage allows us to create an ordered list where the order of items matters
  and is usually numbered.
@@ -787,8 +785,7 @@ Political Ads</a><span class="product-label theme-nyt-now "><span class="visuall
 ```
 
 ##Tag 15 `<address>`
-This tag is typically used to provide contact information for the company,
- author, or person of interest within a page or article to the end user.
+This tag is typically used to provide contact information for the company, author, or person of interest within a page or article to the end user.
 
 ```html
 <address><!-- This is the opening address tag -->
@@ -817,13 +814,10 @@ Austin, TX
 (512) 411-7433
 </address><!-- This is the closing address tag -->
 <a href="http://www.htmlquick.com/reference/tags/address.html"></a>
-
 ```
 
-
 ##Tag 16 `<table>`
-   This tag allows to create a table of information and can take in other tags
-    to add more columns and rows
+This tag allows to create a table of information and can take in other tags to add more columns and rows.
 
 ```html
 <table><!-- This is the opening table tag -->
@@ -870,10 +864,8 @@ Austin, TX
 </table><!-- This is the closing table tag -->
 <a href="http://www.w3schools.com/html/html_tables.asp"></a>
 ```
-##Tag 17 `<figure>`
-   This tag allows us to create some sort of content that is self contained
-    from the main flow of the page. Usually an image. This tag also takes the
-    figcaption tag to provide a caption to the content within figure.
+##Tag 17 `<figure>`  
+This tag allows us to create some sort of content that is self contained from the main flow of the page. Usually an image. This tag also takes the figcaption tag to provide a caption to the content within figure.
 
 ```html
 <figure><!-- opening figure tag -->
