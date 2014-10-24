@@ -1,9 +1,9 @@
 #10 Block-level Tags
 
 
-##`<article>`  
+##`<article>`
 Article content.
-##Ex 1
+###Ex 1
 ```html
 <article class="post type-text" id="100189034319"><div class="clearfix rte">
       <h1 class="title">
@@ -44,32 +44,32 @@ Article content.
         <div class="details">
           <a class="timestamp" href="http://orlando.theironyard.com/post/100189034319/matt-wallaert-behavioral-scientist-bing-will-be">4 days ago</a></div>
         </aside>
-        </article>  
-        ```  
+        </article>
+        ```
 [IY Blog](http://orlando.theironyard.com/)
 
-##Ex 2
+###Ex 2
 ```html
 <article class="story">
   <h2 class="refer-heading"><a href="http://www.nytimes.com/2014/10/22/us/ebola-west-africa-united-states-flights.html">U.S. to Route Passengers From Ebola-Hit Nations to 5 Airports</a> <time class="timestamp" data-eastern-timestamp="12:39 PM" datetime="2014-10-21" data-utc-timestamp="1413909582000">12:39 PM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></h2>
 </article>
-```  
-[NYT](http://www.nytimes.com/)  
-##Ex 3
+```
+[NYT](http://www.nytimes.com/)
+###Ex 3
 ```html
 <article class="story">
   <h2 class="refer-heading"><a href="http://www.nytimes.com/2014/10/22/nyregion/new-york-health-care-workers-gather-for-ebola-training.html">New York Health Care Workers Gather for Training</a> <time class="timestamp" data-eastern-timestamp="12:53 PM" datetime="2014-10-21" data-utc-timestamp="1413910384000">12:53 PM</time><span class="product-label theme-nyt-now hidden"><span class="visually-hidden">NYT Now</span><i class="icon dot-logo-icon"></i></span></h2>
 </article>
 ```
-[NYT](http://www.nytimes.com/)  
-##`<header>`  
-Section or page header.  
-##Ex 1
+[NYT](http://www.nytimes.com/)
+##`<header>`
+Section or page header.
+###Ex 1
 ```html
 <header style="background-image:url(http://static.tumblr.com/3c7cd96cde56779343d2e9a22afec085/w5gxxfv/oCrn8vkw8/tumblr_static_9cxjqqnfamsccsg4ow84sg8kg.jpg);"></header>
 ```
 [IY Blog](http://orlando.theironyard.com/)
-##Ex 2
+###Ex 2
 ```html
 <header class='header row has-dropdown ovh ovv--m'>
 <div class='cell'>
@@ -98,10 +98,10 @@ Section or page header.
 </div>
 </div>
 </header>
-```  
+```
 [codeschool/screencasts/famo-us](https://www.codeschool.com/screencasts/famo-us)
 
-##Ex 3
+###Ex 3
 ```html
  <header id="masthead" class="masthead" role="banner">
 
@@ -337,24 +337,24 @@ Section or page header.
 [NYT](http://www.nytimes.com/)
 
 
-##`<blockquote>`  
-Long ("block") quotation.  
-##Ex 1
+##`<blockquote>`
+Long ("block") quotation.
+###Ex 1
 ```html
 <blockquote>
 <p><em>See? Super excited. And it’s an official picture, because David is in it too (albeit without his actual knowledge)</em></p>
 </blockquote>
 ```
 [IY Blog](http://orlando.theironyard.com/)
-##Ex 2
+###Ex 2
 ```html
 <blockquote>
 <p><span>Together, The Iron Yard and Code School are preparing the next generation of developers, filling the already overwhelming demand for tech talent in the Orlando market and beyond. This is a tremendous opportunity to make a potentially life-changing career move.</span></p>
 <p><span>&#8212; </span><a href="http://al-the-x.me/" target="_blank"><span>David Rogers</span></a><span>, </span><span><a href="http://theironyard.com/about/team/#david-rogers" target="_blank">Front End Instructor, The Iron Yard Orlando</a></span></p>
 </blockquote>
 ```
-[IY Blog](http://orlando.theironyard.com/)  
-##Ex 3
+[IY Blog](http://orlando.theironyard.com/)
+###Ex 3
 ```html
 <blockquote><iframe width='300' height='169' src='http://player.cnevids.com/embed/542c8bb361646d16521a0000/51799c3f68f9da5d48000002' frameBorder='0' allowfullscreen webkitallowfullscreen mozallowfullscreen allowtransparency='true' scrolling='no'></iframe>
 <h2><a  style="color: #000;" href="http://thescene.com/watch/wired/neon-future-sessions-ray-kurzweil-steve-aoki-talk-technology-the-future-humanity">Neon Future Sessions: A Superstar DJ and Famed Futurist Predict What Will Happen Next in Tech
@@ -365,7 +365,7 @@ Long ("block") quotation.
 
 ##`<figure>` & `<figcaption`
 Represents self-contained content, frequently with a caption (`<figcaption>`), and is typically referenced as a single unit. While it is related to the main flow, its position is independent of the main flow. Usually this is an image, an illustration, a diagram, a code snippet, or a schema that is referenced in the main text, but that can be moved to another page or to an appendix without affecting the main flow.
-##Ex 1
+###Ex 1
 ```html
 <figure class="media photo">
     <div class="image">
@@ -376,13 +376,13 @@ Represents self-contained content, frequently with a caption (`<figcaption>`), a
 
                   <span class="credit" itemprop="copyrightHolder">
               <span class="visually-hidden">Credit</span>
-              Luke Sharrett for The New York Times	        </span>
+              Luke Sharrett for The New York Times          </span>
             </figcaption>
 </figure>
 ```
 [NYT](http://www.nytimes.com/)
 
-##Ex 2
+###Ex 2
 ```html
 <figure class="media photo medium-thumb">
     <div class="image">
@@ -398,7 +398,7 @@ Represents self-contained content, frequently with a caption (`<figcaption>`), a
 
 [NYT](http://www.nytimes.com/)
 
-##Ex 3
+###Ex 3
 ```html
 <figure class="media video-playlist videoContainer" aria-label="media" role="group">
             <span class="visually-hidden">Video Playlist</span>
@@ -420,9 +420,9 @@ Represents self-contained content, frequently with a caption (`<figcaption>`), a
 [NYT](http://www.nytimes.com/)
 
 
-##`<footer>`  
+##`<footer>`
 Section or page footer.
-##Ex 1
+###Ex 1
  ```html
     <footer class="extVidPlayerThumbsContainer">
         <div class="extVidPlayerThumbsContainerShadow"></div>
@@ -444,84 +444,84 @@ Section or page footer.
     </footer>
  ```
 [NYT](http://www.nytimes.com/)
-##Ex 2
+###Ex 2
  ```html
     <footer class="portal-footer"></footer>
  ```
  [NYT](http://www.nytimes.com/)
-##Ex 3
+###Ex 3
  ```html
  <footer id="page-footer" class="page-footer" role="contentinfo">
- ```  
+ ```
  [NYT](http://www.nytimes.com/)
-##`<fieldset>`  
+##`<fieldset>`
 Fieldset label.
-##Ex 1
+###Ex 1
 ```html
 <fieldset>
-				<select id="footer_dropdowns_subscribe" name="footer_dropdowns_subscribe">
-					<option>Subscribe to a magazine:</option>
-					<option value="http://www.magazinestoresubscriptions.com/?source=SITEFOOTER">View All Titles</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Allure?source=SITEFOOTER">Allure</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_ArchitecturalDigest?source=SITEFOOTER">Architectural Digest</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_BonAppetite?source=SITEFOOTER">Bon App&#233;tit</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Brides?source=SITEFOOTER">Brides</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_CondeNastTraveler?source=SITEFOOTER">Cond&#233; Nast Traveler</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Details?source=SITEFOOTER">Details</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Glamour?source=SITEFOOTER">Glamour</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_GolfDigest?source=SITEFOOTER">Golf Digest</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_GolfWorld?source=SITEFOOTER">Golf World</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_GQ?source=SITEFOOTER">GQ</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Lucky?source=SITEFOOTER">Lucky</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Self?source=SITEFOOTER">Self</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_TeenVogue?source=SITEFOOTER">Teen Vogue</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_NewYorker?source=SITEFOOTER">The New Yorker</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_VanityFair?source=SITEFOOTER">Vanity Fair</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Vogue?source=SITEFOOTER">Vogue</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_W?source=SITEFOOTER">W</option>
-					<option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Wired?source=SITEFOOTER">WIRED</option>
-				</select>
-				<select id="footer_dropdowns_sites" name="footer_dropdowns_sites">
-					<option>Cond&#233; Nast web sites:</option>
-					<option value="http://www.allure.com/">Allure</option>
-					<option value="http://www.architecturaldigest.com/">Architectural Digest</option>
-					<option value="http://www.arstechnica.com/">ArsTechnica</option>
-					<option value="http://www.bonappetit.com/">Bon App&eacute;tit</option>
-					<option value="http://www.brides.com/">Brides.com</option>
-					<option value="http://www.cntraveler.com/">Cond&eacute; Nast Traveler</option>
-					<option value="http://www.portfolio.com/">Cond&eacute; Nast Portfolio</option>
-					<option value="http://www.concierge.com/">Concierge</option>
-					<option value="http://www.details.com/">Details</option>
-					<option value="http://www.epicurious.com/">Epicurious</option>
-					<option value="http://www.glamour.com/">Glamour</option>
-					<option value="http://www.golfdigest.com">Golf Digest</option>
-					<option value="http://www.golfworld.com">Golf World</option>
-					<option value="http://www.gq.com/">GQ</option>
-					<option value="http://www.hotelchatter.com/">Hotel Chatter</option>
-					<option value="http://www.jaunted.com/">Jaunted</option>
-					<option value="http://www.luckymag.com/">Lucky</option>
-					<option value="http://www.nutritiondata.com/">Nutrition Data</option>
-					<option value="http://www.reddit.com/">Reddit</option>
-					<option value="http://www.self.com/">Self</option>
-					<option value="http://www.style.com">Style.com</option>
-					<option value="http://www.teenvogue.com/">Teen Vogue</option>
-					<option value="http://www.newyorker.com/">The New Yorker</option>
-					<option value="http://www.thescene.com/">The Scene</option>
-					<option value="http://www.vanityfair.com/">Vanity Fair</option>
-					<option value="http://www.vogue.com">Vogue</option>
-					<option value="http://www.webmonkey.com">Webmonkey</option>
-					<option value="http://www.wmagazine.com/">W</option>
-				</select>
-				<select id="footer_dropdowns_international" name="footer_dropdowns_international">
-					<option>International Sites:</option>
-					<option value="http://www.wired.co.uk">Wired UK</option>
-					<option value="http://www.wired.it">Wired Italy</option>
-					<option value="http://wired.jp">Wired Japan</option>
-				</select>
-			</fieldset>
+        <select id="footer_dropdowns_subscribe" name="footer_dropdowns_subscribe">
+          <option>Subscribe to a magazine:</option>
+          <option value="http://www.magazinestoresubscriptions.com/?source=SITEFOOTER">View All Titles</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Allure?source=SITEFOOTER">Allure</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_ArchitecturalDigest?source=SITEFOOTER">Architectural Digest</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_BonAppetite?source=SITEFOOTER">Bon App&#233;tit</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Brides?source=SITEFOOTER">Brides</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_CondeNastTraveler?source=SITEFOOTER">Cond&#233; Nast Traveler</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Details?source=SITEFOOTER">Details</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Glamour?source=SITEFOOTER">Glamour</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_GolfDigest?source=SITEFOOTER">Golf Digest</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_GolfWorld?source=SITEFOOTER">Golf World</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_GQ?source=SITEFOOTER">GQ</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Lucky?source=SITEFOOTER">Lucky</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Self?source=SITEFOOTER">Self</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_TeenVogue?source=SITEFOOTER">Teen Vogue</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_NewYorker?source=SITEFOOTER">The New Yorker</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_VanityFair?source=SITEFOOTER">Vanity Fair</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Vogue?source=SITEFOOTER">Vogue</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_W?source=SITEFOOTER">W</option>
+          <option value="http://www.magazinestoresubscriptions.com/webapp/wcs/stores/servlet/Subscriptions_Wired?source=SITEFOOTER">WIRED</option>
+        </select>
+        <select id="footer_dropdowns_sites" name="footer_dropdowns_sites">
+          <option>Cond&#233; Nast web sites:</option>
+          <option value="http://www.allure.com/">Allure</option>
+          <option value="http://www.architecturaldigest.com/">Architectural Digest</option>
+          <option value="http://www.arstechnica.com/">ArsTechnica</option>
+          <option value="http://www.bonappetit.com/">Bon App&eacute;tit</option>
+          <option value="http://www.brides.com/">Brides.com</option>
+          <option value="http://www.cntraveler.com/">Cond&eacute; Nast Traveler</option>
+          <option value="http://www.portfolio.com/">Cond&eacute; Nast Portfolio</option>
+          <option value="http://www.concierge.com/">Concierge</option>
+          <option value="http://www.details.com/">Details</option>
+          <option value="http://www.epicurious.com/">Epicurious</option>
+          <option value="http://www.glamour.com/">Glamour</option>
+          <option value="http://www.golfdigest.com">Golf Digest</option>
+          <option value="http://www.golfworld.com">Golf World</option>
+          <option value="http://www.gq.com/">GQ</option>
+          <option value="http://www.hotelchatter.com/">Hotel Chatter</option>
+          <option value="http://www.jaunted.com/">Jaunted</option>
+          <option value="http://www.luckymag.com/">Lucky</option>
+          <option value="http://www.nutritiondata.com/">Nutrition Data</option>
+          <option value="http://www.reddit.com/">Reddit</option>
+          <option value="http://www.self.com/">Self</option>
+          <option value="http://www.style.com">Style.com</option>
+          <option value="http://www.teenvogue.com/">Teen Vogue</option>
+          <option value="http://www.newyorker.com/">The New Yorker</option>
+          <option value="http://www.thescene.com/">The Scene</option>
+          <option value="http://www.vanityfair.com/">Vanity Fair</option>
+          <option value="http://www.vogue.com">Vogue</option>
+          <option value="http://www.webmonkey.com">Webmonkey</option>
+          <option value="http://www.wmagazine.com/">W</option>
+        </select>
+        <select id="footer_dropdowns_international" name="footer_dropdowns_international">
+          <option>International Sites:</option>
+          <option value="http://www.wired.co.uk">Wired UK</option>
+          <option value="http://www.wired.it">Wired Italy</option>
+          <option value="http://wired.jp">Wired Japan</option>
+        </select>
+      </fieldset>
 ```
 [www.wired.com](www.wired.com)
-##Ex 2
+###Ex 2
 ```html
 <fieldset class='form-field'>
 <label class="form-label" data-required="true" for="new_user_registration_email">Email</label><input class="form-input" id="new_user_registration_email" name="new_user_registration[email]" size="30" type="email" value="" />
@@ -531,18 +531,18 @@ Fieldset label.
 </fieldset>
 ```
 [codeschool.com](www.codeschool.com/enrollment/new)
-##Ex 3
+###Ex 3
 ```html
 <fieldset class='form-field'>
 <label class="form-label" for="new_user_registration_username">Username</label><input class="form-input" id="new_user_registration_username" name="new_user_registration[username]" size="30" type="text" />
 </fieldset>
-```  
+```
 [codeschool.com](www.codeschool.com/enrollment/new)
 
 
- ##`<form>`  
- Input form.  
- ##Ex 1  
+ ##`<form>`
+ Input form.
+ ###Ex 1
  ```html
  <form action="/search" class="module search-form" method="get">
  <h2>Search</h2>
@@ -552,10 +552,10 @@ Fieldset label.
    </form>
 
  </div>
- </form>  
+ </form>
  ```
  [IY Blog](http://orlando.theironyard.com/)
- ##Ex 2
+ ###Ex 2
  ```html
  <form accept-charset="UTF-8" action="/users/sign_in" class="new_user" data-rel="internal" id="new_user" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="naLQ+bNSllyZFE+n6gcf1SwL6URlKZf0QqVnTkwYfko=" /></div><input id="return" name="return" type="hidden" value="/enrollment/new" />
 <fieldset class='form-field'>
@@ -574,7 +574,7 @@ Fieldset label.
 </form>
 ```
 [codeschool.com](www.codeschool.com/enrollment/new)
-##Ex 3
+###Ex 3
 ```html
 <form accept-charset="UTF-8" action="/enrollment" id="cs_form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="naLQ+bNSllyZFE+n6gcf1SwL6URlKZf0QqVnTkwYfko=" /></div>
 <input id="subscription_token" name="subscription[token]" type="hidden" />
@@ -584,9 +584,9 @@ Fieldset label.
 </form>
 ```
 [codeschool.com](www.codeschool.com/enrollment/new)
-##`<section>`  
-Section of a webpage.  
-##Ex 1
+##`<section>`
+Section of a webpage.
+###Ex 1
 ```html
 <section class="masthead">
  <a href="/en/tutorials/es7/observe/?utm_source=html5rocks&utm_medium=banner&utm_campaign=es7-observe">
@@ -603,7 +603,7 @@ Section of a webpage.
 ```
 [HTML5rocks.com](http://www.html5rocks.com/en/)
 
-##Ex 2
+###Ex 2
 ```html
 <section class="search">
  <div class="container">
@@ -618,7 +618,7 @@ Section of a webpage.
 ```
 [HTML5rocks.com](http://www.html5rocks.com/en/)
 
-##Ex 3
+###Ex 3
 ```html
 <section class="landing-pages">
  <div class="panel mobile">
@@ -651,13 +651,12 @@ Section of a webpage.
    </a>
  </div>
 </section>
-```  
+```
 [HTML5rocks.com](http://www.html5rocks.com/en/)
-
 
  ##`<video>`
  Video player.
- ##Ex 1
+ ###Ex 1
  ```html
  <video class="shy video js-background_video" muted loop>
  <source src="//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm" type="video/webm">
@@ -665,7 +664,7 @@ Section of a webpage.
  </video>
  ```
 [vimeo.com](https://vimeo.com/)
-##Ex 2
+###Ex 2
  ```html
 <video class='mxp-videoplay-introvideo sublime' data-player-kit='3' data-settings='autoresize:fit' height='360' poster='https://d1tijy5l7mg5kk.cloudfront.net/assets/poster-gregg-7b56cd72b5f8d74bf5a097faaa2a1f10.jpg' preload='none' width='640'>
 <source data-quality='hd' src='//www.viddler.com/file/d/8421cbee.mp4?vfid=708a025a4723d1d8a1c083716fb880b3' type='video/mp4'>
@@ -673,20 +672,20 @@ Section of a webpage.
 </video>
  ```
  [codeschool.com](https://www.codeschool.com/)
-##Ex 3
+###Ex 3
  ```html
 <video class='sublime' data-player-kit='3' data-settings='autoresize:fit' height='360' poster='https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/poster-javascript-834064c276b362d23a8236dd97a16181.png' preload='none' width='640'>
 <source data-quality='hd' src='https://www.viddler.com/file/d/f1d5868e.mp4?vfid=708a005f4522d5d8aa687d1e4e611bc5' type='video/mp4'>
 <source src='https://www.viddler.com/file/d/f1d5868e.mp4?vfid=708a005f4522d5de1de22c691528dd2d' type='video/mp4'>
 </video>
- ```  
+ ```
  [codeschool/screencasts/famo-us](https://www.codeschool.com/screencasts/famo-us)
 
 ---
 
 #Tags 11-20 (Assignment 18)
 ##Tag 11 `<ul`>
-   This tag allows us to create an unordered list usually with bulleted items.
+This tag allows us to create an unordered list usually with bulleted items.
 
 ```html
 <ul><!--  This is the opening unordered list tag -->
@@ -750,7 +749,6 @@ properly -->
 <a ref="http://www.nomensa.com/blog/2011/using-html-lists"></a>
 <!-- Creates an ordered list of directions. This makes you follow them in a
 specific order -->
-
 ```
 
 ##Tag 13 `h1`
@@ -864,7 +862,7 @@ This tag allows to create a table of information and can take in other tags to a
 </table><!-- This is the closing table tag -->
 <a href="http://www.w3schools.com/html/html_tables.asp"></a>
 ```
-##Tag 17 `<figure>`  
+##Tag 17 `<figure>`
 This tag allows us to create some sort of content that is self contained from the main flow of the page. Usually an image. This tag also takes the figcaption tag to provide a caption to the content within figure.
 
 ```html
@@ -923,11 +921,11 @@ line breaks
 ```html
 <!-- Header -->
   <header><!-- This is the opening header tag -->
-		<div class="right-panel">
-                	 <a href="/download/" class="cta click_tracking" data-label="Download header">Download</a>
+    <div class="right-panel">
+                   <a href="/download/" class="cta click_tracking" data-label="Download header">Download</a>
                         <!-- Clickable Download link for the Evernote App -->
-            			 <a href="#" id="header-menu" class="menu click_tracking" data-label="Menu open header"><span class="text">Menu</span><span class="header-sprite"></span></a>
-	 </div>               <!-- Main menu button for a dropdown -->
+                   <a href="#" id="header-menu" class="menu click_tracking" data-label="Menu open header"><span class="text">Menu</span><span class="header-sprite"></span></a>
+   </div>               <!-- Main menu button for a dropdown -->
   </header><!-- This is the closing header tag -->
   <a href="https://evernote.com/"></a>
 
