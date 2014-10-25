@@ -83,7 +83,7 @@ nav {
 
   .sub-nav h2 {
     color: #afdefa;
-    padding: 2em 0 0.6em;
+    /*padding: .7em 0 0.6em;*/
     margin: 0;
     font-size: 160%;
     font-weight: 300;
@@ -105,4 +105,8 @@ nav {
   clear: both;
   height: 0;
   }
+
+.hidden {
+  display: none;
+}
 
