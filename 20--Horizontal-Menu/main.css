@@ -36,30 +36,33 @@
   }
 
 nav {
-  margin-top: 1em;
+  margin-top: 5em;
   outline: goldenrod 1px solid;
-  min-height: 30px;
+  min-height: 47px;
   border-bottom: solid orange 10px;
-  background-color: white;
 }
 
 /* Main Nav */
-
-  .main-nav > li {
-    /*margin-bottom: 15px;*/
+  .main-nav {
+    outline: green 1px solid;
+    margin-left: 11.5em;
     float: left;
-    /*clear: both;*/
 
   }
 
+  .main-nav > li {
+    float: left;
+  }
+
   .main-nav > li > a {
-    display: inline;
+    /*display: inline;*/
     /*float: left;*/
+    line-height: 3em;
     font-weight: bold;
     color: #999999;
     text-decoration: none;
-    padding: 20px 30px;
-    margin-right: 20px;
+    padding: 15px 30px;
+    /*margin-right: 20px;*/
     background-color: pink;
   }
 
@@ -71,9 +74,11 @@ nav {
   .sub-nav {
     background-color: #47A3DA;
     padding-left: 2em;
-    padding-right: 2em;
+    /*padding-right: 2em;*/
     padding-top: 2em;
+    padding-bottom: 2em;
     /*float: left;*/
+    position: absolute;
   }
 
   .sub-nav h2 {
