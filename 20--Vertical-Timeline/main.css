@@ -49,10 +49,58 @@ table {
 /**
  * xxxx
  */
+body {
+  line-height: 1.3em;
+  font-size: 1em;
+}
 
+.wrap {
+  width: 100%;
+  background-color: #eee;
+  margin-top: 2em;
+}
 /**
  * xxxx
  */
+article {
+  width: 50%;
+  outline: magenta 1px solid;
+  position: relative;
+  border-left: 15px lightblue solid;
+  float: right;
+  margin-right: 3em;
+}
+
+article div {
+  color: white;
+  width: 70%;
+  margin-right: 3em;
+  margin-bottom: 2em;
+  outline: 1px solid #D08770;
+  padding: .5em;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: .5em;
+  line-height: 1.3em;
+  border-bottom: 1px black solid;
+}
+
+time {
+  position: relative;
+  background-color: #00918B;
+  left: -40%;
+}
+
+.odd {
+  background-color: #6CBFEE;
+}
+
+.even {
+  background-color: #3594CB;
+}
+
 
 /**
  * xxxx
