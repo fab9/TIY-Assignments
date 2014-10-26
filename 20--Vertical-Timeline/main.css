@@ -1,20 +1,6 @@
-/**
- * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
- * http://cssreset.com
- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -22,9 +8,9 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
@@ -36,8 +22,7 @@ ol, ul {
 blockquote, q {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none;
 }
@@ -46,36 +31,26 @@ table {
   border-spacing: 0;
 }
 
-/**
- * xxxx
- */
+/** * xxxx */
 body {
-  line-height: 1.4em;
+  font-family: Arial, sans-serif;
+  line-height: 1.3em;
   font-size: 1.2em;
 }
-
 h1 {
-  font-size: 1.8em;
+  font-size: 1.6em;
+  font-weight: bold;
   line-height: 1.3em;
   border-bottom: 1px lightblue solid;
-  margin-bottom: .3em;
-  /*padding-top: 1em;*/
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-bottom: .7em;
 }
-
-p {
-  padding: 1em;
-}
-
 .wrap {
   width: 100%;
   background-color: #eee;
   margin-top: 2em;
 }
-/**
- * xxxx
- */
+
+/** * xxxx */
 article {
   width: 65%;
   outline: magenta 1px solid;
@@ -84,57 +59,41 @@ article {
   float: right;
   margin-right: 3em;
 }
-
 .article-wrapper {
   color: white;
   margin-right: 2em;
-  margin-left: 2em;
+  margin-left: 2.2em;
   margin-bottom: 2em;
-  padding: .5em;
-  border-radius: 3px;
+  padding: 2em;
+  border-radius: 4px;
 }
-
-
 time {
-  position: relative;
+  position: absolute;
   background-color: #00918B;
-  left: -40%;
+  left: -30%;
 }
-
 .odd {
   background-color: #6CBFEE;
 }
-
 .even {
   background-color: #3594CB;
 }
 
+/** * xxxx */
+/** * xxxx */
 
-/**
- * xxxx
- */
-
-/**
- * xxxx
- */
-
-/**
- * Helpers
- */
+/** * Helpers */
 .pull-right {
-    float: right;
+  float: right;
 }
-
 .pull-left {
-    float: left;
+  float: left;
 }
-
 .group:after {
   content: "";
   display: table;
   clear: both;
 }
-
 .is-hidden {
-    display: none;
+  display: none;
 }
