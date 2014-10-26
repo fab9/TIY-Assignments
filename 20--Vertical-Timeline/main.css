@@ -31,7 +31,9 @@ table {
   border-spacing: 0;
 }
 
-/** * xxxx */
+/**
+ * General
+ */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.3em;
@@ -50,7 +52,9 @@ h1 {
   margin-top: 2em;
 }
 
-/** * xxxx */
+/**
+ * Articles
+ */
 article {
   width: 65%;
   outline: magenta 1px solid;
@@ -79,10 +83,23 @@ time {
   background-color: #3594CB;
 }
 
-/** * xxxx */
-/** * xxxx */
+/**
+ * * Icons
+ */
+.icon {
+  height: 40px;
+  width: 40px;
+  background-color: purple;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  left: -4.5%;
+  border: 9px green solid;
+}
 
-/** * Helpers */
+/**
+ * * Helpers
+ */
 .pull-right {
   float: right;
 }
