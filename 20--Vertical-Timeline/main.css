@@ -50,8 +50,22 @@ table {
  * xxxx
  */
 body {
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+
+h1 {
+  font-size: 1.8em;
   line-height: 1.3em;
-  font-size: 1em;
+  border-bottom: 1px lightblue solid;
+  margin-bottom: .3em;
+  /*padding-top: 1em;*/
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+p {
+  padding: 1em;
 }
 
 .wrap {
@@ -63,29 +77,23 @@ body {
  * xxxx
  */
 article {
-  width: 50%;
+  width: 65%;
   outline: magenta 1px solid;
   position: relative;
-  border-left: 15px lightblue solid;
+  border-left: 12px lightblue solid;
   float: right;
   margin-right: 3em;
 }
 
-article div {
+.article-wrapper {
   color: white;
-  width: 70%;
-  margin-right: 3em;
+  margin-right: 2em;
+  margin-left: 2em;
   margin-bottom: 2em;
-  outline: 1px solid #D08770;
   padding: .5em;
+  border-radius: 3px;
 }
 
-h1 {
-  font-size: 1.8em;
-  margin-bottom: .5em;
-  line-height: 1.3em;
-  border-bottom: 1px black solid;
-}
 
 time {
   position: relative;
