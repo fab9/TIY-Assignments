@@ -57,7 +57,7 @@ h1 {
  */
 article {
   width: 65%;
-  outline: magenta 1px solid;
+  /*outline: magenta 1px solid;*/
   position: relative;
   border-left: 12px lightblue solid;
   float: right;
@@ -79,16 +79,18 @@ time {
 .date {
   color: #BDD0DC;
   text-align: right;
-  font-size: 1.1em;
+  font-size: .8em;
   display: block;
+  margin-bottom: 7px;
 }
 .time {
   color: #6CBFEE;
   text-align: right;
-  font-size: 3.4em;
+  font-size: 1.9em;
 }
 .odd {
   background-color: #6CBFEE;
+  border-color: #6CBFEE;
 }
 .even {
   background-color: #3594CB;
@@ -104,11 +106,27 @@ time {
   position: absolute;
   display: inline;
   border-radius: 50%;
-  left: -34px;
+  left: -41px;
   top: -2px;
   border: 9px #AFDCF8 solid;
 }
 
+i.light, i.dark {
+  /*display: none;*/
+  position: absolute;
+  top: 24px;
+  left: 90px;
+  margin-left: -3px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #6CBFEE;
+}
+
+i.dark {
+  border-right: 10px solid #3594CB;
+}
 /**
  * * Helpers
  */
