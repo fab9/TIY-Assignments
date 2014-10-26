@@ -47,9 +47,9 @@ h1 {
   margin-bottom: .7em;
 }
 .wrap {
-  width: 100%;
+  width: 65%;
   background-color: #eee;
-  margin-top: 2em;
+  margin: 2em auto;
 }
 
 /**
@@ -66,15 +66,26 @@ article {
 .article-wrapper {
   color: white;
   margin-right: 2em;
-  margin-left: 2.2em;
+  margin-left: 5em;
   margin-bottom: 2em;
   padding: 2em;
   border-radius: 4px;
 }
 time {
   position: absolute;
-  background-color: #00918B;
-  left: -30%;
+  left: -20%;
+}
+
+.date {
+  color: #BDD0DC;
+  text-align: right;
+  font-size: 1.1em;
+  display: block;
+}
+.time {
+  color: #6CBFEE;
+  text-align: right;
+  font-size: 3.4em;
 }
 .odd {
   background-color: #6CBFEE;
@@ -87,14 +98,15 @@ time {
  * * Icons
  */
 .icon {
-  height: 40px;
-  width: 40px;
-  background-color: purple;
+  height: 55px;
+  width: 55px;
+  background-color: #46A4DA;
   position: absolute;
-  display: block;
+  display: inline;
   border-radius: 50%;
-  left: -4.5%;
-  border: 9px green solid;
+  left: -34px;
+  top: -2px;
+  border: 9px #AFDCF8 solid;
 }
 
 /**
@@ -110,7 +122,4 @@ time {
   content: "";
   display: table;
   clear: both;
-}
-.is-hidden {
-  display: none;
 }
