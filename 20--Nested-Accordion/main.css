@@ -67,9 +67,9 @@ body {
 /**
  * Top-level
  */
-.heading {
+.main-heading {
   font-size: 2.2em;
-  color: #47A3DA;
+  color: #47A3DA; /*blue*/
   border-bottom: #eee solid 1px;
   padding-bottom: .4em;
   margin-bottom: .5em;
@@ -78,33 +78,52 @@ body {
 /* Hack: setting separate font-sizes
 on before pseudo-element to account for
 diff widths, otherwise text visibly shifts */
-.heading:before {
+.main-heading:before {
   content:'\27B8';
-  color: #EDF0F3;
+  color: #C5C4C6; /*grey*/
   margin-right: .6em;
   font-size: 85.5%;
 }
 
-.heading:hover:before {
+.main-heading:hover:before, .active:before {
   content:'\27B7';
-  color: #47A3DA;
-   font-size: 90%;
+  color: #47A3DA; /*blue*/
+  font-size: 90%;
 }
+
 /**
  * Nested
  */
+
+.nested-heading, .nested-content {
+  margin-left: 2em;
+}
 .nested-heading {
   text-transform: uppercase;
-  color: #47A3DA;
+  color: #47A3DA; /*blue*/
+  letter-spacing: .4em;
+  font-weight: bold;
+  margin-bottom: .5em;
+  margin-top: 1.2em;
+}
+.nested-heading:before {
+  content:'\2192';
+  color: #C5C4C6; /*grey*/
+  margin-right: .6em;
+  font-size: 85.5%;
 }
 
-/*.nested-content {
-
-
-}*/
-/**
- * xxxx
- */
+.nested-heading:hover:before {
+  content:'\2198';
+  color: #47A3DA;
+  font-size: 90%;
+}
+div.main-content {
+  display: none;
+}
+.active + div.main-content {
+  display: block;
+}
 
 /**
  * Helpers
