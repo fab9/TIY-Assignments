@@ -15,7 +15,6 @@ window.onload=function() {
     for (var i = 0; i < accLinks.length; i++) {
         accLinks[i].onclick = function() {
       displayPanel(this);
-      console.log('attaching onclick fn to h1');
       return false;
     }
   }
@@ -31,7 +30,7 @@ function displayPanel(accToActivate) {
             accLinks[i].classList.add("active");
         } else {
       // remove the active class on the link
-          accLinks[i].classList.remove("active");
+          // accLinks[i].classList.remove("active");
       // hide the panel
           accPanels[i].classList.add = "is-hidden";
         }

@@ -105,6 +105,7 @@ diff widths, otherwise text visibly shifts */
   font-weight: bold;
   margin-bottom: .5em;
   margin-top: 1.2em;
+  cursor: pointer;
 }
 .nested-heading:before {
   content:'\2192';
@@ -118,10 +119,10 @@ diff widths, otherwise text visibly shifts */
   color: #47A3DA;
   font-size: 90%;
 }
-div.main-content {
+div.main-content, div.nested-content {
   display: none;
 }
-.active + div.main-content {
+.active + div {
   display: block;
 }
 
