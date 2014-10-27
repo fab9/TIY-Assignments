@@ -1,19 +1,16 @@
-/*new colors
-light: #F17370, not #6CBFEE
-dark: #AD4743, not #3594CB
-other: #F26663
-
-
-*/
+/* new colors
+light:#F17370, not #6CBFEE
+dark:#AD4743, not #3594CB
+other:#F26663 */
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
 * http://cssreset.com */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font: inherit;
+  font-size: 100%;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
+  border: 0;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -34,47 +31,44 @@ blockquote:before, blockquote:after, q:before, q:after {
   content: none;
 }
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
 
-/**
- * General
- */
+/** * General */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.3em;
   font-size: 1.2em;
+  line-height: 1.3em;
 }
 h1 {
   font-size: 1.6em;
   font-weight: bold;
   line-height: 1.3em;
-  border-bottom: 1px lightblue solid;
   margin-bottom: .7em;
+  border-bottom: 1px lightblue solid;
 }
 .wrap {
   width: 65%;
   margin: 2em auto;
 }
 
-/**
- * Articles
- */
+/** * Articles */
 article {
-  width: 65%;
-  /*outline: magenta 1px solid;*/
+  /* outline: magenta 1px solid;
+  */
   position: relative;
-  border-left: 12px lightblue solid;
   float: right;
+  width: 65%;
   margin-right: 3em;
+  border-left: 12px lightblue solid;
 }
 .article-wrapper {
-  color: white;
   margin-right: 2em;
-  margin-left: 5em;
   margin-bottom: 2em;
+  margin-left: 5em;
   padding: 2em;
+  color: white;
   border-radius: 4px;
 }
 time {
@@ -82,59 +76,53 @@ time {
   left: -20%;
 }
 .date {
-  color: #BDD0DC;
-  text-align: right;
   font-size: .8em;
   display: block;
   margin-bottom: 7px;
+  text-align: right;
+  color: #bdd0dc;
 }
 .time {
-  color: #6CBFEE;
-  text-align: right;
   font-size: 1.9em;
+  text-align: right;
+  color: #6cbfee;
 }
 .odd {
-  background-color: #6CBFEE;
-  border-color: #6CBFEE;
+  border-color: #6cbfee;
+  background-color: #6cbfee;
 }
 .even {
-  background-color: #3594CB;
+  background-color: #3594cb;
 }
 
-/**
- * * Icons
- */
+/** * * Icons */
 .icon {
-  height: 55px;
-  width: 55px;
-  background-color: #46A4DA;
   position: absolute;
-  display: inline;
-  border-radius: 50%;
-  left: -41px;
   top: -2px;
-  border: 9px #AFDCF8 solid;
+  left: -41px;
+  display: inline;
+  width: 55px;
+  height: 55px;
+  border: 9px #afdcf8 solid;
+  border-radius: 50%;
+  background-color: #46a4da;
 }
-
 i.light, i.dark {
-  /*display: none;*/
   position: absolute;
   top: 24px;
   left: 90px;
-  margin-left: -3px;
   width: 0;
   height: 0;
+  margin-left: -3px;
   border-top: 10px solid transparent;
+  border-right: 10px solid #6cbfee;
   border-bottom: 10px solid transparent;
-  border-right: 10px solid #6CBFEE;
+}
+i.dark {
+  border-right: 10px solid #3594cb;
 }
 
-i.dark {
-  border-right: 10px solid #3594CB;
-}
-/**
- * * Helpers
- */
+/** * * Helpers */
 .pull-right {
   float: right;
 }
@@ -142,7 +130,7 @@ i.dark {
   float: left;
 }
 .group:after {
-  content: "";
   display: table;
   clear: both;
+  content: '';
 }
