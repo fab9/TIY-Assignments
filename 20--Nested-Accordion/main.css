@@ -51,44 +51,57 @@ table {
  */
 body {
   font-family: 'Lato', Calibri, Arial, sans-serif;
-  font-style: 16px;
+  color: #888;
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 0.2em 0 1.5em;
 }
+
 .wrap {
-  width: 90%;
+  width: 80%;
   max-width: 50em;
-  margin-left: 0 auto;
+  margin: 0 auto;
 }
 
-
-p {
-color: #888;
-font-size: 1.25em;
-font-weight: 300;
-line-height: 1.5;
-padding: 0.2em 0 1.5em;
-margin: 0;
-}
 /**
  * Top-level
  */
 .heading {
-  font-size: 1.8em;
+  font-size: 2.2em;
+  color: #47A3DA;
+  border-bottom: #eee solid 1px;
+  padding-bottom: .4em;
+  margin-bottom: .5em;
+  cursor: pointer;
+}
+/* Hack: setting separate font-sizes
+on before pseudo-element to account for
+diff widths, otherwise text visibly shifts */
+.heading:before {
+  content:'\27B8';
+  color: #EDF0F3;
+  margin-right: .6em;
+  font-size: 85.5%;
+}
+
+.heading:hover:before {
+  content:'\27B7';
+  color: #47A3DA;
+   font-size: 90%;
 }
 /**
  * Nested
  */
 .nested-heading {
   text-transform: uppercase;
+  color: #47A3DA;
 }
 
-.nested-content {
-color: #888;
-font-size: 1.25em;
-font-weight: 300;
-line-height: 1.5;
-padding: 0.2em 0 1.5em;
-margin: 0;
-}
+/*.nested-content {
+
+
+}*/
 /**
  * xxxx
  */
