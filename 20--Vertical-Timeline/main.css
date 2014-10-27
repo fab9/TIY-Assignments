@@ -1,3 +1,10 @@
+/*new colors
+light: #F17370, not #6CBFEE
+dark: #AD4743, not #3594CB
+other: #F26663
+
+
+*/
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
 * http://cssreset.com */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -48,7 +55,6 @@ h1 {
 }
 .wrap {
   width: 65%;
-  background-color: #eee;
   margin: 2em auto;
 }
 
@@ -75,7 +81,6 @@ time {
   position: absolute;
   left: -20%;
 }
-
 .date {
   color: #BDD0DC;
   text-align: right;
