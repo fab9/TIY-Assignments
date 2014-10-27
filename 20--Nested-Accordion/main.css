@@ -49,15 +49,46 @@ table {
 /**
  * xxxx
  */
+body {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  font-style: 16px;
+}
+.wrap {
+  width: 90%;
+  max-width: 50em;
+  margin-left: 0 auto;
+}
 
+
+p {
+color: #888;
+font-size: 1.25em;
+font-weight: 300;
+line-height: 1.5;
+padding: 0.2em 0 1.5em;
+margin: 0;
+}
 /**
- * xxxx
+ * Top-level
  */
-
+.heading {
+  font-size: 1.8em;
+}
 /**
- * xxxx
+ * Nested
  */
+.nested-heading {
+  text-transform: uppercase;
+}
 
+.nested-content {
+color: #888;
+font-size: 1.25em;
+font-weight: 300;
+line-height: 1.5;
+padding: 0.2em 0 1.5em;
+margin: 0;
+}
 /**
  * xxxx
  */
