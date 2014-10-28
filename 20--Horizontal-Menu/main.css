@@ -1,20 +1,6 @@
-/**
- * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
- * http://cssreset.com
- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -22,9 +8,9 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
@@ -33,76 +19,58 @@ body {
 ol, ul {
   list-style: none;
 }
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
-/**
- * xxxx
- */
-
-/**
- * xxxx
- */
-
-/**
- * xxxx
- */
-
-/**
- * xxxx
- */
+/** * General */
 body {
   font-family: 'Lato', Calibri, Arial, sans-serif;
   line-height: 1.8em;
   font-weight: normal;
 }
-h2 {
-  /* float: left;
-  */
+section, .main-nav {
+  width: 90%;
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 0 1.875em;
 }
-ol, ul {
-  list-style: none;
+
+.blueband {
+  position: absolute;
+  background: #47a3da;
+  width: 100%;
+  left: 0;
 }
+
+
 nav {
-  margin-top: 5em;
-  outline: goldenrod 1px solid;
+  margin-top: 3em;
   min-height: 47px;
-  border-bottom: solid orange 10px;
+  border-bottom: solid #47A3DA 10px;
+  width: 100%;
 }
 
 /* Main Nav */
 .main-nav {
-  outline: green 1px solid;
-  margin-left: 11.5em;
-  float: left;
+  margin: 0 auto;
+  /*float: left;*/
 }
 .main-nav > li {
   float: left;
+  margin-right: 33px;
+  padding-top: .6em;
+  padding-bottom: .6em;
+  padding-left: 1.6em;
+
 }
 .main-nav > li > a {
-  /* display: inline;
-  */
-  /* float: left;
-  */
-  line-height: 3em;
   font-weight: bold;
   color: #999999;
   text-decoration: none;
-  padding: 15px 30px;
-  /* margin-right: 20px;
-  */
-  background-color: pink;
+/*  padding: 15px 30px;*/
+  margin-right: 20px;
 }
+
+
+
 .main-nav > li > a:hover {
   color: #47A3DA;
 }
@@ -111,18 +79,15 @@ nav {
 .sub-nav {
   background-color: #47A3DA;
   padding-left: 2em;
-  /* padding-right: 2em;
-  */
+  padding-right: 2em;
   padding-top: 2em;
   padding-bottom: 2em;
-  /* float: left;
-  */
-  position: absolute;
+  float: left;
+  max-width: 33%;
 }
 .sub-nav h2 {
   color: #afdefa;
-  /* padding: .7em 0 0.6em;
-  */
+  padding: .7em 0 0.6em;
   margin: 0;
   font-size: 160%;
   font-weight: 300;
@@ -134,7 +99,10 @@ nav {
   line-height: 2em;
   text-decoration: none;
 }
-
+.open {
+  color: #fff;
+  background: #47a3da;
+}
 /* Helpers */
 .group:after {
   visibility: hidden;
@@ -145,4 +113,7 @@ nav {
 }
 .hidden {
   display: none;
+}
+.visible {
+  display: block;
 }
