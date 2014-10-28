@@ -33,21 +33,9 @@ body {
 ol, ul {
   list-style: none;
 }
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 
 /**
- * xxxx
+ * General
  */
 body {
   font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -67,7 +55,7 @@ body {
 /**
  * Top-level
  */
-.main-heading {
+h3.main-heading {
   font-size: 2.2em;
   color: #47A3DA; /*blue*/
   border-bottom: #eee solid 1px;
@@ -78,14 +66,14 @@ body {
 /* Hack: setting separate font-sizes
 on before pseudo-element to account for
 diff widths, otherwise text visibly shifts */
-.main-heading:before {
+h3.main-heading:before {
   content:'\27B8';
   color: #C5C4C6; /*grey*/
   margin-right: .6em;
   font-size: 85.5%;
 }
 
-.main-heading:hover:before, .active:before {
+.main-heading:hover:before, h4.accordion-open:before {
   content:'\27B7';
   color: #47A3DA; /*blue*/
   font-size: 90%;
@@ -106,46 +94,31 @@ diff widths, otherwise text visibly shifts */
   margin-top: 1.2em;
   cursor: pointer;
 }
-.nested-heading:before {
+h4.nested-heading:before {
   content:'\2192';
   color: #C5C4C6; /*grey*/
   margin-right: .6em;
   font-size: 85.5%;
 }
 
-.nested-heading:hover:before {
+h4.nested-heading:hover:before {
   content:'\2198';
   color: #47A3DA;
   font-size: 90%;
 }
-div.main-content, div.nested-content {
-  display: none;
+
+.accordion h3:before {
+  content:'\27B8'; /* right-ward arrow */
 }
-.active + div {
+
+.accordion h4:before {
+  content:'\2192';
+}
+
+.accordion li > :first-child ~ * {
+  display: none; /* targets nested ul and its children */
+}
+.accordion li.accordion-open > :first-child ~ * {
   display: block;
 }
 
-/**
- * Helpers
- */
-.pull-right {
-    float: right;
-}
-
-.pull-left {
-    float: left;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content:"";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.is-hidden {
-    display: none;
-}
