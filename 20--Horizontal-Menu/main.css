@@ -38,7 +38,11 @@ section, .main-nav {
   background: #47a3da;
   width: 100%;
   left: 0;
+  display: none;
 }
+
+
+
 
 
 nav {
@@ -61,7 +65,7 @@ nav {
   padding-left: 1.6em;
 
 }
-.main-nav > li > a {
+.main-nav > li.top-nav {
   font-weight: bold;
   color: #999999;
   text-decoration: none;
@@ -71,7 +75,7 @@ nav {
 
 
 
-.main-nav > li > a:hover {
+.main-nav > li.top-nav:hover {
   color: #47A3DA;
 }
 
@@ -99,21 +103,15 @@ nav {
   line-height: 2em;
   text-decoration: none;
 }
-.open {
-  color: #fff;
-  background: #47a3da;
+
+
+nav li.open > :first-child ~ * {
+  display: block;
 }
+
+
 /* Helpers */
 .group:after {
-  visibility: hidden;
-  display: block;
-  content: "";
-  clear: both;
-  height: 0;
+clear: both;
 }
-.hidden {
-  display: none;
-}
-.visible {
-  display: block;
-}
+
