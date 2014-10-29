@@ -33,17 +33,13 @@ section, .main-nav {
   padding: 0 1.875em;
 }
 
-.blueband {
+article {
   position: absolute;
   background: #47a3da;
   width: 100%;
   left: 0;
   display: none;
 }
-
-
-
-
 
 nav {
   margin-top: 3em;
@@ -63,9 +59,8 @@ nav {
   padding-top: .6em;
   padding-bottom: .6em;
   padding-left: 1.6em;
+  cursor: pointer;
 
-}
-.main-nav > li.top-nav {
   font-weight: bold;
   color: #999999;
   text-decoration: none;
@@ -73,9 +68,7 @@ nav {
   margin-right: 20px;
 }
 
-
-
-.main-nav > li.top-nav:hover {
+.main-nav > li:hover {
   color: #47A3DA;
 }
 
@@ -104,8 +97,7 @@ nav {
   text-decoration: none;
 }
 
-
-nav li.open > :first-child ~ * {
+.open {
   display: block;
 }
 
