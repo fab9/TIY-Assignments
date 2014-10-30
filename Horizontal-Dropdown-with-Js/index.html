@@ -170,15 +170,51 @@
 
   <script>
   var navItems = document.getElementsByTagName('h3'); // ok
-  var clickableNavItem;
+  var clickNavItem;
+
+/**
+ * If "this" `navItem` is "closed", make it "open"; if "this" `navItem` is "open"
+ * make it "closed". If other `navItems` are "open" then close them, too.
+ *
+ * @todo FIX THIS FUNCTION!
+ *
+ * @param DOMEvent event
+ * @return undefined
+ */
+function clickNavItem(event){
+  // if "this" navItem is "closed"...
+  if ( this.parentElement.className !== 'open' ){
+    makeEverythingClosed(navItems);
+    makeItOpen(this.parentElement);
+  // otherwise if "this" navItem is "open"
+  } else if ( this.parentElement.className === 'open' ){
+    makeItClosed(this.parentElement);
+  }
+}; // END clickNavItem
+
+
 
   // for each navItem
   _.each(navItems, function(navItem) {
     // attach the event handler...
-    navItem.onclick = clickableNavItem; // ok
+    navItem.onclick = clickNavItem; // ok
     console.log('nav items are now clickable'); // ok
   });
 
+
+  /**
+   * @param HTMLElement element
+   * @return Boolean if `element` is "open"
+   */
+  function isOpen(element){
+  }
+  /**
+   * @param HTMLElement element
+   * @return Boolean if `element` is "closed"
+   */
+  function isClosed(element){
+
+  }
 
   // Generic functions
   function makeItOpen (element) {
@@ -187,6 +223,14 @@
 
   function makeItClosed(element){
     element.className = '';
+  }
+
+  function makeEverythingClosed(elements){
+  // for every element in elements
+    _.each(elements, function(element) {
+      // remove open classes
+      element.parentElement.className = '';
+    });
   }
   </script>
 </body>
