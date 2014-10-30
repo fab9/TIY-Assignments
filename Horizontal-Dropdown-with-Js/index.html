@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="styles.css">
-  <!-- link to lodash -->
+  <script src="lodash.js"></script>
 </head>
 <body>
   <ul class="menu">
     <li>
-      <h3>Products</h3>
+      <h3>Productssss</h3>
       <div class="submenu">
         <h4>Learning &amp; Games</h4>
         <ul>
@@ -167,7 +167,27 @@
       </div>
     </li><!-- END Freeware -->
   </ul>
-  <script src="lodash.js"></script>
 
+  <script>
+  var navItems = document.getElementsByTagName('h3'); // ok
+  var clickableNavItem;
+
+  // for each navItem
+  _.each(navItems, function(navItem) {
+    // attach the event handler...
+    navItem.onclick = clickableNavItem; // ok
+    console.log('nav items are now clickable'); // ok
+  });
+
+
+  // Generic functions
+  function makeItOpen (element) {
+    element.className = 'open';
+  }
+
+  function makeItClosed(element){
+    element.className = '';
+  }
+  </script>
 </body>
 </html>
