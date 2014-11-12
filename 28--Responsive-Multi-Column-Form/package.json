@@ -1,0 +1,16 @@
+{
+  "name": "28--Responsive-Multi-Column-Form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "devDependencies": {
+  "gulp": "^3.8.10",
+  "gulp-sass": "^1.1.0",
+  "gulp-util": "^3.0.1",
+  "gulp-webserver": "^0.8.7"
+  }
+}
