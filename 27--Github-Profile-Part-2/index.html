@@ -1,0 +1,283 @@
+<!doctype>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="row navbar navbar-default">
+        <div class="container">
+          <a class="navbar-brand octicon octicon-logo-github" href="#">
+            <span hidden>home</span></a>
+
+          <!-- Begin search -->
+          <div class="site-search">
+            <form class="navbar-form navbar-left" role="search">
+              <fieldset class="form-group site-search">
+                <input type="text" class="form-control input-sm" placeholder="Search GitHub">
+              </fieldset><!-- .form-group -->
+            </form>
+          </div><!-- .site-search -->
+          <ul class="nav navbar-nav">
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Gist</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Help</a></li>
+          </ul><!-- .nav .navbar-nav -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="login" href="#">{{login}}</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="octicon octicon-plus"></span><span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span class="octicon octicon-inbox"></span></a></li>
+            <li><a href="#"><span class="octicon octicon-gear"></span></a></li>
+            <li><a href="#"><span class="octicon octicon-sign-out"></span></a></li>
+          </ul><!-- .nav .navbar-nav .navbar-right -->
+        </div><!-- .container -->
+      </nav>
+      <div class="row">
+        <!-- Begin sidebar -->
+        <aside class="sidebar col-xs-3 col-sm-3 col-md-3">
+          <a href="#" class="thumbnail" id="avatar"><img></a>
+          <h1><span>{{name}}</span> <br>
+            <small>{{login}}</small></h1>
+          <hr>
+          <ul class="bio list-unstyled">
+            <li class="location"> <i class="octicon octicon-location"></i> {{location}} </li>
+            <li class="email"> <i class="octicon octicon-mail"></i> <a href="mailto:{{email}}">{{email}}</a></li>
+            <li class="blog"> <i class="octicon octicon-link"></i> {{blog}} </li>
+            <li class="blog-link"> <i class="octicon octicon-link"></i> <a href="{{blog}}">{{blog}}</a></li>
+          </ul>
+          <hr>
+          <nav class="stats text-center">
+            <a href="#" class="col-xs-4"><big>{{followers}}</big> Followers</a>
+            <a href="#" class="col-xs-4"><big>{{starred.length???}}</big> Starred</a>
+            <a href="#" class="col-xs-4"><big>{{following}}</big> Following</a>
+          </ul>
+          <div class="orgs">
+            <h3>Organizations</h3>
+            <img class="avatar" src="https://avatars3.githubusercontent.com/u/6183?v=2&s=84" height="42" width="42">
+            <img class="avatar" src="https://avatars3.githubusercontent.com/u/1266578?v=2&s=84" height="42" width="42">
+            <img class="avatar" src="https://avatars1.githubusercontent.com/u/3080009?v=2&s=84" height="42" width="42">
+            <img class="avatar" src="https://avatars1.githubusercontent.com/u/3080402?v=2&s=84" height="42" width="42">
+            <img class="avatar" src="https://avatars0.githubusercontent.com/u/3086128?v=2&s=84" height="42" width="42">
+            <img class="avatar" src="https://avatars3.githubusercontent.com/u/3086150?v=2&s=84" height="42" width="42">
+            <img class="avatar" src="https://avatars3.githubusercontent.com/u/3086272?v=2&s=84" height="42" width="42">
+            <img class="avatar" src="https://avatars3.githubusercontent.com/u/6732188?v=2&s=84" height="42" width="42">
+            <img class="avatar" src="https://avatars0.githubusercontent.com/u/6732193?v=2&s=84" height="42" width="42">
+            <img class="avatar" src="https://avatars3.githubusercontent.com/u/8798300?v=2&s=84" height="42" width="42">
+          </div><!-- .orgs -->
+        </aside><!-- .sidebar -->
+
+        <!-- Begin main -->
+        <section class="blue main col-xs-9 col-sm-9 col-md-9">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"> <a data-toggle="tab" href="#tab-contributions" class="octicon octicon-diff-added "> Contributions </a>
+            <li role="presentation"> <a data-toggle="tab" href="#tab-repositories"> Repositories </a>
+            <li role="presentation"> <a data-toggle="tab" href="#tab-activity"> Public activity </a>
+          </ul>
+          <!-- <br> -->
+
+          <div class="tab-content">
+            <section class="pink tab-pane active col-xs-12 col-sm-12 col-md-12" id="tab-contributions">
+              <div class="container-fluid">
+              <div class="row">
+                <div class="panel panel-default col-xs-6 col-sm-6 col-md-6" id="popular-repos">
+                  <div class="panel-heading">
+                    Popular Repositories
+                  </div>
+                  <ul class="list-group">
+                    <a href="#" class="list-group-item">
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
+                      <h4 class="list-group-item-heading octicon octicon-repo">
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
+                      <h4 class="list-group-item-heading octicon octicon-repo">
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
+                      <h4 class="list-group-item-heading octicon octicon-repo">
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
+                    </a>
+                  </ul>
+                </div> <!-- #popular-repos -->
+                <div class="panel panel-default col-xs-6 col-sm-6 col-md-6" id="repo-contribs">
+                  <div class="panel-heading">
+                    Repositories contributed to
+                  </div>
+                  <nav class="list-group">
+                    <a href="#" class="list-group-item">
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
+                      <h4 class="list-group-item-heading octicon octicon-repo">
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
+                      <h4 class="list-group-item-heading octicon octicon-repo">
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
+                      <h4 class="list-group-item-heading octicon octicon-repo">
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
+                    </a>
+                  </nav>
+                </div> <!-- #repo-contribs -->
+              </div><!-- .row -- groups top 2 panels -->
+              </div>
+
+
+               <div class="panel panel-default clearfix" id="public-contribs">
+                 <header class="panel-heading">
+                   <h3 class="panel-title"> Public contributions </h3>
+                 </header>
+                 <ul class="list-group">
+                   <li class="list-group-item">
+                     <p> Contribution Graph ZOMG! </p>
+                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus diam quis leo placerat dictum. Fusce turpis quam, ultrices ut porta sed, aliquam at elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla risus nunc, molestie at congue sit amet, congue a sem. Maecenas ut ipsum vel arcu cursus cursus. Mauris a pulvinar ligula. Fusce tincidunt tempus turpis non vestibulum. Vestibulum sed enim velit, non molestie enim. Pellentesque at mi ipsum, vitae pulvinar dolor. Nam tempus dictum iaculis. Vivamus eget eros id diam iaculis sollicitudin. </p>
+                   </li>
+                   <li class="list-group-item col-xs-4">
+                     <h6 class="list-group-item-heading"> Year of Contributions </h6>
+                   </li>
+                   <li class="list-group-item col-xs-4">
+                     <h6 class="list-group-item-heading"> Longest Streak </h6>
+                   </li>
+                   <li class="list-group-item col-xs-4">
+                     <h6 class="list-group-item-heading"> Current Streak </h6>
+                   </li>
+                   <li class="clearfix">
+                 </ul>
+               </div> <!-- #public-contribs -->
+               <div>
+                 <h4> Contribution activity </h4>
+
+                 <div class="well">
+                   <h5 class="big"> octocat has no activity during this period </h5>
+                 </div>
+               </div>
+            </section> <!-- #tab-contributions -->
+            <section class="tab-pane purple col-xs-6 col-sm-6 col-md-6" id="tab-repositories">
+              <ul class="list-group" id="repo-list">
+                <li class="list-group-item">
+                  <h3 class="list-group-item-heading">{{repo-name}}</h3>
+                  <p>{{repo-desc}}</p>
+                  <p class="muted">Updated on Month DD</p>
+                </li>
+              </ul> <!-- #repo-list -->
+            </section> <!-- #tab-repositories -->
+            <section class="tab-pane col-xs-12 col-sm-12 col-md-12" id="tab-activity">
+              <ul class="list-unstyled">
+                <li> <span class="muted">on Sep 3</span>
+                  <h5> <a href="#">octocat</a> pushed to
+                    <a href="#">change-the-title</a> at
+                    <a href="#">octocat/Spoon-Knife</a>
+                  </h5>
+                </li>
+              </ul>
+            </section> <!-- #tab-activity -->
+          </div> <!-- .tab-content -->
+        <!-- </section> -->
+      </div> <!-- .row -->
+    </div>
+
+    <script>
+      ;(function(){ // closure
+        var data;
+
+        // We can setup a robot to make get requests:
+        function getData(url) {
+         return $.get(url)
+           .error (function () {
+             console.error('OMG!');
+           });
+        }
+
+        function getUser() {
+         return getData('https://api.github.com/users/fab9');
+        }
+
+        function getRepos() {
+         return getData('https://api.github.com/users/fab9/repos');
+        }
+
+        // ===== $.when ===== below uses it to stick 2 promises together
+        var allData = $.when(
+          getUser(), getRepos()
+          );
+
+         allData.done(function(user,repos) {
+           var data = {
+             user: user[0],
+             repos: repos[0]
+            }
+           console.info(data);
+        //    pull out and do text replacements
+        //    for each element here...
+
+          var sidebar = $('.sidebar');
+
+          $('#avatar')
+           .attr('href', user.avatar_url)
+           .children('img')
+             .attr('src', user.avatar_url)
+          ; // END #avatar
+
+          sidebar.children('h1')
+            .children('span').text(data.user.name)
+            .siblings('small').text(data.user.login)
+          ;
+
+          $('.name')
+          .html(data.user.name)
+
+          $('.login')
+          .html( data.user.login)
+
+          $('.location')
+          .html(data.user.location)
+
+          $('.email')
+          .attr('href', 'mailto:rorou192@gmail.com')
+           .html(data.user.email)
+
+          $('.blog')
+          .attr('href', data.user.blog)
+            .html(data.user.blog)
+
+          $('.followers')
+          .attr('href', data.user.followers_url)
+            .html(data.user.followers + ' Follower')
+
+          $('.starred')
+          .attr('href', data.user.starred_url)
+            .html(data.user.starred)
+
+          $('.following')
+          .attr('href', data.user.following_url)
+            .html(data.following)
+
+         }); // END allData
+
+      })(); // END closure
+
+
+    </script>
+  </body>
+</html>
