@@ -30,7 +30,7 @@
             <li><a href="#">Help</a></li>
           </ul><!-- .nav .navbar-nav -->
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">{{login}}</a></li>
+            <li><a class="login" href="#">{{login}}</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="octicon octicon-plus"></span><span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -47,15 +47,14 @@
         <!-- Begin sidebar -->
         <aside class="sidebar col-xs-3 col-sm-3 col-md-3">
           <a href="#" class="thumbnail" id="avatar"><img></a>
-          <h1> <span>{{name}}</span> <br>
+          <h1><span>{{name}}</span> <br>
             <small>{{login}}</small></h1>
           <hr>
           <ul class="bio list-unstyled">
-            <li> <i class="octicon octicon-organization"></i> {{company}}
-            <li> <i class="octicon octicon-location"></i> {{location}}
-            <li> <i class="octicon octicon-mail"></i> {{email}}
-            <li> <i class="octicon octicon-link"></i> {{blog}}
-            <li> <i class="octicon octicon-clock"></i> {{created_at}}... kinda
+            <li class="location"> <i class="octicon octicon-location"></i> {{location}} </li>
+            <li class="email"> <i class="octicon octicon-mail"></i> <a href="mailto:{{email}}">{{email}}</a></li>
+            <li class="blog"> <i class="octicon octicon-link"></i> {{blog}} </li>
+            <li class="blog-link"> <i class="octicon octicon-link"></i> <a href="{{blog}}">{{blog}}</a></li>
           </ul>
           <hr>
           <nav class="stats text-center">
@@ -202,80 +201,85 @@
     </div>
 
     <script>
-    // ----------------
-  // There's a shortcut for getting something and ajaxing and doing
-  // something on success
-  //
-  //in console :
-  //$.get('octocat.json', function(data){});
-  //
-  //what is the diff bw ^^ and $.ajax('octocat.json')
-  //
-  //when i call an ajaxy method such as: $.get/ajax/etc(), it returns
-  //a Promise object.
-  // if everything goes well (the request goes through), the .done(callback) fires. So, on success, .done fires. On error, .error fires.
-  // There's also a .finally and .always that can be fired...
-  // when would I use those?
-  // ---
-  // We can setup a robot to make get requests:
+      ;(function(){ // closure
+        var data;
 
-  function getData(url) {
-   return $.get(url)
-     .error (function () {
-       console.log('OMG!');
-     });
-  }
+        // We can setup a robot to make get requests:
+        function getData(url) {
+         return $.get(url)
+           .error (function () {
+             console.error('OMG!');
+           });
+        }
 
-  function getUser() {
-   return getData('https://api.github.com/users/fab9');
-  }
+        function getUser() {
+         return getData('https://api.github.com/users/fab9');
+        }
 
-  function getRepos() {
-   return getData('https://api.github.com/users/fab9/repos');
-  }
+        function getRepos() {
+         return getData('https://api.github.com/users/fab9/repos');
+        }
 
-  // **** the result of getRepos ^^ is that promise, everytime
-  // I call getRepos, I'll get another promise.****
-  //
-  // function getStarred() {
-  //  return getData('octocat-starred.json');
-  // }
-  //
-  // ===== $.when ===== below uses it to stick 2 promises together
-  var allData = $.when(
-    getUser(), getRepos()
-    );
+        // ===== $.when ===== below uses it to stick 2 promises together
+        var allData = $.when(
+          getUser(), getRepos()
+          );
 
-   allData.done(function(user,repos) {
-     var data = {
-       user: user[0],
-       repos: repos[0]
-      }
-     console.info(data);
-   });
-  //
-  //    pull out and do text replacements
-  //    for each element here... something like this...
-  //
-  //     jQuery('#avatar')
-     //   .attr('href', data.avatar_url)
-     //   .children('img')
-     //     .attr('src', data.avatar_url)
-     // ;
-  //  }); // TODO: check this syntax
-  //---
-  //  promise is not built into js.
-  //  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-// ---
-// in console:
-// $.get('https://api.github.com/users/al-the-x', function(data) {
-//    console.log(data);
-// });
-//
-// $.get('https://api.github.com/users/fab9', function(data) {
-//    console.log(data);
-// });
+         allData.done(function(user,repos) {
+           var data = {
+             user: user[0],
+             repos: repos[0]
+            }
+           console.info(data);
+        //    pull out and do text replacements
+        //    for each element here...
 
+          var sidebar = $('.sidebar');
+
+          $('#avatar')
+           .attr('href', user.avatar_url)
+           .children('img')
+             .attr('src', user.avatar_url)
+          ; // END #avatar
+
+          sidebar.children('h1')
+            .children('span').text(data.user.name)
+            .siblings('small').text(data.user.login)
+          ;
+
+          $('.name')
+          .html(data.user.name)
+
+          $('.login')
+          .html( data.user.login)
+
+          $('.location')
+          .html(data.user.location)
+
+          $('.email')
+          .attr('href', 'mailto:rorou192@gmail.com')
+           .html(data.user.email)
+
+          $('.blog')
+          .attr('href', data.user.blog)
+            .html(data.user.blog)
+
+          $('.followers')
+          .attr('href', data.user.followers_url)
+            .html(data.user.followers + ' Follower')
+
+          $('.starred')
+          .attr('href', data.user.starred_url)
+            .html(data.user.starred)
+
+          $('.following')
+          .attr('href', data.user.following_url)
+            .html(data.following)
+
+         }); // END allData
+
+
+      })(); // END closure
     </script>
   </body>
 </html>
