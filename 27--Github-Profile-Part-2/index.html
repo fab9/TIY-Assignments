@@ -4,104 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <style>
-      body {
-        font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-        color: #333;
-      }
-      body > .container {
-        min-width: 1020px;
-      }
-
-      .navbar-brand {
-        font-size: 4ex;
-      }
-
-      .stats big {
-        font-size: 200%;
-      }
-
-      .bio li {
-        line-height: 2;
-      }
-      .bio .octicon:before {
-        display: inline-block;
-        color: gray;
-        width: 2em;
-        text-align: center;
-      }
-      .main .panel { /* bootstrap override */
-        padding-right: 0;
-        padding-left: 0;
-      }
-      .main section { /* bootstrap override */
-        padding-right: 0;
-        padding-left: 0;
-      }
-      .thumbnail { /* bootstrap override */
-        border: none;
-      }
-      .thumbnail>img { /* bootstrap override */
-        border-radius: 4px;
-      }
-      .badge {
-        color: inherit;
-        vertical-align: baseline;
-        background-color: inherit;
-        border-radius: none;
-        font-size: 12px;
-        color: #888;
-      }
-      .list-group-item-heading {
-        font-weight: bold;
-        font-size: 14px;
-      }
-
-#popular-repos, #repo-contribs {
-
-}
-
-      .repo-description {
-        display: block;
-        max-width: 230px;
-        font-size: 12px;
-        color: #777;
-      }
-
-      .css-truncate .css-truncate-target {
-        display: inline-block;
-        max-width: 125px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        vertical-align: top;
-      }
-
-      .avatar {
-        display: inline-block;
-        overflow: hidden;
-        line-height: 1;
-        vertical-align: middle;
-        border-radius: 3px;
-
-        display: inline-block;
-        margin-bottom: 3px;
-      }
-
-      .pink {
-        background-color: pink;
-      }
-
-      .purple {
-        background-color: thistle;
-      }
-
-      .blue {
-        background-color: lightblue;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
@@ -192,22 +97,22 @@
                   </div>
                   <ul class="list-group">
                     <a href="#" class="list-group-item">
-                      <span class="badge octicon octicon-star">123</span>
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
                       <h4 class="list-group-item-heading octicon octicon-repo">
-                        Repository Name</h4>
-                      <p class="list-group-item-text css-truncate-target">This is the description of the repository.</p>
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
                     </a>
                     <a href="#" class="list-group-item">
-                      <span class="badge octicon octicon-star">123</span>
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
                       <h4 class="list-group-item-heading octicon octicon-repo">
-                        Repository Name</h4>
-                      <p class="list-group-item-text css-truncate-target">This is the description of the repository.</p>
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
                     </a>
                     <a href="#" class="list-group-item">
-                      <span class="badge octicon octicon-star">123</span>
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
                       <h4 class="list-group-item-heading octicon octicon-repo">
-                        Repository Name</h4>
-                      <p class="list-group-item-text css-truncate-target">This is the description of the repository.</p>
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
                     </a>
                   </ul>
                 </div> <!-- #popular-repos -->
@@ -217,22 +122,22 @@
                   </div>
                   <nav class="list-group">
                     <a href="#" class="list-group-item">
-                      <span class="badge octicon octicon-star">123</span>
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
                       <h4 class="list-group-item-heading octicon octicon-repo">
-                        Repository Name</h4>
-                      <p class="list-group-item-text css-truncate-target">This is the description of the repository.</p>
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
                     </a>
                     <a href="#" class="list-group-item">
-                      <span class="badge octicon octicon-star">123</span>
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
                       <h4 class="list-group-item-heading octicon octicon-repo">
-                        Repository Name</h4>
-                      <p class="list-group-item-text css-truncate-target">This is the description of the repository.</p>
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
                     </a>
                     <a href="#" class="list-group-item">
-                      <span class="badge octicon octicon-star">123</span>
+                      <span class="badge octicon octicon-star">{{repo-stars}}</span>
                       <h4 class="list-group-item-heading octicon octicon-repo">
-                        Repository Name</h4>
-                      <p class="list-group-item-text css-truncate-target">This is the description of the repository.</p>
+                        {{repo-name}}</h4>
+                      <p class="list-group-item-text css-truncate-target">{{repo-desc}}</p>
                     </a>
                   </nav>
                 </div> <!-- #repo-contribs -->
@@ -275,8 +180,8 @@
             <section class="tab-pane purple col-xs-6 col-sm-6 col-md-6" id="tab-repositories">
               <ul class="list-group" id="repo-list">
                 <li class="list-group-item">
-                  <h3 class="list-group-item-heading">Repository Name</h3>
-                  <p> This is the repository description. </p>
+                  <h3 class="list-group-item-heading">{{repo-name}}</h3>
+                  <p>{{repo-desc}}</p>
                   <p class="muted">Updated on Month DD</p>
                 </li>
               </ul> <!-- #repo-list -->
