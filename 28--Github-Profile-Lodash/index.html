@@ -5,8 +5,6 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -199,81 +197,9 @@
 
     <script>
       ;(function(){ // closure
-        var data;
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="/node_modules/lodash/lodash.js"></script>
 
-        // We can setup a robot to make get requests:
-        function getData(url) {
-         return $.get(url)
-           .error (function () {
-             console.error('OMG!');
-           });
-        }
-
-        function getUser() {
-         return getData('https://api.github.com/users/fab9');
-        }
-
-        function getRepos() {
-         return getData('https://api.github.com/users/fab9/repos');
-        }
-
-        // ===== $.when ===== below uses it to stick 2 promises together
-        var allData = $.when(
-          getUser(), getRepos()
-          );
-
-         allData.done(function(user,repos) {
-           var data = {
-             user: user[0],
-             repos: repos[0]
-            }
-           console.info(data);
-        //    pull out and do text replacements
-        //    for each element here...
-
-          var sidebar = $('.sidebar');
-
-          $('#avatar')
-           .attr('href', user.avatar_url)
-           .children('img')
-             .attr('src', user.avatar_url)
-          ; // END #avatar
-
-          sidebar.children('h1')
-            .children('span').text(data.user.name)
-            .siblings('small').text(data.user.login)
-          ;
-
-          $('.name')
-          .html(data.user.name)
-
-          $('.login')
-          .html( data.user.login)
-
-          $('.location')
-          .html(data.user.location)
-
-          $('.email')
-          .attr('href', 'mailto:rorou192@gmail.com')
-           .html(data.user.email)
-
-          $('.blog')
-          .attr('href', data.user.blog)
-            .html(data.user.blog)
-
-          $('.followers')
-          .attr('href', data.user.followers_url)
-            .html(data.user.followers + ' Follower')
-
-          $('.starred')
-          .attr('href', data.user.starred_url)
-            .html(data.user.starred)
-
-          $('.following')
-          .attr('href', data.user.following_url)
-            .html(data.following)
-
-         }); // END allData
 
       })(); // END closure
 
