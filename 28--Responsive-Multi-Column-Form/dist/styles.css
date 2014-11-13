@@ -5,14 +5,19 @@
  *
  * Media Queries
  * Codrops 800px/48em == Bootstrap 768px (top half split into 2 cols)
- * **Codrops 880px == Bootstrap (top half split into 2 cols, all bigger)
- * Codrops 1120px/70em  == Bootstrap 1200px (top half split into 2 cols, all bigger)
+ * Codrops 880px == Bootstrap (top half split into 2 cols, all bigger)
+ * **Codrops 1120px/70em  == Bootstrap 1200px (top half split into 2 cols, all bigger)
  */
 
 body {
   font-family: 'Lato', Calibri, Arial, sans-serif;
   color: white;
   background-color: #47a3da;
+}
+
+h2 {
+  color: #57BDFB;
+  margin-bottom: 45px;
 }
 label, .submit {
   font-size: 1.1em;
@@ -45,23 +50,3 @@ textarea {
   background-color: #0B3550;
   border-color: #0B3550;
 }
-
-
-
-/*@media screen and (max-width: 48em) {
-
-}*/
-
-@media screen and (max-width: 800px){
-  .red {
-    outline: solid 2px red;
-  }
-
-  .purple {
-    outline: solid 2px thistle
-  }
-}
-
-/*@media screen and (max-width: 70em) {
-
-}*/

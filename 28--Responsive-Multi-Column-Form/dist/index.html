@@ -8,20 +8,21 @@
 </head>
 <body>
   <div class="container">
-    <div class="row">
+  <header><h2 class="center-block">Responsive Multi-Column Form</h2></header>
+    <div class="row clearfix">
       <div class="col-xs-12">
         <form role="form" action="" method="post">
         <div class="row"><!-- mq 800px -->
 
-        <div class="col-sm-6 red"><!-- mq 800px left col -->
+        <div class="col-sm-6 col-md-4 col-lg-4"><!-- mq 800px left col -->
           <div class="form-group form-group-lg">
              <label class="control-label" for="first-name">First Name</label>
-             <input class="form-control" type="text" id="first-name" size="32">
+             <input class="form-control" type="text" id="first-name" size="32" required>
           </div>
 
           <div class="form-group form-group-lg">
            <label class="control-label" for="last-name">Last Name</label>
-           <input class="form-control" type="text" id="last-name">
+           <input class="form-control" type="text" id="last-name" required>
           </div>
 
           <div class="form-group form-group-lg">
@@ -45,7 +46,7 @@
           </div>
         </div><!-- .col-sm-6 mq 800px left col -->
 
-          <div class="col-sm-6 purple"><!-- mq 800px right col -->
+          <div class="col-sm-6 col-md-4 col-lg-4"><!-- mq 800px right col -->
             <div class="form-group form-group-lg">
               <label class="control-label" for="tel">Phone Number</label>
               <input class="form-control" type="tel" id="tel">
@@ -58,7 +59,8 @@
 
             <div class="form-group form-group-lg">
               <label class="control-label" for="occupation">Occupation</label>
-              <select class="form-control" name="" id="occupation">
+              <select class="form-control" name="" id="occupation"
+                pattern="[Ww]eb [Dd]esigner|[Ww]eb [Dd]eveloper|[Hh]ybrid">
                 <option value="value1" selected>Choose an occupation</option>
                 <option value="value2">Web Designer</option>
                 <option value="value3">Web Developer</option>
@@ -73,40 +75,43 @@
 
             <div class="form-group form-group-lg">
               <label class="control-label" for="fav-gadget">Favorite Gadget</label>
-              <input class="form-control" type="text" name="" id="fav-gadget" placeholder="Annoy-a-tron">
+              <input class="form-control" type="text" name="" id="fav-gadget" placeholder="Annoy-a-tron" required>
             </div>
           </div><!-- .col-sm-6 mq 800px right col -->
-        </div><!-- .row mq 800px -->
 
-          <div class="form-group form-group-lg">
-            <label class="control-label" for="talent">Type of Talent</label>
-            <select class="form-control" name="" id="talent">
-              <option value="value1" selected>Choose a talent</option>
-              <option value="value2">Ninja Silence</option>
-              <option value="value3">Sumo Power</option>
-              <option value="value4">Samurai Precision</option>
-            </select>
-          </div>
 
-          <div class="form-group form-group-lg">
-            <label class="control-label" for="fav-drink">Favorite Drink</label>
-            <input class="form-control" type="text" name="" id="fav-drink" placeholder="Green Tea">
-          </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="form-group form-group-lg">
+                <label class="control-label" for="talent">Type of Talent</label>
+                <select class="form-control" name="" id="talent">
+                  <option value="value1" selected>Choose a talent</option>
+                  <option value="value2">Ninja Silence</option>
+                  <option value="value3">Sumo Power</option>
+                  <option value="value4">Samurai Precision</option>
+                </select>
+              </div>
 
-          <div class="form-group form-group-lg">
-            <label class="control-label" for="power">Special Power</label>
-            <input class="form-control" type="text" name="" id="power" placeholder="Anti-gravity">
-          </div>
+              <div class="form-group form-group-lg">
+                <label class="control-label" for="fav-drink">Favorite Drink</label>
+                <input class="form-control" type="text" name="" id="fav-drink" placeholder="Green Tea">
+              </div>
 
-          <div class="form-group form-group-lg">
-            <label class="control-label" for="weapon">Weapon of Choice</label>
-            <input class="form-control" type="text" name="" id="weapon" placeholder="Lightsaber">
-          </div>
+              <div class="form-group form-group-lg">
+                <label class="control-label" for="power">Special Power</label>
+                <input class="form-control" type="text" name="" id="power" placeholder="Anti-gravity">
+              </div>
 
-          <div class="form-group form-group-lg">
-            <label class="control-label" for="comments">Comments</label>
-            <textarea class="form-control" name="" id="comments" cols="60" rows="50"></textarea>
-          </div>
+              <div class="form-group form-group-lg">
+                <label class="control-label" for="weapon">Weapon of Choice</label>
+                <input class="form-control" type="text" name="" id="weapon" placeholder="Lightsaber">
+              </div>
+
+              <div class="form-group form-group-lg">
+                <label class="control-label" for="comments">Comments</label>
+                <textarea class="form-control" name="" id="comments" cols="60" rows="50"></textarea>
+              </div>
+            </div><!-- .col-md-4 mq 70em -->
+          </div><!-- .row mq 800px -->
 
           <input class="btn btn-default btn-lg submit center-block" type="submit" value="Send your data">
         </form>
@@ -117,6 +122,13 @@
 
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script>
+    $(function() {
+      $(".submit").on("click", function() {
+        alert("Hello World");
+      });
+    });
+  </script>
   <script src="scripts.js"></script>
 </body>
 </html>
