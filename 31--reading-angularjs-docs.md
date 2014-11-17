@@ -1,8 +1,8 @@
-Using [the API documentation](https://docs.angularjs.org/api/), document the following parts of the framework; include the **arguments**, the **return value**, and **an example** of each in use:
+Using [the API documentation](https://docs.angularjs.org/api/), document the following parts of the framework; include the **arguments**, the **return value**, and **an example** of each in use.
 
-## Functions
+# Functions
 
-### `angular.module`
+## angular.module
 Returns an instance of _type_ `angular.Module`, which you should also document.
 
 ```
@@ -25,9 +25,8 @@ module -- new module with the`angular.Module` api.
 var myModule = angular.module('myModule', []);
 ```
 
-----
 
-### `angular.extend`
+## angular.extend
 Extends the destination object dst by copying own enumerable properties from the src object(s) to dst.
 
 ```
@@ -94,9 +93,7 @@ London
 
 > **Tip:** The extend method preserves any properties and methods on the target object. If you want to create a copy of an object without this preservation, then you can use the angular.copy method instead.
 
-----
-
-### `angular.copy`
+## angular.copy
 Creates a deep copy of `source`, which should be an object or an array.
 
 ```
@@ -118,10 +115,7 @@ destination (optional)  | Object, Array | Destination into which the source is c
 var myCopy = angular.copy(myObj);
 ```
 
-----
-
-
-### `angular.element`
+## angular.element
 Wraps a raw DOM element or HTML string as a jQuery element.
 
 If jQuery is available, `angular.element` is an alias for the jQuery function. If jQuery is not available, `angular.element` delegates to Angular's built-in subset of jQuery, called "jQuery lite" or "jqLite."
@@ -143,12 +137,151 @@ object -- jQuery object.
 var firstElement = angular.element('<div class="addAnimation">1</div>');
 ```
 
-----
-
-## Directives
+# Directives
 Keep in mind that some directives can only be used on specific HTML elements!
 
-### `ngApp`
+## ngApp
+designates the root element of the application and is typically placed near the root element of the page such as `html` or `body` tags.
+
+#### Arguments
+Param  | Type | Details
+------------- | ------------- | -------------
+ngApp   | angular.Module | an optional application module name to load
+ngStrictDi  | boolean | if this attribute is present on the app element, the injector will fail to invoke functions which do not use explicit function annotation (and thus unsuitable for minification).
+
+
+#### Returns
+????
+
+#### An example
+```
+<!DOCTYPE html>
+<html ng-app="exampleApp" >
+```
+
+## ngBind
+Tells Angular to replace the text content of the specified HTML element with the value of a given expression
+
+
+
+#### Arguments
+Param  | Type | Details
+------------- | ------------- | -------------
+ngBind  | expression | Expression to evaluate
+
+#### An example
+```
+<p>Hell {{ name }}</p>
+```
+
+## ngClass
+Allows you to dynamically set CSS classes on an HTML element.
+
+#### Arguments
+Param  | Type | Details
+------------- | ------------- | -------------
+ngClass  | expression | Expression to eval. The result of the evaluation can be a string representing space delimited class names, an array, or a map of class names to boolean values.
+
+
+#### Returns
+
+#### An example
+```
+<p ng-class="{strike: deleted, bold: important, red: error}">Map Syntax Example</p>
+```
+
+## ngClick
+Allows you to specify custom behavior when an element is clicked.
+
+```
+<button ng-click="count = count + 1" ng-init="count=0">
+  Increment
+</button>
+```
+
+#### Arguments
+Param  | Type | Details
+------------- | ------------- | -------------
+ngClick  | expression | Expression to evaluate upon click.
+
+#### Returns
+
+#### An example
+Source: [Pro AngularJS Book](http://my.safaribooksonline.com/book/programming/javascript/9781430264484/chapter-7-sportsstore-navigation-and-checkout/sec5_9781430264484_ch07_xhtml)
+
+```
+<button ng-click="count = count + 1" ng-init="count=0">
+  Increment
+</button>
+```
+
+## ngController
+Attaches a controller class to the view.
+
+#### Arguments
+Param  | Type | Details
+------------- | ------------- | -------------
+ngController  | expression | Name of a constructor function registered with the current $controllerProvider or an expression that on the current scope evaluates to a constructor function.
+
+#### Returns
+n/a
+#### An example
+```
+<div id="ctrl-as-exmpl" ng-controller="SettingsController1 as settings">
+  Name:<input type="text" ng-model="settings.name"/>
+  [ <a href="" ng-click="settings.greet()">greet</a> ]
+  <br/>
+  Contact:
+  <ul>
+    [....]
+```
+
+## ngDblclick
+Allows you to specify custom behavior on a dblclick event.
+
+```
+usage
+```
+
+#### Arguments
+Param  | Type | Details
+------------- | ------------- | -------------
+ngDblclick  | expression | expression to evaluate upon double click.
+
+#### An example
+```
+<button ng-dblclick="count = count + 1" ng-init="count=0">
+  Increment (on double click)
+</button>
+count: {{count}}
+```
+
+
+## ngForm
+Nestable alias of form directive.
+
+
+#### Arguments
+Param  | Type | Details
+------------- | ------------- | -------------
+ngForm (optional) | string  | Name of the form
+
+## ngKeyup
+Specify custom behavior on keyup event.
+
+#### Arguments
+Param  | Type | Details
+------------- | ------------- | -------------
+ngKeyup  | expression | Expression to evaluate upon keyup
+
+#### An example
+```
+<p>Typing in the input box below updates the key count</p>
+<input ng-keyup="count = count + 1" ng-init="count=0"> key up count: {{count}}
+```
+
+
+## ngModel
 Definition xxxx
 
 ```
@@ -166,9 +299,8 @@ xxxx  | xxxx | xxxxx
 
 #### An example
 
-----
 
-### `ngBind`
+## ngRepeat
 Definition xxxx
 
 ```
@@ -186,9 +318,8 @@ xxxx  | xxxx | xxxxx
 
 #### An example
 
-----
 
-### `ngClass`
+## ngSubmit
 Definition xxxx
 
 ```
@@ -205,165 +336,3 @@ xxxx  | xxxx | xxxxx
 #### Returns
 
 #### An example
-
-----
-
-### `ngClick`
-Definition xxxx
-
-```
-usage
-```
-
-#### Arguments
-Param  | Type | Details
-------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
-
-#### An example
-
-----
-
-### `ngController`
-Definition xxxx
-
-```
-usage
-```
-
-#### Arguments
-Param  | Type | Details
-------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
-
-#### An example
-
-----
-
-### `ngDblclick`
-Definition xxxx
-
-```
-usage
-```
-
-#### Arguments
-Param  | Type | Details
-------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
-
-#### An example
-
-----
-
-### `ngForm`
-Definition xxxx
-
-```
-usage
-```
-
-#### Arguments
-Param  | Type | Details
-------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
-
-#### An example
-
-----
-
-### `ngKeyup`
-Definition xxxx
-
-```
-usage
-```
-
-#### Arguments
-Param  | Type | Details
-------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
-
-#### An example
-
-----
-
-### `ngModel`
-Definition xxxx
-
-```
-usage
-```
-
-#### Arguments
-Param  | Type | Details
-------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
-
-#### An example
-
-----
-
-### `ngRepeat`
-Definition xxxx
-
-```
-usage
-```
-
-#### Arguments
-Param  | Type | Details
-------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
-
-#### An example
-
-----
-
-### `ngSubmit`
-Definition xxxx
-
-```
-usage
-```
-
-#### Arguments
-Param  | Type | Details
-------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
-
-#### An example
-
-----
