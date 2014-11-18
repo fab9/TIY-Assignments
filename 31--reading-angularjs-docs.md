@@ -282,57 +282,70 @@ ngKeyup  | expression | Expression to evaluate upon keyup
 
 
 ## ngModel
-Definition xxxx
-
-```
-usage
-```
-
-#### Arguments
-Param  | Type | Details
-------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
+Binds an input,select, textarea (or custom form control) to a property on the scope using NgModelController, which is created and exposed by this directive.
 
 #### An example
-
+```
+<script>
+ angular.module('inputExample', [])
+   .controller('ExampleController', ['$scope', function($scope) {
+     $scope.val = '1';
+   }]);
+</script>
+<style>
+  .my-input {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+    background: transparent;
+  }
+  .my-input.ng-invalid {
+    color:white;
+    background: red;
+  }
+</style>
+Update input to see transitions when valid/invalid.
+Integer is a valid value.
+<form name="testForm" ng-controller="ExampleController">
+  <input ng-model="val" ng-pattern="/^\d+$/" name="anim" class="my-input" />
+</form>
+```
 
 ## ngRepeat
-Definition xxxx
-
-```
-usage
-```
+Instantiates a template once per item from a collection.
 
 #### Arguments
 Param  | Type | Details
 ------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
+ngRepeat  | repeat_expression | The expression indicating how to enumerate a collection.
 
 #### An example
+```
+<header ng-repeat-start="item in items">
+  Header {{ item }}
+</header>
+<div class="body">
+  Body {{ item }}
+</div>
+<footer ng-repeat-end>
+  Footer {{ item }}
+</footer>
 
+```
 
 ## ngSubmit
-Definition xxxx
-
-```
-usage
-```
+Enables binding angular expressions to onsubmit events.
 
 #### Arguments
 Param  | Type | Details
 ------------- | ------------- | -------------
-xxxx  | xxxx | xxxx
-xxxx  | xxxx | xxxxx
-
-
-#### Returns
+ngSubmit  | expression | Expression to eval.
 
 #### An example
+```
+<form ng-submit="submit()" ng-controller="ExampleController">
+  Enter text and hit enter:
+  <input type="text" ng-model="text" name="text" />
+  <input type="submit" id="submit" value="Submit" />
+  <pre>list={{list}}</pre>
+</form>
+```
