@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc overview
- * @name githubProfileApp
+ * @name profileApp
  * @description
- * # githubProfileApp
+ * # profileApp
  *
  * Main module of the application.
  */
 angular
-  .module('githubProfileApp', []);
+  .module('profileApp', []);

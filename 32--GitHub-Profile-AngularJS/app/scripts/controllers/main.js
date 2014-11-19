@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name githubProfileApp.controller:MainCtrl
+ * @name profileApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the githubProfileApp
+ * Controller of the profileApp
  */
-angular.module('githubProfileApp')
+angular.module('profileApp')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
