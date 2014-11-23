@@ -1,33 +1,150 @@
-<div class="container">
+<div class="container beige">
 
   <div ng-include="'components/navbar/navbar.html'"></div>
 
-  <div class="jumbotron text-center">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure scaffolding your apps.
-    </p>
-    <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-  </div>
+</div><!-- .container .beige -->
 
-  <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
-      <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-        <div class="caption">
-          <h3>{{awesomeThing.title}}</h3>
-          <p>{{awesomeThing.description}}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
+    <div class="container blue">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 purple sidebar">
+          <img alt="Fabi's avatar" class="avatar thumbnail" src="{{avatar_url}}" width="230">
+          <h2>{{name}}</h2>
+          <p>{{login}}</p>
+          <ul class="list-unstyled">
+            <li class="octicon octicon-location">{{location}}</li>
+            <li class="octicon octicon-mail">{{email}}</li>
+            <li class="octicon octicon-clock">Joined on {{created_at}}</li>
+          </ul>
+          <ul class="list-unstyled">
+            <li><span>{{followers}}</span> Followers</li>
+            <li><span>57</span> Starred</li>
+            <li><span>{{following}}</span> Following</li>
+          </ul>
+          <div class="orgs">
+            <h3>Organizations</h3>
+            <img src="https://avatars3.githubusercontent.com/u/6183?v=2&s=84">
+            <img src="https://avatars3.githubusercontent.com/u/1266578?v=2&s=84">
+            <img src="https://avatars1.githubusercontent.com/u/3080009?v=2&s=84">
+            <img src="https://avatars1.githubusercontent.com/u/3080402?v=2&s=84">
+            <img src="https://avatars0.githubusercontent.com/u/3086128?v=2&s=84">
+            <img src="https://avatars3.githubusercontent.com/u/3086150?v=2&s=84">
+            <img src="https://avatars3.githubusercontent.com/u/3086272?v=2&s=84">
+            <img src="https://avatars3.githubusercontent.com/u/6732188?v=2&s=84">
+            <img src="https://avatars0.githubusercontent.com/u/6732193?v=2&s=84">
+            <img src="https://avatars3.githubusercontent.com/u/8798300?v=2&s=84">
+          </div><!-- .orgs -->
+        </div><!-- .sidebar -->
+
+        <!-- Main Content -->
+        <div class="main col-xs-9 col-sm-9 col-md-9">
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="active"><a href="#"><span class="octicon octicon-diff-added">Contributions</span></a></li>
+            <li><a href="#">Repositories</a></li>
+            <li><a href="#">Public activity</a></li>
+            <li class ="pull-right"><button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-pencil"></span>Edit profile</span></li>
+          </ul><!-- .nav-tabs -->
+
+          <section class="pink contributions-tab">
+            <div class=" clearfix">
+            <div class="panel panel-default col-md-6 col-sm-6 col-xs-6" id="popular-repos">
+              <header class="panel-heading">
+                <h3 class="panel-title">Popular Repositories</h3>
+              </header>
+              <ul class="list-group">
+                <a href="#" class="list-group-item">
+                  <span class="badge octicon octicon-star">123</span>
+                  <h4 class="list-group-item-heading octicon octicon-repo">devbootcat</h4>
+                  <p>This is the description of the repository.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <span class="badge octicon octicon-star">123</span>
+                  <h4 class="list-group-item-heading octicon octicon-repo">Tumblr clone</h4>
+                  <p>This is the description of the repository.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <span class="badge octicon octicon-star">123</span>
+                  <h4 class="list-group-item-heading octicon octicon-repo">alfred-workflows</h4>
+                  <p>This is the description of the repository.</p>
+                </a>
+              </ul><!-- .list-group -->
+            </div> <!-- #popular-repos -->
+
+            <div class="panel panel-default col-md-6 col-sm-6 col-xs-6" id="public-contribs">
+              <header class="panel-heading">
+                <h3 class="panel-title">Repositories contributed to</h3>
+              </header>
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <span class="badge octicon octicon-star">123</span>
+                  <h4 class="list-group-item-heading octicon octicon-repo">devbootcat</h4>
+                  <p>This is the description of the repository.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <span class="badge octicon octicon-star">123</span>
+                  <h4 class="list-group-item-heading octicon octicon-repo">Tumblr clone</h4>
+                  <p>This is the description of the repository.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <span class="badge octicon octicon-star">123</span>
+                  <h4 class="list-group-item-heading octicon octicon-repo">alfred-workflows</h4>
+                  <p>This is the description of the repository.</p>
+                </a>
+              </div><!-- .list-group -->
+            </div><!-- #public-contribs -->
+            </div><!-- row -->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Contributions<span class="octicon octicon-lock pull-right"></span></h3>
+              </div>
+              <div class="panel-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus diam quis leo placerat dictum. Fusce turpis quam, ultrices ut porta sed, aliquam at elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla risus nunc, molestie at congue sit amet, congue a sem. Maecenas ut ipsum vel arcu cursus cursus. Mauris a pulvinar ligula. Fusce tincidunt tempus turpis non vestibulum. Vestibulum sed enim velit, non molestie enim. Pellentesque at mi ipsum, vitae pulvinar dolor. Nam tempus dictum iaculis. Vivamus eget eros id diam iaculis sollicitudin. </p>
+              </div>
+            </div><!-- .panel -->
+
+            <!-- Contribution Activity -->
+            <section class="contrib-activity">
+              <h2 class="pull-left">Contribution activity</h2>
+              <button type="button" class="btn btn-default btn-sm pull-right">Period: 1 week<span class="caret"></button>
+
+              <!-- Commits -->
+              <section class="commits">
+                <h3 class="conversation-list-heading">
+                  <div class="inner">
+                    <span class="octicon octicon-git-commit"></span>
+                    <span class="text-emphasized">67</span> commits
+                  </div>
+                </h3>
+                Pushed 2 commits to fab9/github-profile Nov 6
+                Pushed 7 commits to fab9/fab9.github.io Nov 6
+                Pushed 38 commits to xdonze/25--Scotts-Tots Nov 3 – Nov 6
+                Pushed 20 commits to asoper29/24--Weekend-Warriors Oct 31 – Nov 2
+              </section><!-- .commits -->
+            </section><!-- .contrib-activity -->
+          </section><!-- .pink #tab-contributions -->
+      </div><!-- .row -->
+    </div> <!-- .blue .container -->
+
+    <!-- footer -->
+    <footer class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="header-logo-invertocat navbar-brand" href="https://github.com/">
+            <span class="mega-octicon octicon-mark-github"></span>
+          </a>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="footer">
-    <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
-  </div>
-
-</div>
+        <ul class="nav navbar-nav">
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Gist</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Status</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div><!-- .container -->
+    </footer>

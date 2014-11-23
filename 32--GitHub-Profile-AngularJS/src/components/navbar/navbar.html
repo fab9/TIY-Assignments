@@ -1,19 +1,34 @@
-<nav class="navbar navbar-static-top navbar-inverse" ng-controller="NavbarCtrl">
-  <div class="navbar-header">
-    <a class="navbar-brand" href="https://github.com/Swiip/generator-gulp-angular">
-      <span class="glyphicon glyphicon-home"></span> Gulp Angular
-    </a>
-  </div>
-
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
-    <ul class="nav navbar-nav">
-      <li class="active"><a ng-href="#">Home</a></li>
-      <li><a ng-href="#">About</a></li>
-      <li><a ng-href="#">Contact</a></li>
-    </ul>
-
-    <ul class="nav navbar-nav navbar-right">
-      <li>Current date: {{ date | date:'yyyy-MM-dd' }}</li>
-    </ul>
-  </div>
-</nav>
+    <div class="container beige">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <a class="header-logo-invertocat navbar-brand" href="https://github.com/">
+            <span class="mega-octicon octicon-mark-github"></span>
+          </a>
+        </div>
+        <div class="site-search">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group site-search">
+              <input type="text" class="form-control input-sm" placeholder="Search GitHub">
+            </div><!-- .form-group -->
+          </form>
+        </div><!-- .site-search -->
+        <ul class="nav navbar-nav">
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Gist</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">{{login}}</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="octicon octicon-plus"></span><span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><span class="octicon octicon-inbox"></span></a></li>
+          <li><a href="#"><span class="octicon octicon-gear"></span></a></li>
+          <li><a href="#"><span class="octicon octicon-sign-out"></span></a></li>
+        </ul>
+      </nav>
+    </div><!-- .container .beige-->
